@@ -1,0 +1,4 @@
+﻿<Debug enable="yes" level="Debug">
+    <StdError enable="yes" level="Debug" />
+    <FileDebug enable="yes" level="0" />
+</Debug>

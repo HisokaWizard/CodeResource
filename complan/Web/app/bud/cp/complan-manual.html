@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<div ng-controller="CPManualCtrl as ctrl" class="b-container  b-browser-window-width">
+  <div ng-include="'app/components/breadcrumbs/breadcrumbs.html'"></div>
+    <div class="b-row">
+        <div class="b-col-9">
+            <div class="b-left-functional-area b-functional-area-color" ng-style="{'height' : ctrl.WinHeight-200+'px'}">
+                <div class="b-row">
+                    <div class="b-col-6">
+                        <div class="b-pull-left b-functional-area-heading">
+                            Справочник
+                        </div>
+                    </div>
+                    <div class="b-col-12">
+                        <div ng-if="ctrl.ForbiddenFreq">
+                            <div class="cp-manual-font-title-table" ng-bind="'Запрещенные частоты и диапазоны'"></div>
+                            <button class="b-btn b-btn-default cp-manual-button-position" ng-click="ctrl.EnableValueFreq()" ng-bind="'Значения частот'"></button>
+                            <button class="b-btn b-btn-default cp-manual-button-position" ng-click="ctrl.EnableFreqRange()" ng-bind="'Диапазоны частот'"></button>
+                            <div class="cp-manual-scroll-table-fordiddenfreq" ng-if="ctrl.ValueFreq" ng-style="{'height' : ctrl.WinHeight-400+'px'}">
+                                <table class="b-table b-table-bordered cp-manual-font-table">
+                                    <tr class="cp-manual-first-tr-table">
+                                        <td ng-bind="'Частота, МГц'"></td>
+                                        <td ng-bind="'Комментарий'"></td>
+                                    </tr>
+                                    <tr ng-repeat="freq in ctrl.forbidden_freq_value">
+                                        <td ng-bind="freq.freqvalue"></td>
+                                        <td ng-bind="freq.description"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="cp-manual-scroll-table-fordiddenfreq" ng-if="ctrl.FreqRange" ng-style="{'height' : ctrl.WinHeight-400+'px'}">
+                                <table class="b-table b-table-bordered cp-manual-font-table">
+                                    <tr class="cp-manual-first-tr-table">
+                                        <td ng-bind="'Частота от, МГц'"></td>
+                                        <td ng-bind="'Частота до, МГц'"></td>
+                                        <td ng-bind="'Комментарий'"></td>
+                                    </tr>
+                                    <tr ng-repeat="freqrange in ctrl.forbidden_freqrange">
+                                        <td ng-bind="freqrange.freqvalmin"></td>
+                                        <td ng-bind="freqrange.freqvalmax"></td>
+                                        <td ng-bind="freqrange.description"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div ng-if="ctrl.FixedFreq">
+                            <div class="cp-manual-font-title-table" ng-bind="'Установленные частоты'"></div>
+                            <div class="cp-manual-scroll-table-fixedfreq" ng-style="{'height' : ctrl.WinHeight-330+'px'}">
+                                <table class="b-table b-table-bordered cp-manual-font-table">
+                                    <tr class="cp-manual-first-tr-table">
+                                        <td ng-bind="'Частота, МГц'"></td>
+                                        <td ng-bind="'Режим'"></td>
+                                        <td ng-bind="'Устройство'"></td>
+                                    </tr>
+                                    <tr ng-repeat="params in ctrl.ParamsSetsArr track by $index">
+                                        <td ng-bind="params.frequency"></td>
+                                        <td ng-bind="params.state_device"></td>
+                                        <td>
+                                            <div ng-if="'' == params.device" ng-bind="params.device_id"></div>
+                                            <div ng-if="'' != params.device">
+                                                <a ng-if="ctrl.getWebType(params.device_id) == 'new'" ng-href="#/elements/{{params.device_type}}/{{params.device_id}}" ng-bind="params.device"></a>
+                                                <a ng-if="ctrl.getWebType(params.device_id) == 'proxy'" ng-href="#/elements/server/{{params.device_id}}" ng-bind="params.device"></a>
+                                                <span ng-if="ctrl.getWebType(params.device_id) == 'nothing'" ng-bind="params.device"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="b-col-3">
+            <div class="b-right-functional-area b-functional-area-color" ng-style="{'height' : ctrl.WinHeight-200+'px'}">
+                <div class="b-row">
+                    <div class="b-col-12">
+                        <input type="text" ng-model="ctrl.label" class="cp-service-filter"/>
+                    </div>
+                </div>
+                <div class="b-row">
+                    <div class="b-col-10">
+                        <div class="b-functional-area-heading" ng-bind="'Частоты:'"></div>
+                        <button class="b-btn b-btn-default cp-manual-button-position" style="width:220px;" ng-click="ctrl.EnableFixedFreq()" ng-bind="'Установленные'"></button>
+                        <button class="b-btn b-btn-default cp-manual-button-position" style="width:220px;" ng-click="ctrl.EnableForbiddenFreq()" ng-bind="'Запрещенные'"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

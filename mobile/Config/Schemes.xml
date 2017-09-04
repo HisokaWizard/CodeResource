@@ -1,0 +1,249 @@
+﻿<SchemeList>
+	<Scheme id="main" label="Схема стратегических объектов" image="app/bud/mobile/img/scheme/main.png" width="1400" height="640">
+		<NodeList>
+			<Node id="Building" label="Здание" type="transit" x="740" y="75">
+				<Size width="220" height="100"></Size>
+				<Description>Стратегический объект: Здание</Description>
+				<TransitSchemeId>HouseIntelTech_1</TransitSchemeId>
+			</Node>
+			<Node id="Ship" label="Корабль" type="transit" x="225" y="445">
+				<Size width="445" height="115"></Size>
+				<Description>Стратегический объект: Корабль</Description>
+				<TransitSchemeId>Kuznecov_1</TransitSchemeId>
+			</Node>
+			<Node id="Submarine" label="Подводная лодка" type="transit" x="630" y="350">
+				<Size width="230" height="50"></Size>
+				<Description>Стратегический объект: Подводная лодка</Description>
+				<TransitSchemeId>Submarine949_1</TransitSchemeId>
+			</Node>
+		</NodeList>
+		<EdgeList>
+		</EdgeList>
+    </Scheme>
+	<Scheme id="Submarine949_1" label="Подводная лодка 949: Вид сбоку" image="app/bud/mobile/img/scheme/949_1.png" width="1400" height="640">
+		<NodeList>
+			<Node id="frontView" label="Перейти на вид сверху" type="transit" x="20" y="20">
+				<Size width="230" height="40"></Size>
+				<Description>Подводная лодка проекта 949 вид сбоку</Description>
+				<TransitSchemeId>Submarine949_2</TransitSchemeId>
+			</Node>
+			<Node id="1" label="ГАП-1" type="location" x="260" y="275">
+				<Size width="95" height="100"></Size>
+				<Description>Главный антенный пост - 1</Description>
+				<Location>1</Location>
+			</Node>
+			<Node id="2" label="ТО" type="location" x="70" y="275">
+				<Size width="185" height="100"></Size>
+				<Description>Торпедный Отсек</Description>
+				<Location>2</Location>
+			</Node>
+			<Node id="3" label="ЖК" type="location" x="365" y="275">
+				<Size width="170" height="55"></Size>
+				<Description>Жилые казарменные помещения</Description>
+				<Location>3</Location>
+			</Node>
+			<Node id="4" label="КС" type="location" x="365" y="335">
+				<Size width="170" height="40"></Size>
+				<Description>Кухня и Столовая</Description>
+				<Location>4</Location>
+			</Node>
+			<Node id="5" label="ГКП" type="location" x="540" y="275">
+				<Size width="130" height="55"></Size>
+				<Description>Главный Командный Пост</Description>
+				<Location>5</Location>
+			</Node>
+			<Node id="6" label="ГП" type="location" x="540" y="335">
+				<Size width="130" height="40"></Size>
+				<Description>Помещения для гигиены</Description>
+				<Location>6</Location>
+			</Node>
+			<Node id="7" label="ТОО" type="location" x="675" y="275">
+				<Size width="265" height="100"></Size>
+				<Description>Технический отсек оборудования</Description>
+				<Location>7</Location>
+			</Node>
+			<Node id="8" label="МО" type="location" x="945" y="275">
+				<Size width="240" height="100"></Size>
+				<Description>Машинный отсек</Description>
+				<Location>8</Location>
+			</Node>
+		</NodeList>
+		<EdgeList>
+		</EdgeList>
+    </Scheme>
+	<Scheme id="Submarine949_2" label="Подводная лодка 949: Вид сверху" image="app/bud/mobile/img/scheme/949_2.png" width="1400" height="640">
+		<NodeList>
+			<Node id="topView" label="Перейти на вид сбоку" type="transit" x="20" y="20">
+				<Size width="230" height="40"></Size>
+				<Description>Подводная лодка проекта 949 вид сверху</Description>
+				<TransitSchemeId>Submarine949_1</TransitSchemeId>
+			</Node>
+			<Node id="1" label="ГАП-1" type="location" x="300" y="260">
+				<Size width="95" height="120"></Size>
+				<Description>Главный антенный пост - 1</Description>
+				<Location>1</Location>
+			</Node>
+			<Node id="2" label="ТО" type="location" x="105" y="260">
+				<Size width="190" height="120"></Size>
+				<Description>Торпедный Отсек</Description>
+				<Location>2</Location>
+			</Node>
+			<Node id="3" label="ЖК" type="location" x="400" y="260">
+				<Size width="180" height="120"></Size>
+				<Description>Жилые казарменные помещения</Description>
+				<Location>3</Location>
+			</Node>
+			<Node id="5" label="ГКП" type="location" x="585" y="260">
+				<Size width="140" height="120"></Size>
+				<Description>Главный Командный Пост</Description>
+				<Location>5</Location>
+			</Node>
+			<Node id="7" label="ТОО" type="location" x="730" y="260">
+				<Size width="270" height="120"></Size>
+				<Description>Технический отсек оборудования</Description>
+				<Location>7</Location>
+			</Node>
+			<Node id="8" label="МО" type="location" x="1005" y="260">
+				<Size width="250" height="120"></Size>
+				<Description>Машинный отсек</Description>
+				<Location>8</Location>
+			</Node>
+		</NodeList>
+		<EdgeList>
+		</EdgeList>
+    </Scheme>
+	<Scheme id="HouseIntelTech_1" label="Центр управления 'Интелтех': Вид сбоку" image="app/bud/mobile/img/scheme/house.png" width="1400" height="640">
+		<NodeList>
+			<Node id="frontView" label="Перейти на вид сверху" type="transit" x="20" y="20">
+				<Size width="230" height="40"></Size>
+				<Description>Центр управления 'Интелтех': Вид сверху</Description>
+				<TransitSchemeId>HouseIntelTech_2</TransitSchemeId>
+			</Node>
+			<Node id="1" label="ГАП-1" type="location" x="165" y="185">
+				<Size width="155" height="120"></Size>
+				<Description>Главный антенный пост - 1</Description>
+				<Location>1</Location>
+			</Node>
+			<Node id="3" label="ЖК" type="location" x="890" y="305">
+				<Size width="440" height="185"></Size>
+				<Description>Жилые казарменные помещения</Description>
+				<Location>3</Location>
+			</Node>
+			<Node id="4" label="КС" type="location" x="430" y="400">
+				<Size width="275" height="90"></Size>
+				<Description>Кухня и Столовая</Description>
+				<Location>4</Location>
+			</Node>
+			<Node id="5" label="ГКП" type="location" x="530" y="225">
+				<Size width="180" height="80"></Size>
+				<Description>Главный Командный Пост</Description>
+				<Location>5</Location>
+			</Node>
+			<Node id="6" label="ГП" type="location" x="710" y="400">
+				<Size width="100" height="90"></Size>
+				<Description>Помещения для гигиены</Description>
+				<Location>6</Location>
+			</Node>
+		</NodeList>
+		<EdgeList>
+		</EdgeList>
+    </Scheme>
+	<Scheme id="HouseIntelTech_2" label="Центр управления 'Интелтех': Вид сверху" image="app/bud/mobile/img/scheme/house_top.png" width="1400" height="640">
+		<NodeList>
+			<Node id="topView" label="Перейти на вид сбоку" type="transit" x="20" y="20">
+				<Size width="230" height="40"></Size>
+				<Description>Центр управления 'Интелтех': Вид сверху</Description>
+				<TransitSchemeId>HouseIntelTech_1</TransitSchemeId>
+			</Node>
+			<Node id="1" label="ГАП-1" type="location" x="150" y="400">
+				<Size width="200" height="100"></Size>
+				<Description>Главный антенный пост - 1</Description>
+				<Location>1</Location>
+			</Node>
+			<Node id="5" label="ГКП" type="location" x="510" y="400">
+				<Size width="140" height="100"></Size>
+				<Description>Главный Командный Пост</Description>
+				<Location>5</Location>
+			</Node>
+		</NodeList>
+		<EdgeList>
+		</EdgeList>
+    </Scheme>	
+	<Scheme id="Kuznecov_1" label="АНК Кузнецов: Вид сбоку" image="app/bud/mobile/img/scheme/kuznecov.png" width="1400" height="640">
+		<NodeList>
+			<Node id="frontView" label="Перейти на вид сверху" type="transit" x="20" y="20">
+				<Size width="230" height="40"></Size>
+				<Description>АНК Кузнецов: Вид сбоку</Description>
+				<TransitSchemeId>Kuznecov_2</TransitSchemeId>
+			</Node>
+			<Node id="1" label="ГАП-1" type="location" x="720" y="145">
+				<Size width="205" height="80"></Size>
+				<Description>Главный антенный пост - 1</Description>
+				<Location>1</Location>
+			</Node>
+			<Node id="2" label="ТО" type="location" x="155" y="350">
+				<Size width="230" height="45"></Size>
+				<Description>Торпедный Отсек</Description>
+				<Location>2</Location>
+			</Node>
+			<Node id="3" label="ЖК" type="location" x="595" y="355">
+				<Size width="325" height="45"></Size>
+				<Description>Жилые казарменные помещения</Description>
+				<Location>3</Location>
+			</Node>
+			<Node id="4" label="КС" type="location" x="390" y="300">
+				<Size width="135" height="50"></Size>
+				<Description>Кухня и Столовая</Description>
+				<Location>4</Location>
+			</Node>
+			<Node id="5" label="ГКП" type="location" x="660" y="230">
+				<Size width="290" height="60"></Size>
+				<Description>Главный Командный Пост</Description>
+				<Location>5</Location>
+			</Node>
+			<Node id="6" label="ГП" type="location" x="925" y="355">
+				<Size width="125" height="45"></Size>
+				<Description>Помещения для гигиены</Description>
+				<Location>6</Location>
+			</Node>
+			<Node id="7" label="ТОО" type="location" x="530" y="300">
+				<Size width="500" height="50"></Size>
+				<Description>Технический отсек оборудования</Description>
+				<Location>7</Location>
+			</Node>
+			<Node id="8" label="МО" type="location" x="1055" y="300">
+				<Size width="200" height="100"></Size>
+				<Description>Машинный отсек</Description>
+				<Location>8</Location>
+			</Node>
+		</NodeList>
+		<EdgeList>
+		</EdgeList>
+    </Scheme>
+	<Scheme id="Kuznecov_2" label="АНК Кузнецов: Вид сверху" image="app/bud/mobile/img/scheme/kuznecov_top.png" width="1400" height="640">
+		<NodeList>
+			<Node id="frontView" label="Перейти на вид сбоку" type="transit" x="20" y="20">
+				<Size width="230" height="40"></Size>
+				<Description>АНК Кузнецов: Вид сверху</Description>
+				<TransitSchemeId>Kuznecov_1</TransitSchemeId>
+			</Node>
+			<Node id="4" label="КС" type="location" x="390" y="265">
+				<Size width="130" height="95"></Size>
+				<Description>Кухня и Столовая</Description>
+				<Location>4</Location>
+			</Node>
+			<Node id="7" label="ТОО" type="location" x="540" y="315">
+				<Size width="490" height="125"></Size>
+				<Description>Технический отсек оборудования</Description>
+				<Location>7</Location>
+			</Node>
+			<Node id="8" label="МО" type="location" x="1050" y="180">
+				<Size width="225" height="270"></Size>
+				<Description>Машинный отсек</Description>
+				<Location>8</Location>
+			</Node>
+		</NodeList>
+		<EdgeList>
+		</EdgeList>
+    </Scheme>	
+</SchemeList>

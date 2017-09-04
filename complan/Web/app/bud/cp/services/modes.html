@@ -1,0 +1,15 @@
+<div class="cp-controlling-tab b-row">
+  <div ng-repeat="(mId,mode) in cpCtrl.services[sId].modes" class="cp-service-mode-row">
+    <div class="b-col-offset-3 b-col-5">
+      Состояние: <span ng-bind="cpCtrl.translate(ctrl.getModeState(sId,mId))"></span><br/>
+      Частота приема: <span ng-bind="mode.rx_frequency"></span><span ng-bind="cpCtrl.kv.suffix"></span><br/>
+      Частота передачи: <span ng-bind="mode.tx_frequency"></span><span ng-bind="cpCtrl.kv.suffix"></span><br/>
+      Класс излучения: <span ng-bind="mode.tx_class_id"></span><br/>
+      Мощность: <span ng-bind="mode.tx_power"></span>%
+    </div>
+    <div class="b-col-3 b-text-center">
+      <img ng-show="'active' == ctrl.getModeState(sId,mId)" src="/img/toggle-icons/on.png" class="cp-service-mode-toggle-img" >
+      <img ng-click="ctrl['switch'](sId,mId)" ng-hide="'active' == ctrl.getModeState(sId,mId)" src="/img/toggle-icons/off.png" class="cp-service-mode-toggle-img">
+    </div>
+  </div>
+</div>

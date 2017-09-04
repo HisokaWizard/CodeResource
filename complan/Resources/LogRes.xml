@@ -1,0 +1,157 @@
+<Resources>
+	<Item isArray="1">
+		<Entry>Starting</Entry>
+		<Russian>
+			<Short>Начало работы</Short>
+		</Russian>
+		<English>
+			<Short>Starting</Short>
+		</English>
+	</Item>
+
+	<Item isArray="1">
+		<Entry>successful</Entry>
+		<Russian>
+			<Short>удачно</Short>
+		</Russian>
+		<English>
+			<Short>successful</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>unsuccessful</Entry>
+		<Russian>
+			<Short>неудачно</Short>
+		</Russian>
+		<English>
+			<Short>unsuccessful</Short>
+		</English>
+	</Item>
+
+	<Item isArray="1">
+		<Entry>SwitchSetOfTracts</Entry>
+		<Russian>
+			<Short>Запрос на переключение набора трактов</Short>
+		</Russian>
+		<English>
+			<Short>Request for switching the set of tracts</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>SwitchSetOfTractsCompleted</Entry>
+		<Russian>
+			<Short>Завершение переключения набора трактов</Short>
+		</Russian>
+		<English>
+			<Short>Switching the set of tracts completed</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>CreateTract</Entry>
+		<Russian>
+			<Short>Запрос на формирование тракта</Short>
+		</Russian>
+		<English>
+			<Short>Request for tract creation</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>CreateTractCompleted</Entry>
+		<Russian>
+			<Short>Завершение формирования тракта</Short>
+		</Russian>
+		<English>
+			<Short>Tract creation comleted</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>DeleteTract</Entry>
+		<Russian>
+			<Short>Запрос на расформирование тракта</Short>
+		</Russian>
+		<English>
+			<Short>Request for tract destruction</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>DeleteTractCompleted</Entry>
+		<Russian>
+			<Short>Завершение расформирования тракта</Short>
+		</Russian>
+		<English>
+			<Short>Tract destruction comleted</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>SwitchTractMode</Entry>
+		<Russian>
+			<Short>Запрос на переключение режима тракта</Short>
+		</Russian>
+		<English>
+			<Short>Request for tract mode switching</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>SwitchTractModeCompleted</Entry>
+		<Russian>
+			<Short>Завершение переключения режима тракта</Short>
+		</Russian>
+		<English>
+			<Short>Tract mode switching comleted</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>AddTerminal</Entry>
+		<Russian>
+			<Short>Запрос на добавление терминала</Short>
+		</Russian>
+		<English>
+			<Short>Request for adding terminal</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>AddTerminalCompleted</Entry>
+		<Russian>
+			<Short>Завершение добавления терминала</Short>
+		</Russian>
+		<English>
+			<Short>Adding terminal completed</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>DeleteTerminal</Entry>
+		<Russian>
+			<Short>Запрос на удаление терминала</Short>
+		</Russian>
+		<English>
+			<Short>Request for deleting terminal</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>DeleteTerminalCompleted</Entry>
+		<Russian>
+			<Short>Завершение удаления терминала</Short>
+		</Russian>
+		<English>
+			<Short>Deleting terminal completed</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>ConnectTerminal</Entry>
+		<Russian>
+			<Short>Подключение терминала к тракту</Short>
+		</Russian>
+		<English>
+			<Short>Connecting the terminal to the tract</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>DisconnectTerminal</Entry>
+		<Russian>
+			<Short>Отключение терминала от тракта</Short>
+		</Russian>
+		<English>
+			<Short>Disconnecting the terminal to the tract</Short>
+		</English>
+	</Item>
+</Resources>

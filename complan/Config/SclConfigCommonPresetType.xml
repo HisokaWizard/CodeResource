@@ -1,0 +1,18 @@
+﻿<PresetType>
+  <Id>SclConfigCommon</Id>
+  <UriTemplate>http://{host-address}/restconf/data/scl-config/common</UriTemplate>
+  <Description>Основная конфигурация приложения</Description>
+  <AllowedHosts>
+	<HostType>mvt</HostType>
+	<HostType>locos</HostType>
+	<HostType>sclConference</HostType>
+	<HostType>sclPresence</HostType>
+	<HostType>sclGate</HostType>
+	<HostType>sclRouter</HostType>
+	<HostType>sclIM</HostType>
+	<HostType>sclStreamer</HostType>
+  </AllowedHosts>
+  <PresetList>
+    <Preset id="Common_preset_1"/>
+  </PresetList>
+</PresetType>

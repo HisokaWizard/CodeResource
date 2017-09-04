@@ -1,0 +1,46 @@
+﻿<PresetType>
+  <Id>TypeK638</Id>
+  <UriTemplate>http://{host-address}/restconf/data/k638-conf</UriTemplate>
+  <Description>Предустановка K638</Description>
+  <AllowedHosts><HostType>k638</HostType></AllowedHosts>
+  <PresetList>
+    <Preset id="K638_dummy">
+    </Preset>
+    <Preset id="K638_preset_250300Hz">
+		<k638-conf>
+		  <index_work_channel>{index}</index_work_channel>
+		  <ch>
+			<index>{index}</index>
+			<recv_frq>250300</recv_frq>
+			<transv_frq>250300</transv_frq>
+			<connector>Default</connector>
+			<noise_gate>On</noise_gate>
+		  </ch>
+		</k638-conf>
+    </Preset>
+    <Preset id="K638_preset_110KHz">
+		<k638-conf>
+		  <index_work_channel>{index}</index_work_channel>
+		  <ch>
+			<index>{index}</index>
+			<recv_frq>110000</recv_frq>
+			<transv_frq>110000</transv_frq>
+			<connector>Default</connector>
+			<noise_gate>On</noise_gate>
+		  </ch>
+		</k638-conf>
+    </Preset>
+    <Preset id="K638_preset_140KHz">
+		<k638-conf>
+		  <index_work_channel>{index}</index_work_channel>
+		  <ch>
+			<index>{index}</index>
+			<recv_frq>140000</recv_frq>
+			<transv_frq>140000</transv_frq>
+			<connector>Default</connector>
+			<noise_gate>On</noise_gate>
+		  </ch>
+		</k638-conf>
+    </Preset>
+  </PresetList>
+</PresetType>

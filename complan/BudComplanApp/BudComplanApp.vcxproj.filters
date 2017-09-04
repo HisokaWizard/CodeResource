@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Configuration">
+      <UniqueIdentifier>{b001be73-da95-4e00-b0eb-6bc30b18531a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\WebInterface">
+      <UniqueIdentifier>{d56e1401-38e5-4ef5-b807-8ef58420dcda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WebInterface">
+      <UniqueIdentifier>{9b766e97-ecbe-4e05-83e2-bf8a4787b5ad}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Doc\Doxygen\Doxyfile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="precomp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\RadioService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\RadioServiceList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\RadioServiceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\HostList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\EventMsg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Host.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\EventSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ManagedData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\XmlMerger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\WebInterface\AjaxResource.cpp">
+      <Filter>Source Files\WebInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\WebInterface\ComPlansResources.cpp">
+      <Filter>Source Files\WebInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\WebInterface\ServiceResources.cpp">
+      <Filter>Source Files\WebInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\WebInterface\ServiceSchemeResource.cpp">
+      <Filter>Source Files\WebInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\WebInterface\WebInterface.cpp">
+      <Filter>Source Files\WebInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\WebInterface\NetGraph.cpp">
+      <Filter>Source Files\WebInterface</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\Application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="precomp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RadioService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RadioServiceList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\RadioServiceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\EventMsg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\HostList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Host.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\EventSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ManagedData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\XmlMerger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\WebInterface\AjaxResource.h">
+      <Filter>Header Files\WebInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\WebInterface\ComPlansResources.h">
+      <Filter>Header Files\WebInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\WebInterface\ServiceResources.h">
+      <Filter>Header Files\WebInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\WebInterface\ServiceSchemeResource.h">
+      <Filter>Header Files\WebInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\WebInterface\WebInterface.h">
+      <Filter>Header Files\WebInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\WebInterface\NetGraph.h">
+      <Filter>Header Files\WebInterface</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

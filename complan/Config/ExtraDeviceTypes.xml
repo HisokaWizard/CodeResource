@@ -1,0 +1,265 @@
+<ExtraDeviceTypes>tavs
+<DeviceType id="tavs" label="ТАВС" role="endpoint" can-send="false" can-recieve="false" component-id="tavsAgent">
+        <Description>Выносной пульт связи</Description>
+        <MediaTypes>
+            <MediaType id="audio" />                   
+        </MediaTypes>
+    </DeviceType>
+      <DeviceType id="ls" label="ЛС" role="endpoint" can-send="false" can-recieve="false" component-id="lsAgent">
+        <Description>Выносной пульт связи</Description>
+        <MediaTypes>
+            <MediaType id="audio" />                   
+        </MediaTypes>
+    </DeviceType>
+  <DeviceType id="fw" label="ФВ" role="endpoint" can-send="false" can-recieve="false" component-id="fwAgent">
+        <Description>Выносной пульт связи</Description>
+        <MediaTypes>
+            <MediaType id="audio" />                   
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="ktsos" label="КТОС" role="endpoint" can-send="false" can-recieve="false" component-id="ktsosAgent">
+        <Description>Выносной пульт связи</Description>
+        <MediaTypes>
+            <MediaType id="audio" />                   
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="tm" label="ВПС" role="endpoint" can-send="false" can-recieve="false" component-id="tmAgent">
+        <Description>Выносной пульт связи</Description>
+        <MediaTypes>
+            <MediaType id="audio" />                   
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="tos" label="ТОС" role="endpoint" can-send="false" can-recieve="false" component-id="tosAgent">
+        <Description>Выносной пульт связи</Description>
+        <MediaTypes>
+            <MediaType id="audio" />                   
+            <MediaType id="text" />                   
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="aist" label="ТКТ" role="endpoint" can-send="false" can-recieve="false" component-id="aistAgent">
+        <Description>Терминал командной трансляции</Description>
+        <MediaTypes>
+            <MediaType id="audio" />                   
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="tmr" label="ТМР" role="endpoint" can-send="false" can-recieve="false" component-id="tmrAgent">
+        <Description>Терминал мобильной радиосети</Description>
+        <MediaTypes>
+            <MediaType id="audio" />                   
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="vi" label="ВИ" role="endpoint" can-send="false" can-recieve="false" component-id="viAgent">
+        <Description>Видеомодуль индивидуальный</Description>
+        <MediaTypes>
+            <MediaType id="audio" />                   
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="tdl" label="ТДЛ" role="endpoint" can-send="false" can-recieve="false" component-id="tdlAgent">
+        <Description>Терминал должностного лица</Description>
+        <MediaTypes>
+            <MediaType id="audio" />                   
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="ttss" label="ТСС" role="endpoint" can-send="false" can-recieve="false" component-id="ttssAgent">
+        <Description>Терминал телефонной связи сенсорный</Description>
+        <MediaTypes>
+            <MediaType id="audio" />                   
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="vmspd" label="ВМСПД" role="radio" can-send="true" can-recieve="true" component-id="vmspdAgent">
+        <Description>ВМСПД описание</Description>
+        <Ranges>
+            <Range id="mv2dmv1" />
+            <Range id="mv1" />
+        </Ranges>
+        <MediaTypes>
+            <MediaType id="audio" />                   
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="n1000" label="Нептун 1000" role="radio" can-send="true" can-recieve="false" component-id="n1000Agent">
+        <Description>Описание Нептун 1000</Description>
+        <Ranges>
+            <Range id="mv2dmv1" />
+            <Range id="mv1" />
+        </Ranges>
+        <MediaTypes>         
+            <MediaType id="telecode" />                
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="t614" label="T-614" role="encryptor" can-send="false" can-recieve="false" component-id="t614Agent">
+        <Description>Описание T-614</Description>
+        <MediaTypes>         
+            <MediaType id="telecode" />                
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="r620" label="P-620" role="radio" can-send="true" can-recieve="true" component-id="r620Agent">
+        <Description>P-620</Description>
+        <Ranges>
+            <Range id="dkmv" />
+            <Range id="sv" />
+            <Range id="sdv" />
+        </Ranges>
+        <MediaTypes>            
+            <MediaType id="text" />               
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="r612" label="P-612" role="radio" can-send="true" can-recieve="true" component-id="r612Agent">
+        <Description>Описание P-612</Description>
+        <Ranges>
+            <Range id="dkmv" />
+            <Range id="sv" />
+            <Range id="sdv" />
+        </Ranges>
+        <MediaTypes>            
+            <MediaType id="control"/>           
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="r693" label="ВПС" role="radio" can-send="false" can-recieve="true" component-id="r693Agent">
+        <Description>Описание P-693</Description>
+        <Ranges>
+            <Range id="mv2dmv1" />
+            <Range id="mv1" />
+            <Range id="dkmv" />
+            <Range id="sv" />
+            <Range id="sdv" />
+        </Ranges>
+        <MediaTypes>
+            <MediaType id="audio" />
+            <MediaType id="telecode" />
+            <MediaType id="text" />      
+            <MediaType id="control" />              
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="r774" label="P-774" role="radio" can-send="false" can-recieve="true" component-id="r774Agent">
+        <Description>СДВ радиоприемник Р-774 СД1.1</Description>
+        <Ranges>
+            <Range id="mv2dmv1" />
+            <Range id="mv1" />
+            <Range id="dkmv" />
+            <Range id="sv" />
+            <Range id="sdv" />
+        </Ranges>
+        <MediaTypes>           
+            <MediaType id="audio" />
+            <MediaType id="telecode" />
+            <MediaType id="text" />      
+            <MediaType id="control" />               
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="r793" label="ССС Р-793М" role="radio" can-send="true" can-recieve="true" component-id="r793Agent">
+        <Description>Станция спутниковой связи Р-793М</Description>
+        <Ranges>
+            <Range id="mv2dmv1" />
+            <Range id="mv1" />
+            <Range id="dkmv" />
+            <Range id="sv" />
+            <Range id="sdv" />
+        </Ranges>
+        <MediaTypes>
+            <MediaType id="audio" />
+            <MediaType id="telecode" />
+            <MediaType id="text" />      
+            <MediaType id="control" />       
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="r794" label="ВПС" role="radio" can-send="true" can-recieve="true" component-id="r794Agent">
+        <Description>Выносной пульт связи</Description>
+        <Ranges>
+            <Range id="mv2dmv1" />
+            <Range id="mv1" />
+            <Range id="dkmv" />
+            <Range id="sv" />
+            <Range id="sdv" />
+        </Ranges>
+        <MediaTypes>
+               <MediaType id="audio" />
+            <MediaType id="telecode" />
+            <MediaType id="text" />      
+            <MediaType id="control" />                   
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="k638" label="K-638" role="antenna" can-send="true" can-recieve="true" component-id="k638Agent">
+        <Description>Описание K-638</Description>
+        <Ranges>
+            <Range id="mv2dmv1" />
+            <Range id="mv1" />
+            <Range id="dkmv" />
+            <Range id="sv" />
+            <Range id="sdv" />
+        </Ranges>
+        <MediaTypes>
+             <MediaType id="audio" />
+            <MediaType id="telecode" />
+            <MediaType id="text" />      
+            <MediaType id="control" />       
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="neptunukv" label="ВПС" role="antenna" can-send="true" can-recieve="true" component-id="neptunukvAgent">
+        <Description>Описание neptunukv</Description>
+        <Ranges>
+            <Range id="mv2dmv1" />
+            <Range id="mv1" />
+        </Ranges>
+        <MediaTypes>
+             <MediaType id="audio" />
+            <MediaType id="telecode" />
+            <MediaType id="text" />      
+            <MediaType id="control" />             
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="k678" label="К-678" role="antenna" can-send="true" can-recieve="true" component-id="k638Agent">
+        <Description>Описание К-678</Description>
+        <Ranges>
+            <Range id="mv2dmv1" />
+            <Range id="mv1" />
+        </Ranges>
+        <MediaTypes>
+              <MediaType id="audio" />
+            <MediaType id="telecode" />
+            <MediaType id="text" />      
+            <MediaType id="control" />             
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="aczia-sdv" label="Акция-СДВ" role="antenna" can-send="true" can-recieve="true" component-id="neptunukvAgent">
+        <Description>Описание  Акция-СДВ</Description>
+        <Ranges>
+            <Range id="dkmv" />
+            <Range id="sv" />
+            <Range id="sdv" />
+        </Ranges>
+        <MediaTypes>
+            <MediaType id="audio" />
+            <MediaType id="telecode" />
+            <MediaType id="text" />      
+            <MediaType id="control" />       
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="neptunafu" label="Нпт-АФУ" role="antenna" can-send="true" can-recieve="true" component-id="neptunafuAgent">
+        <Description>Выносной пульт связи</Description>
+        <Ranges>
+            <Range id="dkmv" />
+            <Range id="sv" />
+            <Range id="sdv" />
+        </Ranges>
+        <MediaTypes>
+              <MediaType id="audio" />
+            <MediaType id="telecode" />
+            <MediaType id="text" />      
+            <MediaType id="control" />         
+        </MediaTypes>
+    </DeviceType>
+    <DeviceType id="no-our-device" label="Не наше устройство" role="endpoint" can-send="true" can-recieve="true" component-id="">
+        <Description>Неизвестное устройство</Description>
+        <Ranges>
+            <Range id="dkmv" />
+            <Range id="sv" />
+            <Range id="sdv" />
+        </Ranges>
+        <MediaTypes>
+            <MediaType id="audio" />
+            <MediaType id="telecode" />
+            <MediaType id="text" />      
+            <MediaType id="control" />         
+        </MediaTypes>
+    </DeviceType>
+</ExtraDeviceTypes>

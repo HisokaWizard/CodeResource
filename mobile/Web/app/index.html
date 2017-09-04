@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <title></title>
+    <link  rel='stylesheet' type='text/css' href='lib/fonts/fonts.css'/>
+    <link  rel='stylesheet' type='text/css' href='app/base.css'/>
+    <link  rel="stylesheet" type="text/css" href='app/app.css'/>
+    <script src='lib/angular/xml2json.js'></script>
+    <script src='lib/polyfills/json/json-serialization.js'></script>
+    <script src="lib/polyfills/es5/es5-shim.js"></script>
+    <script src="lib/polyfills/es5/es5-sham.js"></script>
+    <script src="lib/polyfills/canvas-text/canvas.text.js"></script>
+    <script src="lib/polyfills/canvas-text/optimer-normal-normal.js"></script>
+    <script src="lib/polyfills/object-assign/object-assign.js"></script>
+  </head>
+  <body ng-app="app" class="b-general-background-color">
+
+    <nav ng-include="'app/bar/bar.html'" class="b-navbar b-navbar-default b-navbar-fixed-top b-header-font b-header-color">
+    </nav>
+
+    <div ng-view></div>
+    <script src='lib/angular/angular.js'></script>
+    <script src='lib/angular/angular-route.js'></script>
+    <script src='lib/ocLazyLoad/ocLazyLoad.js'></script>
+
+    <script src='app/app.js'></script>
+
+    <script src='app/components/breadcrumbs/breadcrumbs.js'></script>
+    <script src='app/components/modules/modules.js'></script>
+    <script src='app/components/modules/modules-service.js'></script>
+    <script src='app/components/location/location.js'></script>
+
+    <script src='app/alarm-log/alarm-log.js'></script>
+    <script src='app/alarm-log/alarm-log-controller.js'></script>
+    <script src='app/components/breadcrumbs/breadcrumbs-controller.js'></script>
+    <script src='app/alarm-log/alarm-log-service.js'></script>
+    <script src='app/bar/bar.js'></script>
+    <script src='app/bar/bar-controller.js'></script>
+
+    <script src='app/components/request/request.js'></script>
+    <script src='app/components/event-system/event-system.js'></script>
+    <script src='app/components/event-system/events/events.js'></script>
+    <script src='app/components/event-system/handlers/handlers.js'></script>
+    <script src='app/components/scheme/scheme.js'></script>
+    <script src='app/components/navigation/navigation.js'></script>
+    <script src='app/components/event-system/callbacks/callbacks.js'></script>
+    <script src='app/components/queue/queue.js'></script>
+    <script src='app/components/cache/cache.js'></script>
+
+    <script src='app/components/mvvm/mvvm.js'></script>
+    <script src='app/components/resources/resources.js'></script>
+
+    <script src='app/components/event-system/model-es-service.js'></script>
+    <script src='app/components/event-system/view-model-es-service.js'></script>
+    <script src='app/components/event-system/client-es-service.js'></script>
+    <script src='app/components/location/location-service.js'></script>
+    <script src='app/components/resources/resource-service.js'></script>
+    <script src='app/components/scheme/scheme-service.js'></script>
+    <script src='app/components/scheme/mouse-event-service.js'></script>
+    <script src='app/components/scheme/node-services/node-device-service.js'></script>
+    <script src='app/components/scheme/node-services/node-transit-service.js'></script>
+    <script src='app/components/scheme/node-services/node-group-service.js'></script>
+    <script src='app/components/scheme/node-services/node-location-service.js'></script>
+    <script src='app/components/scheme/node-services/node-port-service.js'></script>
+    <script src='app/components/scheme/node-services/node-component-service.js'></script>
+    <script src='app/components/scheme/scheme-obj/scheme-obj-service.js'></script>
+    <script src='app/components/navigation/navigation-service.js'></script>
+    <script src='app/components/cache/cache-service.js'></script>
+
+    <script src='app/components/event-system/callbacks/backend-data-changed-callback-factory.js'></script>
+    <script src='app/components/event-system/callbacks/fail-response-callback-factory.js'></script>
+    <script src='app/components/event-system/callbacks/get-callback-factory.js'></script>
+    <script src='app/components/event-system/callbacks/model-sent-callback-factory.js'></script>
+    <script src='app/components/event-system/callbacks/model-update-callback-factory.js'></script>
+    <script src='app/components/event-system/callbacks/put-callback-factory.js'></script>
+    <script src='app/components/event-system/callbacks/success-response-callback-factory.js'></script>
+    <script src='app/components/event-system/callbacks/view-model-init-callback-factory.js'></script>
+    <script src='app/components/event-system/callbacks/delete-callback-factory.js'></script>
+
+    <script src='app/components/event-system/events/backend-data-changed-event-factory.js'></script>
+    <script src='app/components/event-system/events/fail-response-event-factory.js'></script>
+    <script src='app/components/event-system/events/get-event-factory.js'></script>
+    <script src='app/components/event-system/events/delete-event-factory.js'></script>
+    <script src='app/components/event-system/events/model-sent-event-factory.js'></script>
+    <script src='app/components/event-system/events/model-update-event-factory.js'></script>
+    <script src='app/components/event-system/events/put-event-factory.js'></script>
+    <script src='app/components/event-system/events/success-response-event-factory.js'></script>
+    <script src='app/components/event-system/events/view-model-init-event-factory.js'></script>
+
+    <script src='app/components/event-system/handlers/handler-factory.js'></script>
+    <script src='app/components/event-system/handlers/backend-data-changed-handler-factory.js'></script>
+    <script src='app/components/event-system/handlers/fail-response-handler-factory.js'></script>
+    <script src='app/components/event-system/handlers/get-handler-factory.js'></script>
+    <script src='app/components/event-system/handlers/model-sent-handler-factory.js'></script>
+    <script src='app/components/event-system/handlers/model-update-handler-factory.js'></script>
+    <script src='app/components/event-system/handlers/put-handler-factory.js'></script>
+    <script src='app/components/event-system/handlers/success-response-handler-factory.js'></script>
+    <script src='app/components/event-system/handlers/view-model-init-handler-factory.js'></script>
+    <script src='app/components/event-system/handlers/delete-handler-factory.js'></script>
+    <script src='app/components/request/get-factory.js'></script>
+    <script src='app/components/request/put-factory.js'></script>
+    <script src='app/components/request/delete-factory.js'></script>
+    <script src='app/components/request/post-factory.js'></script>
+	  <script src='app/components/queue/queue-factory.js'></script>
+
+    <script src="app/components/scheme/figures/square-factory.js"></script>
+    <script src="app/components/scheme/figures/image-factory.js"></script>
+    <script src="app/components/scheme/figures/circle-factory.js"></script>
+    <script src="app/components/scheme/figures/line-factory.js"></script>
+
+    <script src='app/components/mvvm/model-factory.js'></script>
+    <script src='app/components/mvvm/view-model-factory.js'></script>
+
+  </body>
+</html>

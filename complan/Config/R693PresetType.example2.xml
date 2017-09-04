@@ -1,0 +1,19 @@
+﻿<PresetType>
+  <Id>PartnerR693</Id>
+  <UriTemplate>http://{host-address}/restconf/data/r693-conf/ch={channel}</UriTemplate>
+  <Description>Предустановка R693 для Партнёра</Description>
+  <AllowedHosts><HostType>r693</HostType></AllowedHosts>
+  <PresetList>
+    <Preset id="R693_preset_5MHz">
+      <ch>
+        <frq>5000000</frq>
+      </ch>
+    </Preset>
+    <Preset id="R693_preset_5p5MHz">
+    <ch>
+      <frq>5500000</frq>
+    </ch>
+    </Preset>
+
+  </PresetList>
+</PresetType>

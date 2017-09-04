@@ -1,0 +1,11 @@
+﻿<PresetType>
+  <Id>DummyPreset</Id>
+  <!-- host-address это заглушка на место которой будет подставлен адрес конкретного хоста -->
+  <UriTemplate>http://{host-address}/restconf/data</UriTemplate>
+  <Description>Предустановка ППИ</Description>
+  <AllowedHosts><HostType>iconverter</HostType></AllowedHosts>
+  <PresetList>
+    <Preset id="dummy">	
+    </Preset>
+  </PresetList>
+</PresetType>

@@ -1,0 +1,11 @@
+﻿<PresetManagerData>
+<PresetTypes>
+	<PresetType file="R774PresetType.xml" />
+	<PresetType file="R612PresetType.xml" />
+	<PresetType file="IConverterPresetType.xml" />
+    <PresetType file="DummyPresetType.xml" />
+</PresetTypes>
+
+<CompositePresets/>
+
+</PresetManagerData>

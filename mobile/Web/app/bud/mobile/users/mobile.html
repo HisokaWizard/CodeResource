@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<section ng-controller="MobileController as ctrl">
+    <div ng-include="'app/components/breadcrumbs/breadcrumbs.html'"></div>
+    <div class="mob-double-colons">
+
+        <!--<ul id="breadcrumbs-one">-->
+            <!--<li><a href="#/mobile" ng-bind="'ГЛАВНАЯ'"></a></li>-->
+        <!--</ul>-->
+      <!--<div class="b-row">-->
+        <!--<div class="b-col-12">-->
+          <!--<div ng-controller="breadcrumbsController as bCtrl" ng-init="bCtrl.nipOff(ctrl.breadcrumb)" class="mob-breadcrumbs">-->
+            <!--/<div ng-repeat="(i,crumb) in bCtrl.breadcrumbs track by $index" class="b-breadcrumbs-display">-->
+            <!--<a ng-href="{{crumb.uri}}" ng-bind="crumb.label" class="b-breadcrumbs-space"></a>-->
+            <!--<span ng-hide="i+1 == bCtrl.breadcrumbsLength">/</span>-->
+          <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+        <div ng-bind="ctrl.ReplaceUserParams()"></div>
+        <div class="b-col-10">
+            <div class="mob-left-panel">
+
+                <div class="b-col-12 mob-font-title-left-panel">
+                    <div class="b-col-10">
+                        <span class="b-text-left" ng-bind="ctrl.translate('MobileTitleName')"></span>
+                    </div>
+                    <div class="b-col-2 b-text-right">
+                        <div class="b-btn-group">
+                            <button class="b-btn b-btn-default table-button-icon-enable" ng-disabled="true" ng-click="ctrl.ToTable()"></button>
+                            <button class="b-btn b-btn-default scheme-button-icon-enable" ng-click="ctrl.ToScheme()"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="b-col-12 mob-accordion-table-scroll">
+
+                    <div class="mob-table-accordion-position mob-title-tr-accordion">
+                        <div class="b-col-7 b-text-left first-td-size">
+                            <span ng-bind="ctrl.translate('user')"></span>
+                        </div>
+                        <div class="b-col-1 b-text-center second-td-size">
+                        </div>
+                        <div class="b-col-1 b-text-center third-td-size">
+                            <span  ng-bind="ctrl.translate('position')"></span>
+                        </div>
+                        <div class="b-col-1 b-text-center four-td-size">
+                            <span ng-bind="ctrl.translate('pulse')"></span>
+                        </div>
+                        <div class="b-col-2 b-text-center five-td-size">
+                            <span ng-bind="ctrl.translate('active')"></span>
+                        </div>
+                    </div>
+
+                    <div ng-model="accordion" ng-init="accordion={cTab:-1}" class="cp-services-font">
+                        <div ng-repeat="user in ctrl.UTable() | orderBy:'user_name'">
+                            <div ng-click="accordion.cTab=$index"
+                                 ng-class="{'b-accordion' : true, 'b-active-accordion' : $index == accordion.cTab}">
+                                <div class="b-row cp-services-font">
+                                    <div class="b-col-7 first-td-size">
+                                        <span class="b-text-left" ng-bind="user.user_name"></span>
+                                    </div>
+                                    <div class="b-col-1 b-text-center second-td-size">
+                                        <span ng-if="ctrl.AllIsWork(user)">
+                                            <img src="app/bud/mobile/img/users/AllRight.png">
+                                        </span>
+                                        <span ng-if="ctrl.AnyProblemInWork(user)">
+                                            <img src="app/bud/mobile/img/users/AnyProblem.png">
+                                        </span>
+                                        <span ng-if="ctrl.SmrProblem(user)">
+                                            <img src="app/bud/mobile/img/users/SmrNotWork.png">
+                                        </span>
+                                        <span ng-if="ctrl.UserHaveNotDevice(user)">
+                                            <img src="app/bud/mobile/img/users/NotDevice.png">
+                                        </span>
+                                    </div>
+                                    <div class="b-col-1 b-text-center third-td-size">
+                                        <div ng-if="0!=ctrl.user[user.id_to_list].endpoint.length && !ctrl.SmrProblem(user)">
+                                            <span ng-bind="ctrl.RealLocation(ctrl.state[ctrl.user[user.id_to_list].endpoint[0]].location)"></span>
+                                        </div>
+                                        <div ng-if="0==ctrl.user[user.id_to_list].endpoint.length || ctrl.SmrProblem(user)">
+                                            <span>-</span>
+                                        </div>
+                                    </div>
+                                    <div class="b-col-1 b-text-center four-td-size">
+                                        <div ng-if="0!=ctrl.user[user.id_to_list].endpoint.length && !ctrl.SmrProblem(user)">
+                                            <span ng-bind="ctrl.state[ctrl.user[user.id_to_list].endpoint[0]].pulse"></span>
+                                        </div>
+                                        <div ng-if="0==ctrl.user[user.id_to_list].endpoint.length || ctrl.SmrProblem(user)">
+                                            <span>-</span>
+                                        </div>
+                                    </div>
+                                    <div class="b-col-2 b-text-center five-td-size">
+                                        <div ng-if="0!=ctrl.user[user.id_to_list].endpoint.length && !ctrl.SmrProblem(user)">
+                                            <span ng-if="ctrl.DeviceMoving(ctrl.user[user.id_to_list].endpoint[0])" ng-bind="ctrl.translate('movement_yes')"></span>
+                                            <span ng-if="!ctrl.DeviceMoving(ctrl.user[user.id_to_list].endpoint[0])" ng-bind="ctrl.translate('movement_no')"></span>
+                                        </div>
+                                        <div ng-if="0==ctrl.user[user.id_to_list].endpoint.length || ctrl.SmrProblem(user)">
+                                            <span>-</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-class="{'b-accordion-body' : true, 'b-accordion-show' : $index == accordion.cTab, 'cp-services-accordion-body-height' : $index == accordion.cTab}">
+                                <div class="b-col-3 b-text-center">
+                                    <img id="user-look-like" src="app/bud/mobile/img/users/{{user.id_to_list}}.png"><br>
+                                    <a class="mob-font-accordion-additionally" ng-href="#/user/{{user.id_to_list}}" ng-bind="ctrl.translate('additionally')"></a>
+                                </div>
+                                <div class="b-col-9 mob-font-accordion-open">
+
+                                    <div ng-if="ctrl.SmrProblem(user)">
+                                        <div class="mob-td-tr-bioparams" ng-bind="'Устройства связи вышли из строя. Данные пользователя в данный момент получить невозможно.'"></div>
+                                    </div>
+
+                                    <div ng-if="0 == ctrl.user[user.id_to_list].endpoint.length" class="mob-table-bioparams">
+                                        <div class="mob-td-tr-bioparams" ng-bind="'Отсутсвуют устройства связи. Данные пользователя получить не возможно.'"></div>
+                                    </div>
+
+                                    <div ng-if="1 < ctrl.user[user.id_to_list].endpoint.length && !ctrl.SmrProblem(user)" class="mob-table-bioparams">
+                                        <div class="b-btn-group">
+                                            <button ng-repeat="item in ctrl.user[user.id_to_list].endpoint" class="b-btn b-btn-default mob-device" ng-click="ctrl.DoActiveItem(item)">
+                                                <span class="mob-button-bioparams" ng-bind="'Устройство: '+ctrl.data[item].label"></span>
+                                            </button>
+                                        </div>
+                                        <div ng-if="''==ctrl.Active_Item">
+                                            <table class="b-table-bordered">
+                                                <tr>
+                                                    <td>
+                                                        <div class="mob-td-tr-bioparams" ng-bind="ctrl.translate('position')+': '+ctrl.RealLocation(ctrl.state[ctrl.user[user.id_to_list].endpoint[0]].location)"></div>
+                                                        <div class="mob-td-tr-bioparams">
+                                                            <span ng-if="ctrl.DeviceMoving(ctrl.user[user.id_to_list].endpoint[0])" ng-bind="ctrl.translate('active')+': '+ctrl.translate('movement_yes')"></span>
+                                                            <span ng-if="!ctrl.DeviceMoving(ctrl.user[user.id_to_list].endpoint[0])" ng-bind="ctrl.translate('active')+': '+ctrl.translate('movement_no')"></span>
+                                                        </div>
+                                                        <div class="mob-td-tr-bioparams" ng-bind="ctrl.translate('blood_oxygen_saturation')+' '+ctrl.state[ctrl.user[user.id_to_list].endpoint[0]].blood"></div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="mob-td-tr-bioparams" ng-bind="ctrl.translate('temperature')+' '+ctrl.state[ctrl.user[user.id_to_list].endpoint[0]].temperature"></div>
+                                                        <div class="mob-td-tr-bioparams" ng-bind="ctrl.translate('pressure')+' '+ctrl.state[ctrl.user[user.id_to_list].endpoint[0]].bp"></div>
+                                                        <div class="mob-td-tr-bioparams" ng-bind="ctrl.translate('pulse')+': '+ctrl.state[ctrl.user[user.id_to_list].endpoint[0]].pulse"></div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div ng-if="''!=ctrl.Active_Item">
+                                            <table class="b-table-bordered">
+                                                <tr>
+                                                    <td>
+                                                        <div class="mob-td-tr-bioparams" ng-bind="ctrl.translate('position')+': '+ctrl.RealLocation(ctrl.state[ctrl.Active_Item].location)"></div>
+                                                        <div class="mob-td-tr-bioparams">
+                                                            <span ng-if="ctrl.DeviceMoving(ctrl.Active_Item)" ng-bind="ctrl.translate('active')+': '+ctrl.translate('movement_yes')"></span>
+                                                            <span ng-if="!ctrl.DeviceMoving(ctrl.Active_Item)" ng-bind="ctrl.translate('active')+': '+ctrl.translate('movement_no')"></span>
+                                                        </div>
+                                                        <div class="mob-td-tr-bioparams" ng-bind="ctrl.translate('blood_oxygen_saturation')+' '+ctrl.state[ctrl.Active_Item].blood"></div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="mob-td-tr-bioparams" ng-bind="ctrl.translate('temperature')+' '+ctrl.state[ctrl.Active_Item].temperature"></div>
+                                                        <div class="mob-td-tr-bioparams" ng-bind="ctrl.translate('pressure')+' '+ctrl.state[ctrl.Active_Item].bp"></div>
+                                                        <div class="mob-td-tr-bioparams" ng-bind="ctrl.translate('pulse')+': '+ctrl.state[ctrl.Active_Item].pulse"></div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div ng-if="1==ctrl.user[user.id_to_list].endpoint.length && !ctrl.SmrProblem(user)" class="mob-table-bioparams">
+                                        <div class="mob-label-device" ng-bind="'Устройство: '+ctrl.data[ctrl.user[user.id_to_list].endpoint[0]].label"></div>
+                                        <table class="b-table-bordered">
+                                            <tr>
+                                                <td>
+                                                    <div class="mob-td-tr-bioparams" ng-bind="ctrl.translate('position')+': '+ctrl.RealLocation(ctrl.state[ctrl.user[user.id_to_list].endpoint[0]].location)"></div>
+                                                    <div class="mob-td-tr-bioparams">
+                                                        <span ng-if="ctrl.DeviceMoving(ctrl.user[user.id_to_list].endpoint[0])" ng-bind="ctrl.translate('active')+': '+ctrl.translate('movement_yes')"></span>
+                                                        <span ng-if="!ctrl.DeviceMoving(ctrl.user[user.id_to_list].endpoint[0])" ng-bind="ctrl.translate('active')+': '+ctrl.translate('movement_no')"></span>
+                                                    </div>
+                                                    <div class="mob-td-tr-bioparams" ng-bind="ctrl.translate('blood_oxygen_saturation')+' '+ctrl.state[ctrl.user[user.id_to_list].endpoint[0]].blood"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="mob-td-tr-bioparams" ng-bind="ctrl.translate('temperature')+' '+ctrl.state[ctrl.user[user.id_to_list].endpoint[0]].temperature"></div>
+                                                    <div class="mob-td-tr-bioparams" ng-bind="ctrl.translate('pressure')+' '+ctrl.state[ctrl.user[user.id_to_list].endpoint[0]].bp"></div>
+                                                    <div class="mob-td-tr-bioparams" ng-bind="ctrl.translate('pulse')+': '+ctrl.state[ctrl.user[user.id_to_list].endpoint[0]].pulse"></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="b-col-2">
+            <div class="mob-right-panel">
+                <div class="mob-userlist-font" ng-bind="'Поиск пользователей:'"></div>
+                <input class="search-user" type="text" ng-model="text"><br>
+                <div class="b-row b-col-12 mob-list-scroll">
+                    <div class="mob-userlist-font-with-margin-top" ng-repeat="user in ctrl.UserName() | orderBy:'+user_name' | filter:text">
+                        <a class="mob-userlist-font" ng-href="#/user/{{user.id_to_list}}" ng-bind="user.user_name"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

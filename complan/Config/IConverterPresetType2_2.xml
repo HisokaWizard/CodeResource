@@ -1,0 +1,52 @@
+﻿<PresetType>
+  <Id>IConverterPreset2_2</Id>
+  <UriTemplate>http://{host-address}/restconf/data/iconverter2</UriTemplate>
+  <Description>Предустановка 1-ого модуля ППИ</Description>
+  <AllowedHosts><HostType>iconverter</HostType></AllowedHosts>
+  <PresetList>
+    <Preset id="IConverter_dummy">
+    </Preset>
+    
+    <Preset id="IConverter2_connect">
+	<iconverter2>
+	    <connection>
+		<interface-id>0</interface-id>
+		<remote-port>{port1}</remote-port>
+	    </connection>
+	    <connection>
+		<interface-id>1</interface-id>
+		<remote-port>{port2}</remote-port>
+	    </connection>
+	    <connection>
+		<interface-id>2</interface-id>
+		<remote-port>{port3}</remote-port>
+	    </connection>
+	    <connection>
+		<interface-id>3</interface-id>
+		<remote-port>{port4}</remote-port>
+	    </connection>
+	</iconverter2>
+    </Preset>
+    <Preset id="IConverter2_reset">
+	<iconverter2>
+	    <connection>
+		<interface-id>0</interface-id>
+		<remote-port>0</remote-port>
+	    </connection>
+	    <connection>
+		<interface-id>1</interface-id>
+		<remote-port>0</remote-port>
+	    </connection>
+	    <connection>
+		<interface-id>2</interface-id>
+		<remote-port>0</remote-port>
+	    </connection>
+	    <connection>
+		<interface-id>3</interface-id>
+		<remote-port>0</remote-port>
+	    </connection>
+	</iconverter2>
+    </Preset>
+
+  </PresetList>
+</PresetType>

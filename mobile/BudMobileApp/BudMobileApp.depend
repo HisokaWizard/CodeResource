@@ -1,0 +1,1005 @@
+# depslib dependency file v1.0
+1495443522 source:e:\trunk\cacos\buds\budmobile\budmobileapp\sources\endpoint.cpp
+	"precomp.h"
+	<JsonCpp/json.h>
+	"EndPoint.h"
+
+1495443523 e:\trunk\cacos\buds\budmobile\budmobileapp\precomp.h
+	<amgDefs.h>
+	<math.h>
+	<sstream>
+	<Debug/amgDebug.h>
+	<amgSystem.h>
+	<amgAString.h>
+	<Link/TUri.h>
+	<Web/sclHttpWebInterface.h>
+	<Web/sclHttpSections.h>
+	"XML/amgXmlNode.h"
+	"XML/amgXmlDocument.h"
+	"XML/amgXmlPrinter.h"
+	"XML/amgXmlHandle.h"
+
+1495440568 e:\trunk\amg\amglib\include\amgdefs.h
+	<sdkddkver.h>
+	<winsock2.h>
+	<windows.h>
+	<vcl.h>
+	<wx/wxprec.h>
+	<wx/wx.h>
+	<wx/wx.h>
+	<afxwin.h>
+	<afxext.h>
+	<stddef.h>
+	<locale>
+	<string>
+	<cstring>
+	<typeinfo>
+	<type_traits>
+	<errno.h>
+	<sys/types.h>
+	<mmsystem.h>
+	<direct.h>
+	<dir.h>
+	<wx/wxprec.h>
+	<errno.h>
+	<sys/types.h>
+	<mmsystem.h>
+	<direct.h>
+	<dir.h>
+	<errno.h>
+	<sys/types.h>
+	<mmsystem.h>
+	<direct.h>
+	<dir.h>
+	<wx/wxprec.h>
+	<wx/defs.h>
+	<wx/string.h>
+	<assert.h>
+	<iconv.h>
+	<stdint.h>
+	<limits.h>
+	<limits.h>
+	<errno.h>
+	<sys/types.h>
+	<mmsystem.h>
+	<direct.h>
+	<dir.h>
+	<wx/wxprec.h>
+	<wx/wx.h>
+
+1492688637 e:\trunk\amg\amglib\include\debug\amgdebug.h
+	"Debug/amgCDebug.h"
+
+1492688637 e:\trunk\amg\amglib\include\debug\amgcdebug.h
+	"TListOfPointers.h"
+	"TListOfStrings.h"
+	"Debug/amgIDebug.h"
+	"Threads/amgThread.h"
+	"Threads/TThreadPointersList.h"
+
+1492688637 e:\trunk\amg\amglib\include\tlistofpointers.h
+	"amgErrors.h"
+	<vector>
+	<algorithm>
+	"amgSystem.h"
+	"TSmartCollection.h"
+
+1492688637 e:\trunk\amg\amglib\include\amgerrors.h
+	"amgDefs.h"
+	<typeinfo>
+	"amgSmartObject.h"
+	"amgString.h"
+	"Tree/AttrKeyName.h"
+	"TDateAndTime.h"
+	"amgSources.h"
+
+1492688637 e:\trunk\amg\amglib\include\amgsmartobject.h
+	"amgDefs.h"
+	"amgObject.h"
+	"amgTemplate.h"
+
+1492688637 e:\trunk\amg\amglib\include\amgobject.h
+	"amgDefs.h"
+	"Interlock/Interlock.h"
+
+1492688637 e:\trunk\amg\amglib\include\interlock\interlock.h
+	"amgDefs.h"
+	<atomic>
+	<pthread.h>
+
+1492688637 e:\trunk\amg\amglib\include\amgtemplate.h
+	"amgDefs.h"
+	<type_traits>
+
+1492688637 e:\trunk\amg\amglib\include\amgstring.h
+	"amgDefs.h"
+	<locale>
+	<string>
+	<stdint.h>
+	"amgTChar.h"
+	"amgAString.h"
+	"amgWString.h"
+
+1492688637 e:\trunk\amg\amglib\include\amgtchar.h
+	<wchar.h>
+
+1492688637 e:\trunk\amg\amglib\include\amgastring.h
+	"amgDefs.h"
+	<locale>
+	<string>
+	<System.hpp>
+	"amgObject.h"
+	"amgTemplate.h"
+	<wx/string.h>
+	<cstringt.h>
+	<algorithm>
+
+1492688637 e:\trunk\amg\amglib\include\amgwstring.h
+	"amgDefs.h"
+	<locale>
+	<string>
+	"amgObject.h"
+	"amgTemplate.h"
+	"amgAString.h"
+
+1492688637 e:\trunk\amg\amglib\include\tree\attrkeyname.h
+	"amgDefs.h"
+	"amgString.h"
+	"amgProperty.h"
+	"TListOfStrings.h"
+
+1492688637 e:\trunk\amg\amglib\include\amgproperty.h
+	"amgDefs.h"
+	"amgSmartObject.h"
+	"amgClosure.h"
+
+1492688637 e:\trunk\amg\amglib\include\amgclosure.h
+	"amgDefs.h"
+	"amgSmartObject.h"
+	"amgString.h"
+
+1492688637 e:\trunk\amg\amglib\include\tlistofstrings.h
+	"amgDefs.h"
+	<vector>
+	<System.hpp>
+	"amgString.h"
+
+1492688637 e:\trunk\amg\amglib\include\tdateandtime.h
+	"amgDefs.h"
+	<stdint.h>
+	<limits.h>
+	<time.h>
+	<sys/time.h>
+	<winsock2.h>
+	<windows.h>
+	<errno.h>
+	<sys/types.h>
+	<mmsystem.h>
+	<direct.h>
+	<dir.h>
+	"amgString.h"
+
+1492688637 e:\trunk\amg\amglib\include\amgsources.h
+	"amgDefs.h"
+	<string>
+	<map>
+	"amgSmartObject.h"
+
+1500468217 e:\trunk\amg\amglib\include\amgsystem.h
+	"amgDefs.h"
+	"amgString.h"
+	<typeinfo>
+	<exception>
+	<stdlib.h>
+	<stdio.h>
+	<new>
+
+1492688637 e:\trunk\amg\amglib\include\tsmartcollection.h
+
+1492688637 e:\trunk\amg\amglib\include\debug\amgidebug.h
+	"amgDefs.h"
+	<map>
+	<string>
+	"amgString.h"
+	"amgErrors.h"
+	"MessageThread/amgMessageThread.h"
+	"Tree/TMemoryTree.h"
+	"Configuration/TConfig.h"
+	"XML/amgXmlDocument.h"
+	"Configuration/RDebugConfig.h"
+
+1492688637 e:\trunk\amg\amglib\include\messagethread\amgmessagethread.h
+	"Threads/amgThread.h"
+	"Message/amgMessage.h"
+	"TTimer/TTimer.h"
+
+1492688637 e:\trunk\amg\amglib\include\threads\amgthread.h
+	"amgProperty.h"
+	"amgErrors.h"
+	"Threads/amgCriticalSection.h"
+	"Threads/RUsageStatistics.h"
+
+1492688637 e:\trunk\amg\amglib\include\threads\amgcriticalsection.h
+	"amgProperty.h"
+	"amgErrors.h"
+
+1492688637 e:\trunk\amg\amglib\include\threads\rusagestatistics.h
+	"Threads/DateTimeUtils.h"
+	<string>
+	<sys/resource.h>
+	<windows.h>
+
+1492688637 e:\trunk\amg\amglib\include\threads\datetimeutils.h
+	"amgDefs.h"
+	<sys/time.h>
+	<Winsock2.h>
+
+1492688637 e:\trunk\amg\amglib\include\message\amgmessage.h
+	"amgProperty.h"
+	"Threads/amgMutex.h"
+	"Threads/amgCriticalSection.h"
+	"Threads/amgCondition.h"
+	"Threads/amgBarrier.h"
+	<functional>
+	<future>
+	"Message/amgSimpleMessage.h"
+
+1492688637 e:\trunk\amg\amglib\include\threads\amgmutex.h
+	"amgString.h"
+	"amgProperty.h"
+	"amgErrors.h"
+
+1492688637 e:\trunk\amg\amglib\include\threads\amgcondition.h
+	"amgProperty.h"
+	"amgErrors.h"
+	"Threads/amgMutex.h"
+
+1492688637 e:\trunk\amg\amglib\include\threads\amgbarrier.h
+	"amgString.h"
+	"amgProperty.h"
+	"amgErrors.h"
+
+1492688637 e:\trunk\amg\amglib\include\message\amgsimplemessage.h
+	"Message/amgMessage.h"
+
+1492688637 e:\trunk\amg\amglib\include\ttimer\ttimer.h
+	"amgDefs.h"
+	"amgSmartObject.h"
+	"amgClosure.h"
+	"amgProperty.h"
+	"TDateAndTime.h"
+	"Message/amgMessage.h"
+
+1492688637 e:\trunk\amg\amglib\include\tree\tmemorytree.h
+	"amgDefs.h"
+	"amgString.h"
+	"TListOfPointers.h"
+	"TListOfStrings.h"
+	"Tree/TCTree.h"
+	"Tree/MemoryAttr.h"
+
+1492688637 e:\trunk\amg\amglib\include\tree\tctree.h
+	"amgDefs.h"
+	"Tree/TITree.h"
+	"Tree/MemoryAttr.h"
+	"amgString.h"
+	"TListOfStrings.h"
+	"Configuration/TConfigMessages.h"
+
+1492688637 e:\trunk\amg\amglib\include\tree\titree.h
+	"amgDefs.h"
+	"amgString.h"
+	"TListOfStrings.h"
+	"Tree/AttrKeyName.h"
+
+1492688637 e:\trunk\amg\amglib\include\tree\memoryattr.h
+	"amgDefs.h"
+	"amgString.h"
+	"TListOfStrings.h"
+
+1492688637 e:\trunk\amg\amglib\include\configuration\tconfigmessages.h
+	"amgDefs.h"
+	<winsock2.h>
+	<windows.h>
+	<errno.h>
+	<sys/types.h>
+	<mmsystem.h>
+	<direct.h>
+	<dir.h>
+	"TListOfPointers.h"
+	"TListOfStrings.h"
+	"amgErrors.h"
+
+1492688637 e:\trunk\amg\amglib\include\configuration\tconfig.h
+	"amgDefs.h"
+	<map>
+	"amgString.h"
+	"TListOfStrings.h"
+	"Configuration/TMemoryConfig.h"
+	"Tree/TMemoryTree.h"
+	"amgSystem.h"
+	"Configuration/TConfigMessages.h"
+	"TListOfPointers.h"
+	"TParamString.h"
+
+1492688637 e:\trunk\amg\amglib\include\configuration\tmemoryconfig.h
+	"amgDefs.h"
+	<map>
+	"amgString.h"
+	"TListOfStrings.h"
+	"Tree/TMemoryTree.h"
+	"Tree/NestedTree.h"
+	"amgSystem.h"
+
+1492688637 e:\trunk\amg\amglib\include\tree\nestedtree.h
+	"Tree/TCTree.h"
+	"TListOfPointers.h"
+	"amgString.h"
+	"Configuration/TConfigMessages.h"
+
+1492688637 e:\trunk\amg\amglib\include\tparamstring.h
+	"amgString.h"
+
+1492688637 e:\trunk\amg\amglib\include\xml\amgxmldocument.h
+	"amgDefs.h"
+	"XML/amgXmlNode.h"
+	"XML/amgXmlNodeset.h"
+	"XML/amgXmlElement.h"
+	"amgFile.h"
+	"Configuration/TConfig.h"
+
+1492688637 e:\trunk\amg\amglib\include\xml\amgxmlnode.h
+	"XML/amgXmlError.h"
+	"XML/amgXmlBase.h"
+	"THash.h"
+	"XML/amgXmlNodeset.h"
+
+1492688637 e:\trunk\amg\amglib\include\xml\amgxmlerror.h
+	"amgErrors.h"
+
+1492688637 e:\trunk\amg\amglib\include\xml\amgxmlbase.h
+	"amgDefs.h"
+	"amgString.h"
+	"amgBuffer.h"
+
+1492688637 e:\trunk\amg\amglib\include\amgbuffer.h
+	"amgDefs.h"
+	<limits>
+	"TListOfPointers.h"
+	"TRelevantObject.h"
+
+1492688637 e:\trunk\amg\amglib\include\trelevantobject.h
+	"amgDefs.h"
+	"amgObject.h"
+	"amgErrors.h"
+
+1492688637 e:\trunk\amg\amglib\include\thash.h
+	"amgDefs.h"
+	<map>
+	"amgObject.h"
+	"amgErrors.h"
+
+1492688637 e:\trunk\amg\amglib\include\xml\amgxmlnodeset.h
+	"amgDefs.h"
+	"TListOfPointers.h"
+	"amgString.h"
+
+1492688637 e:\trunk\amg\amglib\include\xml\amgxmlelement.h
+	"amgDefs.h"
+	"amgString.h"
+	"XML/amgXmlNode.h"
+	"XML/amgXmlAttribute.h"
+	"TListOfPointers.h"
+
+1492688637 e:\trunk\amg\amglib\include\xml\amgxmlattribute.h
+	"amgDefs.h"
+	"XML/amgXmlBase.h"
+	"amgProperty.h"
+
+1492688637 e:\trunk\amg\amglib\include\amgfile.h
+	"amgDefs.h"
+	"TListOfPointers.h"
+	"amgBuffer.h"
+	"Link/TPath.h"
+
+1492688637 e:\trunk\amg\amglib\include\link\tpath.h
+	"amgDefs.h"
+	"TListOfPointers.h"
+	"TRelevantObject.h"
+	"Link/TAddress.h"
+
+1492688637 e:\trunk\amg\amglib\include\link\taddress.h
+	"amgDefs.h"
+	"TListOfPointers.h"
+	"TRelevantObject.h"
+	"Threads/amgCriticalSection.h"
+
+1492688637 e:\trunk\amg\amglib\include\configuration\rdebugconfig.h
+	"amgDefs.h"
+	<stdexcept>
+	<string>
+	<map>
+	"Threads/amgCriticalSection.h"
+	"amgErrors.h"
+	"Threads/amgCriticalSection.h"
+
+1492688637 e:\trunk\amg\amglib\include\threads\tthreadpointerslist.h
+	"TListOfPointers.h"
+	"Threads/amgCriticalSection.h"
+	"Threads/TLockableObject.h"
+
+1492688637 e:\trunk\amg\amglib\include\threads\tlockableobject.h
+	"amgDefs.h"
+	"Threads/amgCriticalSection.h"
+	"Threads/amgThread.h"
+	"amgSmartObject.h"
+
+1492688637 e:\trunk\amg\amglib\include\link\turi.h
+	"amgDefs.h"
+	<list>
+	<set>
+	<map>
+	<string>
+	<memory>
+	"amgString.h"
+	"TStringHash.h"
+	"Link/TAddress.h"
+	"Link/TPath.h"
+
+1492688637 e:\trunk\amg\amglib\include\tstringhash.h
+	"amgDefs.h"
+	"THash.h"
+
+1492688506 e:\trunk\sclhttp\sclhttplib\include\web\sclhttpwebinterface.h
+	<amgDefs.h>
+	"HTTP/sclHttpServer.h"
+	"sclHttpCss.h"
+	"HTTP/sclHttpFileResource.h"
+	"HTTP/sclHttpProxy.h"
+
+1492688506 e:\trunk\sclhttp\sclhttplib\include\http\sclhttpserver.h
+	<amgDefs.h>
+	"HTTP/sclHttpParser.h"
+	<Text/sclTextUserAgent.h>
+	"Text/sclTextDispatcher.h"
+	"Text/sclContext.h"
+	"Text/sclAuth.h"
+	"HTTP/sclHttpMessage.h"
+
+1492688707 e:\trunk\amgscl\amgscllib\include\http\sclhttpparser.h
+	<amgDefs.h>
+	"Text/sclTextParser.h"
+
+1492688707 e:\trunk\amgscl\amgscllib\include\text\scltextparser.h
+	<amgDefs.h>
+	<Link/TILink.h>
+	<amgBuffer.h>
+	"sclStreamId.h"
+	"Text/sclTextMessage.h"
+	"Text/sclContext.h"
+	"sclDispatcher.h"
+	"sclSmartParameter.h"
+
+1502254522 e:\trunk\amg\amglib\include\link\tilink.h
+	"amgDefs.h"
+	"TStringRes.h"
+	"Link/TSystemLink.h"
+
+1492688637 e:\trunk\amg\amglib\include\tstringres.h
+	"amgDefs.h"
+	<map>
+	"amgString.h"
+	"Link/TPath.h"
+
+1500877239 e:\trunk\amg\amglib\include\link\tsystemlink.h
+	"amgDefs.h"
+	"Link/TSocketInfo.h"
+	"Threads/TLockableObject.h"
+	"Threads/TThreadPointersList.h"
+	"MessageThread/amgMessageThread.h"
+
+1492688637 e:\trunk\amg\amglib\include\link\tsocketinfo.h
+	"amgDefs.h"
+	<winsock2.h>
+	<windows.h>
+	<errno.h>
+	<sys/types.h>
+	<mmsystem.h>
+	<direct.h>
+	<dir.h>
+	<netdb.h>
+	<arpa/inet.h>
+	<fcntl.h>
+	<sys/select.h>
+	<sys/time.h>
+	<unistd.h>
+	<stdio.h>
+	<stdlib.h>
+	<linux/socket.h>
+	<sys/socket.h>
+	<sys/types.h>
+	<linux/types.h>
+	<linux/netlink.h>
+	<linux/rtnetlink.h>
+	<linux/kernel.h>
+	<netinet/in.h>
+	<netinet/tcp.h>
+	<netdb.h>
+	<errno.h>
+	<signal.h>
+	"TSpawnedObject.h"
+	"amgBuffer.h"
+	"Link/TAddress.h"
+
+1492688637 e:\trunk\amg\amglib\include\tspawnedobject.h
+	"amgDefs.h"
+	"amgObject.h"
+	"amgErrors.h"
+	"Threads/amgCriticalSection.h"
+
+1492688709 e:\trunk\amgscl\amgscllib\include\sclstreamid.h
+	<amgDefs.h>
+	<amgString.h>
+	<Link/TUri.h>
+
+1492688709 e:\trunk\amgscl\amgscllib\include\text\scltextmessage.h
+	<amgDefs.h>
+	<TStringHash.h>
+	"sclStreamId.h"
+	"sclMessage.h"
+	"sclSmartParameter.h"
+	"Text/sclTextBody.h"
+	"Text/sclHeaderFields.h"
+	<memory>
+
+1492688709 e:\trunk\amgscl\amgscllib\include\sclmessage.h
+	<amgDefs.h>
+	<amgString.h>
+	<MessageThread/amgMessageThread.h>
+	<TListOfStrings.h>
+	<Link/TSocketLink.h>
+	<TSpawnedObject.h>
+	<Threads/TLockableObject.h>
+	"sclStreamId.h"
+
+1492688637 e:\trunk\amg\amglib\include\link\tsocketlink.h
+	"Link/TThreadLink.h"
+
+1492688637 e:\trunk\amg\amglib\include\link\tthreadlink.h
+	"Link/TILink.h"
+	"TTimer/TTimer.h"
+	"THash.h"
+	<tuple>
+
+1492688706 e:\trunk\amgscl\amgscllib\include\sclsmartparameter.h
+	<amgDefs.h>
+	<TListOfPointers.h>
+
+1492688707 e:\trunk\amgscl\amgscllib\include\text\scltextbody.h
+	<iostream>
+	<amgDefs.h>
+	<amgString.h>
+	<TListOfPointers.h>
+	<amgFile.h>
+	<XML/amgXML.h>
+	"sclStreamId.h"
+	"Text/sclHeaderFields.h"
+
+1492688637 e:\trunk\amg\amglib\include\xml\amgxml.h
+	"amgDefs.h"
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	"XML/amgXmlAttribute.h"
+	"XML/amgXmlElement.h"
+	"XML/amgXmlComment.h"
+	"XML/amgXmlText.h"
+	"XML/amgXmlDeclaration.h"
+	"XML/amgXmlUnknown.h"
+	"XML/amgXmlDocument.h"
+	"XML/amgXmlHandle.h"
+
+1492688637 e:\trunk\amg\amglib\include\xml\amgxmlcomment.h
+	"amgDefs.h"
+	"XML/amgXmlNode.h"
+
+1492688637 e:\trunk\amg\amglib\include\xml\amgxmltext.h
+	"amgDefs.h"
+	"XML/amgXmlNode.h"
+
+1492688637 e:\trunk\amg\amglib\include\xml\amgxmldeclaration.h
+	"amgDefs.h"
+	"XML/amgXmlNode.h"
+
+1492688637 e:\trunk\amg\amglib\include\xml\amgxmlunknown.h
+	"amgDefs.h"
+	"XML/amgXmlNode.h"
+
+1492688637 e:\trunk\amg\amglib\include\xml\amgxmlhandle.h
+	"XML/amgXmlElement.h"
+
+1492688708 e:\trunk\amgscl\amgscllib\include\text\sclheaderfields.h
+	<functional>
+	<amgDefs.h>
+	<amgString.h>
+	<amgErrors.h>
+	<TListOfPointers.h>
+	<TStringHash.h>
+	<Link/TUri.h>
+
+1492688709 e:\trunk\amgscl\amgscllib\include\text\sclcontext.h
+	<amgDefs.h>
+	<amgString.h>
+	<TListOfPointers.h>
+	<TRelevantObject.h>
+	"sclStreamId.h"
+	"sclDispatcher.h"
+	"Text/sclHeaderFields.h"
+	"Text/sclTextMessage.h"
+	"sclSmartParameter.h"
+
+1492688706 e:\trunk\amgscl\amgscllib\include\scldispatcher.h
+	<amgDefs.h>
+	<amgString.h>
+	<Link/TILink.h>
+	<Threads/TLockableObject.h>
+	<Threads/TThreadPointersList.h>
+	"sclStreamId.h"
+	"sclMessage.h"
+
+1492688709 e:\trunk\amgscl\amgscllib\include\text\scltextuseragent.h
+	<amgDefs.h>
+	"Text/sclTextDispatcher.h"
+
+1492688708 e:\trunk\amgscl\amgscllib\include\text\scltextdispatcher.h
+	<amgDefs.h>
+	<Link/TILink.h>
+	"sclStreamId.h"
+	"Text/sclTextMessage.h"
+	"Text/sclContext.h"
+	"Text/sclTextParser.h"
+
+1492688707 e:\trunk\amgscl\amgscllib\include\text\sclauth.h
+	<amgDefs.h>
+	<amgString.h>
+	<TListOfPointers.h>
+	"sclStreamId.h"
+	"Text/sclContext.h"
+
+1492688706 e:\trunk\amgscl\amgscllib\include\http\sclhttpmessage.h
+	<amgDefs.h>
+	<Link/THttpUri.h>
+	"Text/sclContext.h"
+
+1492688637 e:\trunk\amg\amglib\include\link\thttpuri.h
+	"Link/TUri.h"
+
+1492688506 e:\trunk\sclhttp\sclhttplib\include\sclhttpcss.h
+	<amgDefs.h>
+	"TStringHash.h"
+	"HTTP/sclHttpFileResource.h"
+	"HTTP/sclHttpProxy.h"
+
+1492688506 e:\trunk\sclhttp\sclhttplib\include\http\sclhttpfileresource.h
+	<amgDefs.h>
+	"HTTP/sclHttpServer.h"
+	<amgFile.h>
+
+1492688506 e:\trunk\sclhttp\sclhttplib\include\http\sclhttpproxy.h
+	<amgDefs.h>
+	"HTTP/sclHttpServer.h"
+	"amgFile.h"
+	"HTTP/sclHttpClient.h"
+	<list>
+	<algorithm>
+
+1492688506 e:\trunk\sclhttp\sclhttplib\include\http\sclhttpclient.h
+	<amgDefs.h>
+	"HTTP/sclHttpUserAgent.h"
+	<memory>
+
+1492688707 e:\trunk\amgscl\amgscllib\include\http\sclhttpuseragent.h
+	<amgDefs.h>
+	"HTTP/sclHttpMessage.h"
+	"HTTP/sclHttpParser.h"
+	"HTTP/sclHttpCookie.h"
+	<Text/sclTextUserAgent.h>
+	<sclLinkDispatcher.h>
+	<Text/sclAuth.h>
+
+1492688707 e:\trunk\amgscl\amgscllib\include\http\sclhttpcookie.h
+	<amgDefs.h>
+	<amgAString.h>
+	<Link/TAddress.h>
+	<Link/TUri.h>
+	<set>
+
+1492688709 e:\trunk\amgscl\amgscllib\include\scllinkdispatcher.h
+	<amgDefs.h>
+	<Link/TUDPLink.h>
+	<Link/TTCPLink.h>
+	<Threads/TThreadPointersList.h>
+	"sclStreamId.h"
+	"sclDispatcher.h"
+
+1492688637 e:\trunk\amg\amglib\include\link\tudplink.h
+	"Link/TSocketLink.h"
+
+1492688637 e:\trunk\amg\amglib\include\link\ttcplink.h
+	"Link/TSocketLink.h"
+
+1492688506 e:\trunk\sclhttp\sclhttplib\include\web\sclhttpsections.h
+	<amgDefs.h>
+	<Threads/TLockableObject.h>
+	"Web/sclHttpSectionPage.h"
+	"HTTP/sclHttpMemoryResource.h"
+
+1492688506 e:\trunk\sclhttp\sclhttplib\include\web\sclhttpsectionpage.h
+	<set>
+	<amgDefs.h>
+	"Web/sclHttpWebInterface.h"
+
+1492688506 e:\trunk\sclhttp\sclhttplib\include\http\sclhttpmemoryresource.h
+	<amgDefs.h>
+	"HTTP/sclHttpServer.h"
+
+1492688637 e:\trunk\amg\amglib\include\xml\amgxmlprinter.h
+	"XML/amgXmlVisitor.h"
+	"amgString.h"
+
+1492688637 e:\trunk\amg\amglib\include\xml\amgxmlvisitor.h
+	"amgDefs.h"
+
+1497857067 e:\trunk\cacos\buds\budmobile\budmobileapp\include\endpoint.h
+	<HTTP/sclHttpQueue.h>
+	<HTTP/sclHttpServerService.h>
+	<HTTP/sclHttpFolderControl.h>
+	<Threads/TLockableObject.h>
+	<amgSmartObject.h>
+	<TListOfPointers.h>
+	<XML/amgXmlDocument.h>
+	<Text/sclTextBody.h>
+	<ckiCache.h>
+
+1500545514 e:\trunk\amgscl\amgscllib\include\http\sclhttpqueue.h
+	<amgDefs.h>
+	"HTTP/sclHttpServerService.h"
+
+1492688706 e:\trunk\amgscl\amgscllib\include\http\sclhttpserverservice.h
+	"Text/sclTextUserAgent.h"
+	"Text/sclHeaderFields.h"
+	"Text/sclTextBody.h"
+	"HTTP/sclHttpMessage.h"
+	<unordered_map>
+
+1492688707 e:\trunk\amgscl\amgscllib\include\http\sclhttpfoldercontrol.h
+	<amgDefs.h>
+	<amgFile.h>
+	"HTTP/sclHttpServerService.h"
+
+1502798245 e:\trunk\cacos\cakapilib\include\ckicache.h
+	<amgDefs.h>
+	<Debug/amgDebug.h>
+	"ckiService.h"
+
+1492688522 e:\trunk\cacos\cakapilib\include\ckiservice.h
+	<amgDefs.h>
+	<MessageThread/amgWorker.h>
+	"HTTP/sclHttpQueue.h"
+
+1492688637 e:\trunk\amg\amglib\include\messagethread\amgworker.h
+	"amgDefs.h"
+	"MessageThread/amgMessageThread.h"
+	<future>
+
+1495443591 source:e:\trunk\cacos\buds\budmobile\budmobileapp\sources\group.cpp
+	"precomp.h"
+	<JsonCpp/json.h>
+	"Group.h"
+
+1495443594 e:\trunk\cacos\buds\budmobile\budmobileapp\include\group.h
+	<HTTP/sclHttpQueue.h>
+	<HTTP/sclHttpServerService.h>
+	<HTTP/sclHttpFolderControl.h>
+	<Threads/TLockableObject.h>
+	<amgSmartObject.h>
+	<TListOfPointers.h>
+	<XML/amgXmlDocument.h>
+	<Text/sclTextBody.h>
+	<ckiCache.h>
+
+1495443523 source:e:\trunk\cacos\buds\budmobile\budmobileapp\sources\main.cpp
+	"precomp.h"
+	<amgApplication.h>
+	<JsonCpp/json.h>
+	"Application.h"
+
+1492688506 e:\trunk\lotapplication\lotapplicationlib\include\amgapplication.h
+	<amgDefs.h>
+	<MainThread/amgMainThread.h>
+	<Link/TPath.h>
+	<Configuration/RDebugConfig.h>
+	<amgFile.h>
+	<XML/amgXmlDocument.h>
+	<TFolder.h>
+	<Link/TNamedPipe.h>
+	"Version/amgVersion.h"
+
+1492688637 e:\trunk\amg\amglib\include\mainthread\amgmainthread.h
+	"Threads/amgThread.h"
+	"MessageThread/amgMessageThread.h"
+	"TTimer/TTimer.h"
+
+1492688637 e:\trunk\amg\amglib\include\tfolder.h
+	"amgDefs.h"
+	"Link/TPath.h"
+	"TListOfPointers.h"
+	"amgErrors.h"
+	"amgBuffer.h"
+	"amgFile.h"
+	<windows.h>
+	<tchar.h>
+	<direct.h>
+	<Shellapi.h>
+	<dirent.h>
+	<sys/types.h>
+	<fnmatch.h>
+	<sys/stat.h>
+	<glob.h>
+	<stdio.h>
+	<iostream>
+
+1492688637 e:\trunk\amg\amglib\include\link\tnamedpipe.h
+	"amgDefs.h"
+	"amgBuffer.h"
+	"amgAString.h"
+	"amgErrors.h"
+	"amgFile.h"
+	<algorithm>
+	<windows.h>
+	<aclapi.h>
+	<stdio.h>
+	<tchar.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/stat.h>
+	<sys/ioctl.h>
+	<exception>
+
+1492688506 e:\trunk\lotapplication\lotapplicationlib\include\version\amgversion.h
+	<amgDefs.h>
+	<stdio.h>
+	<amgString.h>
+
+1502797330 e:\trunk\cacos\buds\budmobile\budmobileapp\include\application.h
+	<amgDefs.h>
+	<string>
+	<amgServiceApplication.h>
+	<HTTP/sclHttpClientService.h>
+	<ckiBudService.h>
+	<ckiHosts.h>
+	<ckiModules.h>
+	<ckiMediaType.h>
+	<ckiPresetType.h>
+	<ckiUsers.h>
+	<ckiSchemes.h>
+	<ckiLocation.h>
+	"EndPoint.h"
+	"Group.h"
+
+1492688506 e:\trunk\lotapplication\lotapplicationlib\include\amgserviceapplication.h
+	<amgDefs.h>
+	"amgConsoleApplication.h"
+
+1492688507 e:\trunk\lotapplication\lotapplicationlib\include\amgconsoleapplication.h
+	<amgDefs.h>
+	"amgApplication.h"
+
+1492688707 e:\trunk\amgscl\amgscllib\include\http\sclhttpclientservice.h
+	<amgDefs.h>
+	<memory>
+	"HTTP/sclHttpMessage.h"
+
+1500265041 e:\trunk\cacos\cakapilib\include\ckibudservice.h
+	<amgDefs.h>
+	"ckiService.h"
+	"ckiCache.h"
+	"ckiModules.h"
+	<Log/Log.h>
+
+1495005812 e:\trunk\cacos\cakapilib\include\ckimodules.h
+	<amgDefs.h>
+	"ckiCache.h"
+
+1502254525 e:\trunk\lotdata\lotdatalib\include\log\log.h
+	"LotData.h"
+	"Log/Record.h"
+	"Log/ThreadMessages.h"
+	<MessageThread/amgWorker.h>
+	<list>
+
+1492688461 e:\trunk\lotdata\lotdatalib\include\lotdata.h
+	<amgDefs.h>
+	<XML/amgXML.h>
+	<TListOfPointers.h>
+	<amgString.h>
+	<Configuration/TConfig.h>
+	<amgErrors.h>
+
+1500265063 e:\trunk\lotdata\lotdatalib\include\log\record.h
+	"LotData.h"
+	"Log/Field.h"
+	"Log/FileBuffer.h"
+	<TStringHash.h>
+	<JsonCpp/json.h>
+
+1500265063 e:\trunk\lotdata\lotdatalib\include\log\field.h
+	"LotData.h"
+	"DataDefs.h"
+
+1492688461 e:\trunk\lotdata\lotdatalib\include\datadefs.h
+	<XML/amgXML.h>
+	<TListOfPointers.h>
+	<amgString.h>
+	<Configuration/TConfig.h>
+	"LotData.h"
+
+1492688461 e:\trunk\lotdata\lotdatalib\include\log\filebuffer.h
+	"LotData.h"
+	"DataDefs.h"
+
+1492688461 e:\trunk\lotdata\lotdatalib\include\log\threadmessages.h
+	"LotData.h"
+	"DataDefs.h"
+	"Log/Record.h"
+	<list>
+	<functional>
+
+1500877239 e:\trunk\cacos\cakapilib\include\ckihosts.h
+	<amgDefs.h>
+	<Restconf/sclRestconfConsts.h>
+	"ckiCache.h"
+
+1492688522 e:\trunk\cacos\cakapilib\include\ckimediatype.h
+	<amgDefs.h>
+	"ckiCache.h"
+
+1492688522 e:\trunk\cacos\cakapilib\include\ckipresettype.h
+	"amgDefs.h"
+	<stdexcept>
+	<vector>
+	<map>
+	<memory>
+
+1500363532 e:\trunk\cacos\cakapilib\include\ckiusers.h
+	<amgDefs.h>
+	<amgString.h>
+	"ckiCache.h"
+
+1498028860 e:\trunk\cacos\cakapilib\include\ckischemes.h
+	<amgDefs.h>
+	<amgString.h>
+	"ckiCache.h"
+
+1496300315 e:\trunk\cacos\buds\budmobile\budmobileapp\include\location.h
+	<HTTP/sclHttpQueue.h>
+	<HTTP/sclHttpServerService.h>
+	<HTTP/sclHttpFolderControl.h>
+	<Threads/TLockableObject.h>
+	<amgSmartObject.h>
+	<TListOfPointers.h>
+	<XML/amgXmlDocument.h>
+	<Text/sclTextBody.h>
+	<ckiCache.h>
+
+1492688470 e:\trunk\sclyang\sclyanglib\include\restconf\sclrestconfconsts.h
+	<amgDefs.h>
+	<string>
+
+1502794165 e:\trunk\cacos\cakapilib\include\ckilocation.h
+	<amgDefs.h>
+	<amgString.h>
+	"ckiCache.h"
+

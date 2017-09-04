@@ -1,0 +1,14 @@
+﻿<PresetType>
+  <Id>SclConfigUsers</Id>
+  <UriTemplate>http://{host-address}/restconf/data/scl-config/users</UriTemplate>
+  <Description>Адресная книга (пользователи)</Description>
+  <AllowedHosts>
+	<HostType>mvt</HostType>
+	<HostType>sclConference</HostType>
+	<HostType>sclPresence</HostType>
+	<HostType>sclGate</HostType>
+  </AllowedHosts>
+  <PresetList>
+    <Preset id="Users_preset_1"/>
+  </PresetList>
+</PresetType>

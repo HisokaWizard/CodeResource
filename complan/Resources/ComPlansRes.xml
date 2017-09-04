@@ -1,0 +1,57 @@
+﻿<Resources>
+	<Item isArray="1">
+		<Entry>CP-1</Entry>
+		<Russian>
+			<Short>Все тракты</Short>
+			<Full>Все тракты</Full>
+		</Russian>
+		<English>
+			<Short>Communication plan 1</Short>
+			<Full>Communication plan 1</Full>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>CP-2</Entry>
+		<Russian>
+			<Short>Тракты открытой части</Short>
+			<Full>Тракты открытой части</Full>
+		</Russian>
+		<English>
+			<Short>Communication plan 2</Short>
+			<Full>Communication plan 2</Full>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>CP-3</Entry>
+		<Russian>
+			<Short>Тракты закрытой части</Short>
+			<Full>Тракты закрытой части</Full>
+		</Russian>
+		<English>
+			<Short>Communication plan 3</Short>
+			<Full>Communication plan 3</Full>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>CP-4</Entry>
+		<Russian>
+			<Short>Нептун 1000 и Р-693</Short>
+			<Full>Нептун 1000 и Р-693</Full>
+		</Russian>
+		<English>
+			<Short>Communication plan 4</Short>
+			<Full>Communication plan 4</Full>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>CP-5</Entry>
+		<Russian>
+			<Short>Р-612-08</Short>
+			<Full>Р-612-08</Full>
+		</Russian>
+		<English>
+			<Short>Communication plan 5</Short>
+			<Full>Communication plan 5</Full>
+		</English>
+	</Item>
+</Resources>

@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>BudMobile</ProjectName>
+    <ProjectGuid>{D37DBF09-2B7E-4665-89BF-6B2E89C2FA32}</ProjectGuid>
+    <RootNamespace>vksSimpleFocus</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)\Build\Global-VS2015.props" />
+    <Import Project="$(SolutionDir)\Build\$(Configuration).$(Platform).props" Condition="exists('$(SolutionDir)\Build\$(Configuration).$(Platform).props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)\Build\Global-VS2015.props" />
+    <Import Project="$(SolutionDir)\Build\$(Configuration).$(Platform).props" Condition="exists('$(SolutionDir)\Build\$(Configuration).$(Platform).props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)\Build\Global-VS2015.props" />
+    <Import Project="$(SolutionDir)\Build\$(Configuration).$(Platform).props" Condition="exists('$(SolutionDir)\Build\$(Configuration).$(Platform).props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)\Build\Global-VS2015.props" />
+    <Import Project="$(SolutionDir)\Build\$(Configuration).$(Platform).props" Condition="exists('$(SolutionDir)\Build\$(Configuration).$(Platform).props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.61030.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\Bin\vc\$(Configuration)\</OutDir>
+    <IntDir>.\Obj\vc\$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>.\Obj\vc_x64\$(Configuration)\</IntDir>
+    <OutDir>..\Bin\vc_x64\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\Bin\vc\</OutDir>
+    <IntDir>.\Obj\vc\$(Configuration)\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)</TargetName>
+    <IntDir>.\Obj\vc_x64\$(Configuration)\</IntDir>
+    <OutDir>..\Bin\vc_x64\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>.;Include;..\..\..\..\AMG\AMGLib\Include;..\..\..\..\LotApplication\LotApplicationLib\Include;..\..\..\..\amgSCL\amgSCLLib\Include;..\..\..\..\sclHTTP\sclHTTPLib\Include;..\..\..\..\sclYang\sclYangLib\Include;..\..\..\..\Cacos\CakApiLib\Include;..\..\..\..\LotData\LotDataLib\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ErrorReporting>None</ErrorReporting>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\AMG\AMGlib\Include;..\..\LotApplication\LotApplicationLib\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>LotData.lib;libJsonCppd.lib;wxexpatd.lib;wxjpegd.lib;wxmsw28d.lib;wxpngd.lib;wxregexd.lib;wxtiffd.lib;wxzlibd.lib;winmm.lib;comctl32.lib;rpcrt4.lib;ws2_32.lib;odbc32.lib;Iphlpapi.lib;Version.lib;Traffic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\AMG\Lib\vc\$(Configuration);..\..\..\..\LotApplication\Lib\vc\$(Configuration);..\..\..\..\amgScl\Lib\vc\$(Configuration);..\..\..\..\LotData\Lib\vc\$(Configuration);..\..\..\..\sclHttp\Lib\vc\$(Configuration);..\..\..\..\sipPackages\lib\vc\$(Configuration);..\..\..\..\UData\lib\vc\$(Configuration);..\..\..\..\sclUniCon\Lib\vc\$(Configuration);..\..\..\..\sipPubSub\Lib\vc\$(Configuration);..\..\..\..\sclYang\Lib\vc\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <HeapReserveSize>536870912</HeapReserveSize>
+      <HeapCommitSize>33554432</HeapCommitSize>
+      <StackReserveSize>524288</StackReserveSize>
+      <StackCommitSize>262144</StackCommitSize>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkErrorReporting />
+      <ShowProgress>NotSet</ShowProgress>
+      <SubSystem>Console</SubSystem>
+      <StripPrivateSymbols>
+      </StripPrivateSymbols>
+      <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>.;Include;..\..\..\..\AMG\AMGLib\Include;..\..\..\..\LotApplication\LotApplicationLib\Include;..\..\..\..\amgSCL\amgSCLLib\Include;..\..\..\..\sclHTTP\sclHTTPLib\Include;..\..\..\..\sclYang\sclYangLib\Include;..\..\..\..\Cacos\CakApiLib\Include;..\..\..\..\LotData\LotDataLib\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;__WXDEBUG__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\AMG\AMGlib\Include;..\..\LotApplication\LotApplicationLib\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>LotData.lib;sclHTTP.lib;libJsonCppd.lib;wxexpatd.lib;wxjpegd.lib;wxmsw28d.lib;wxpngd.lib;wxregexd.lib;wxtiffd.lib;wxzlibd.lib;winmm.lib;comctl32.lib;rpcrt4.lib;ws2_32.lib;odbc32.lib;Iphlpapi.lib;Version.lib;Traffic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\AMG\Lib\vc_x64\$(Configuration);..\..\..\..\LotApplication\Lib\vc_x64\$(Configuration);..\..\..\..\amgScl\Lib\vc_x64\$(Configuration);..\..\..\..\LotData\Lib\vc_x64\$(Configuration);..\..\..\..\sclHttp\Lib\vc_x64\$(Configuration);..\..\..\..\sipPackages\lib\vc_x64\$(Configuration);..\..\..\..\UData\lib\vc_x64\$(Configuration);..\..\..\..\sclUniCon\Lib\vc_x64\$(Configuration);..\..\..\..\sipPubSub\Lib\vc_x64\$(Configuration);..\..\..\..\sclYang\Lib\vc_x64\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <HeapReserveSize>536870912</HeapReserveSize>
+      <HeapCommitSize>33554432</HeapCommitSize>
+      <StackReserveSize>524288</StackReserveSize>
+      <StackCommitSize>262144</StackCommitSize>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <LinkErrorReporting>
+      </LinkErrorReporting>
+      <ShowProgress>NotSet</ShowProgress>
+      <SubSystem>Console</SubSystem>
+      <StripPrivateSymbols>
+      </StripPrivateSymbols>
+      <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>.;Include;..\..\..\..\AMG\AMGLib\Include;..\..\..\..\LotApplication\LotApplicationLib\Include;..\..\..\..\amgSCL\amgSCLLib\Include;..\..\..\..\sclHTTP\sclHTTPLib\Include;..\..\..\..\sclYang\sclYangLib\Include;..\..\..\..\Cacos\CakApiLib\Include;..\..\..\..\LotData\LotDataLib\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;amg_useWX;__WXMSW__;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat />
+      <DisableSpecificWarnings>4201;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ErrorReporting>None</ErrorReporting>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\AMG\AMGlib\Include;..\..\LotApplication\LotApplicationLib\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>LotData.lib;sclHTTP.lib;libJsonCpp.lib;wxexpat.lib;wxjpeg.lib;wxmsw28.lib;wxpng.lib;wxregex.lib;wxtiff.lib;wxzlib.lib;winmm.lib;comctl32.lib;rpcrt4.lib;ws2_32.lib;odbc32.lib;Iphlpapi.lib;Version.lib;Traffic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\AMG\Lib\vc\$(Configuration);..\..\..\..\LotApplication\Lib\vc\$(Configuration);..\..\..\..\amgScl\Lib\vc\$(Configuration);..\..\..\..\LotData\Lib\vc\$(Configuration);..\..\..\..\sclHttp\Lib\vc\$(Configuration);..\..\..\..\sipPackages\lib\vc\$(Configuration);..\..\..\..\UData\lib\vc\$(Configuration);..\..\..\..\sipPubSub\lib\vc\$(Configuration);..\..\..\..\advScl\Lib\vc\$(Configuration);..\..\..\..\sclYang\Lib\vc\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <HeapReserveSize>536870912</HeapReserveSize>
+      <HeapCommitSize>33554432</HeapCommitSize>
+      <StackReserveSize>524288</StackReserveSize>
+      <StackCommitSize>262144</StackCommitSize>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkErrorReporting />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>.;Include;..\..\..\..\AMG\AMGLib\Include;..\..\..\..\LotApplication\LotApplicationLib\Include;..\..\..\..\amgSCL\amgSCLLib\Include;..\..\..\..\sclHTTP\sclHTTPLib\Include;..\..\..\..\sclYang\sclYangLib\Include;..\..\..\..\Cacos\CakApiLib\Include;..\..\..\..\LotData\LotDataLib\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;amg_useWX;__WXMSW__;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <DisableSpecificWarnings>4201;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ErrorReporting>None</ErrorReporting>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\AMG\AMGlib\Include;..\..\LotApplication\LotApplicationLib\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>LotData.lib;sclHTTP.lib;libJsonCpp.lib;wxexpat.lib;wxjpeg.lib;wxmsw28.lib;wxpng.lib;wxregex.lib;wxtiff.lib;wxzlib.lib;winmm.lib;comctl32.lib;rpcrt4.lib;ws2_32.lib;odbc32.lib;Iphlpapi.lib;Version.lib;Traffic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\AMG\Lib\vc_x64\$(Configuration);..\..\..\..\LotApplication\Lib\vc_x64\$(Configuration);..\..\..\..\amgScl\Lib\vc_x64\$(Configuration);..\..\..\..\LotData\Lib\vc_x64\$(Configuration);..\..\..\..\sclHttp\Lib\vc_x64\$(Configuration);..\..\..\..\sipPackages\lib\vc_x64\$(Configuration);..\..\..\..\UData\lib\vc_x64\$(Configuration);..\..\..\..\sipPubSub\lib\vc_x64\$(Configuration);..\..\..\..\advScl\Lib\vc_x64\$(Configuration);..\..\..\..\sclYang\Lib\vc_x64\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <HeapReserveSize>536870912</HeapReserveSize>
+      <HeapCommitSize>33554432</HeapCommitSize>
+      <StackReserveSize>524288</StackReserveSize>
+      <StackCommitSize>262144</StackCommitSize>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <LinkErrorReporting>
+      </LinkErrorReporting>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\amgSCL\amgSCLLib\amgSCL-VS2015.vcxproj">
+      <Project>{cb6bdffb-52b8-4192-be2d-286f42e91587}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\AMG\AMGLib\AMG-VS2015.vcxproj">
+      <Project>{86b5bd9b-6af2-4332-8e82-0d18417144b0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\LotApplication\LotApplicationLib\LotApplication-VS2015.vcxproj">
+      <Project>{9163ea23-4e7b-4f3a-a567-c9572ca00ee5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\sclHTTP\sclHTTPLib\sclHTTP-VS2015.vcxproj">
+      <Project>{36d240bf-a3b3-4d6c-9e82-eb751da26aae}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\sclYang\sclYangLib\sclYang-VS2015.vcxproj">
+      <Project>{1e83c35b-1658-4ee8-a4e0-0645a4113716}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CakApiLib\CakApi-VS2015.vcxproj">
+      <Project>{670fcc21-435d-42cc-a3b8-7d9e161c7b0f}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="precomp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Sources\Application.cpp" />
+    <ClCompile Include="Sources\EndPoint.cpp" />
+    <ClCompile Include="Sources\Group.cpp" />
+    <ClCompile Include="Sources\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\Application.h" />
+    <ClInclude Include="Include\EndPoint.h" />
+    <ClInclude Include="Include\Group.h" />
+    <ClInclude Include="precomp.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

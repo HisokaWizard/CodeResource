@@ -1,0 +1,1281 @@
+<ComPlans>
+   <Ranges>
+      <Range id="uhv" label="УКВ" suffix="кГц">
+         <Description>Ультра короткие волны</Description>
+      </Range>
+      <Range id="kv" label="КВ" suffix="кГц">
+         <Description>Короткие волны</Description>
+      </Range>
+   </Ranges>
+   <Services>
+      <Service id="s01" label="КВ ТФО №1" range-id="kv" media-type-id="audio" target-uri="sip:channel4@gate.local">
+         <Description>Это КВ ТФО №1</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФО</Description>
+               <Build>
+		  <Preset Host="r612" Id="R612_preset_110KHz" Type="TypeR612">
+                     <Parameter Name="index">0</Parameter>
+		  </Preset>
+               </Build>
+               <Destroy>
+		  <Preset Host="r612" Id="R612_preset_110KHz" Type="TypeR612">
+                     <Parameter Name="index">0</Parameter>
+		  </Preset>
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm2" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s02" label="КВ ТФО №2" range-id="kv" media-type-id="audio" target-uri="sip:vchannel1@gate.local">
+         <Description>Это КВ ТФО №2</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФО</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>ТФО</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm1" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s03" label="КВ ТФО №3" range-id="kv" media-type-id="audio" target-uri="sip:channel7@gate.local">
+         <Description>Это КВ ТФО №3</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФО</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>ТФО</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm1" auto-connect="true"/>
+            <Endpoint id="tss1" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s04" label="КВ ТФО №4" range-id="kv" media-type-id="audio" target-uri="sip:vchannel1@gate.local">
+         <Description>Это КВ ТФО №4</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФО</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>ТФО</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm1" auto-connect="true"/>
+            <Endpoint id="tss1" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s05" label="УКВ ТФО №1" range-id="uhv" media-type-id="audio" target-uri="sip:channel4@gate.local">
+         <Description>Это КВ ТФО №1</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФО</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>ТФО</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm1" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s06" label="УКВ ТФО №2" range-id="uhv" media-type-id="audio" target-uri="sip:channel5@gate.local">
+         <Description>Это КВ ТФО №2</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФО</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>ТФО</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm1" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s07" label="УКВ ТФО №3" range-id="uhv" media-type-id="audio" target-uri="sip:channel4@gate.loca">
+         <Description>Это УКВ ТФО №3</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФО</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>ТФО</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm1" auto-connect="true"/>
+            <Endpoint id="tss1" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s08" label="УКВ ТФО №4" range-id="uhv" media-type-id="audio" target-uri="sip:channel5@gate.local">
+         <Description>Это УКВ ТФО №4</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФО</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>ТФО</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm1" auto-connect="true"/>
+            <Endpoint id="tss1" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s09" label="СДВ СЛХ" range-id="uhv" media-type-id="audio" target-uri="sip:channel6@gate.local">
+         <Description>Это СДВ СЛХ</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Слуховая открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>СЛХ</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Слуховая открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>СЛХ</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tos" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s10" label="КВ СЛХ №1" range-id="kv" media-type-id="audio" target-uri="sip:channel1@gate.local">
+         <Description>Это КВ СЛХ №1</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Слуховая открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>СЛХ</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Слуховая открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>СЛХ</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tos" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s11" label="КВ СЛХ №2" range-id="kv" media-type-id="audio" target-uri="sip:vchannel1@gate.local">
+         <Description>Это КВ СЛХ №2</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Слуховая открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>СЛХ</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Слуховая открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>СЛХ</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tos" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s12" label="КВ СБД Акула №1" range-id="kv" media-type-id="audio" target-uri="sip:channel1@gate.local">
+         <Description>Это КВ СБД Акула №1</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Сверхбыстродействующая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>радиолиния «Акула»</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Сверхбыстродействующая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>радиолиния «Акула»</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="p758is" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s13" label="КВ СБД Акула №2" range-id="kv" media-type-id="audio" target-uri="sip:channel2@gate.local">
+         <Description>Это КВ СБД Акула №2</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Сверхбыстродействующая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>радиолиния «Акула</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Сверхбыстродействующая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>радиолиния «Акула</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="p758is" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s14" label="КВ СБД Сплав №1" range-id="kv" media-type-id="audio" target-uri="sip:channel1@gate.local">
+         <Description>Это КВ СБД Сплав №1</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Сверхбыстродействующая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>радиолиния «Сплав»</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Сверхбыстродействующая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>радиолиния «Сплав»</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="p758is" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s15" label="КВ СБД Сплав №2" range-id="kv" media-type-id="audio" target-uri="sip:channel2@gate.local">
+         <Description>Это КВ СБД Сплав №2</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Сверхбыстродействующая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>радиолиния «Сплав»</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Сверхбыстродействующая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>радиолиния «Сплав»</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="p758is" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s16" label="КВ ТФ ЗАС №1" range-id="kv" media-type-id="audio" target-uri="sip:channel1@gate.local">
+         <Description>Это КВ ТФ ЗАС №1</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФ ЗАС</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>ТФ ЗАС</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm3" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s17" label="КВ ТФ ЗАС №2" range-id="kv" media-type-id="audio" target-uri="sip:vchannel1@gate.local">
+         <Description>Это КВ ТФ ЗАС №2</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФ ЗАС</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>ТФ ЗАС</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm3" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s18" label="КВ ТФ ЗАС №3" range-id="kv" media-type-id="audio" target-uri="sip:channel1@gate.local">
+         <Description>Это КВ ТФ ЗАС №3</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФ ЗАС</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>ТФ ЗАС</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm3" auto-connect="true"/>
+            <Endpoint id="tm4" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s19" label="КВ ТФ ЗАС №4" range-id="kv" media-type-id="audio" target-uri="sip:vchannel1@gate.local">
+         <Description>Это КВ ТФ ЗАС №4</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФ ЗАС</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>ТФ ЗАС</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm3" auto-connect="true"/>
+            <Endpoint id="tm4" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s20" label="УКВ ТФ ЗАС №1" range-id="uhv" media-type-id="audio" target-uri="sip:channel4@gate.local">
+         <Description>Это УКВ ТФ ЗАС №1</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФ ЗАС</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>ТФ ЗАС</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm3" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s21" label="УКВ ТФ ЗАС №2" range-id="uhv" media-type-id="audio" target-uri="sip:channel5@gate.local">
+         <Description>Это УКВ ТФ ЗАС №2</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФ ЗАС</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>ТФ ЗАС</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm4" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s22" label="УКВ ТФ ЗАС №3" range-id="uhv" media-type-id="audio" target-uri="sip:channel4@gate.local">
+         <Description>Это УКВ ТФ ЗАС №3</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФ ЗАС</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>ТФ ЗАС</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm3" auto-connect="true"/>
+            <Endpoint id="tm4" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s23" label="УКВ ТФ ЗАС №4" range-id="uhv" media-type-id="audio" target-uri="sip:channel5@gate.local">
+         <Description>Это УКВ ТФ ЗАС №4</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>ТФ ЗАС</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>ТФ ЗАС</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm3" auto-connect="true"/>
+            <Endpoint id="tm4" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s24" label="СДВ СЛХ ЗАС №1" range-id="uhv" media-type-id="audio" target-uri="sip:channel6@gate.local">
+         <Description>Это СДВ СЛХ ЗАС №1</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Слуховая открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>СЛХ</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Слуховая открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>СЛХ</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tos" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s25" label="СДВ СЛХ ЗАС №2" range-id="uhv" media-type-id="audio" target-uri="sip:channel6@gate.local">
+         <Description>Это СДВ СЛХ ЗАС №2</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Слуховая открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>СЛХ</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Слуховая открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>СЛХ</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="t228" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s26" label="КВ СЛХ ЗАС №1" range-id="kv" media-type-id="audio" target-uri="sip:channel1@gate.local">
+         <Description>Это КВ СЛХ ЗАС №1</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Слуховая открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>СЛХ</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Слуховая открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>СЛХ</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="t228" auto-connect="true"/>
+            <Endpoint id="tos" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s27" label="КВ СЛХ ЗАС №2" range-id="kv" media-type-id="audio" target-uri="sip:channel1@gate.local">
+         <Description>Это КВ СЛХ ЗАС №2</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Слуховая открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>СЛХ</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Слуховая открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>СЛХ</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="t228" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s28" label="КВ СЛХ ЗАС №3" range-id="kv" media-type-id="audio" target-uri="sip:vchannel1@gate.local">
+         <Description>Это КВ СЛХ ЗАС №3</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Слуховая открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>СЛХ</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Слуховая открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>СЛХ</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="t228" auto-connect="true"/>
+            <Endpoint id="tos" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s29" label="КВ СЛХ ЗАС №4" range-id="kv" media-type-id="audio" target-uri="sip:vchannel1@gate.local">
+         <Description>Это КВ СЛХ ЗАС №4</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Слуховая открытая связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>СЛХ</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Слуховая открытая связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>СЛХ</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="t228" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s30" label="КВ БП ЗАС №1" range-id="kv" media-type-id="audio" target-uri="sip:channel1@gate.local">
+         <Description>Это КВ БП ЗАС №1</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Буквопечатающая шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>БП ЗАС</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Буквопечатающая шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>БП ЗАС</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="ktsos" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s31" label="КВ БП ЗАС №2" range-id="kv" media-type-id="audio" target-uri="sip:vchannel1@gate.local">
+         <Description>Это КВ БП ЗАС №2</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Буквопечатающая шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>БП ЗАС</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Буквопечатающая шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>БП ЗАС</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="ktsos" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s32" label="УКВ БП ЗАС №1" range-id="uhv" media-type-id="audio" target-uri="sip:channel4@gate.local">
+         <Description>Это УКВ БП ЗАС №1</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Буквопечатающая шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>БП ЗАС</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Буквопечатающая шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>БП ЗАС</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="ktsos" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s33" label="УКВ БП ЗАС №2" range-id="uhv" media-type-id="audio" target-uri="sip:channel5@gate.local">
+         <Description>Это УКВ БП ЗАС №2</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Буквопечатающая шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>БП ЗАС</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Буквопечатающая шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>БП ЗАС</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="ktsos" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s34" label="СДВ БД ЗАС Дальность №1" range-id="kv" media-type-id="audio" target-uri="sip:channel1@gate.local">
+         <Description>Это СДВ БД ЗАС Дальность №1</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Быстродействующая шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>радиолиния "Дальность"</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Быстродействующая шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>радиолиния "Дальность"</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="akbu" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s35" label="СДВ БД ЗАС Дальность №2" range-id="kv" media-type-id="audio" target-uri="sip:vchannel1@gate.local">
+         <Description>Это СДВ БД ЗАС Дальность №2</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Быстродействующая шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>радиолиния "Дальность"</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Быстродействующая шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>радиолиния "Дальность"</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="akbu" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s36" label="СДВ БД ЗАС Дальность №3" range-id="kv" media-type-id="audio" target-uri="sip:channel6@gate.local">
+         <Description>Это СДВ БД ЗАС Дальность №3</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Быстродействующая шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>радиолиния "Дальность"</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Быстродействующая шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>радиолиния "Дальность"</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="akbu" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s37" label="КВ БД ЗАС Интеграл №1" range-id="kv" media-type-id="audio" target-uri="sip:channel1@gate.local">
+         <Description>Это КВ БД ЗАС Интеграл №1</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Сверхбыстродействующая шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>радиолиния "Интеграл"</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Сверхбыстродействующая шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>радиолиния "Интеграл"</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="akbu" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+      <Service id="s38" label="КВ БД ЗАС Интеграл №2" range-id="kv" media-type-id="audio" target-uri="sip:vchannel1@gate.local">
+         <Description>Это КВ БД ЗАС Интеграл №2</Description>
+		 <Crypted>false</Crypted>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Сверхбыстродействующая шифрованная связь" channel="1" rx-frequency="100" tx-frequency="200">
+               <Description>радиолиния "Интеграл"</Description>
+               <Build>
+		  <Preset Host="ppi1" Id="start_comm_1" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+		</Preset>
+               </Build>
+               <Destroy>
+                 <Preset Host="ppi1" Id="stop_comm" Type="IConverterPreset">
+                   <Parameter Name="channel">0</Parameter>
+                   <Parameter Name="target-name">iconverter1</Parameter>
+                   <Parameter Name="remote-name">iconverter2</Parameter>
+                 </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Сверхбыстродействующая шифрованная связь" channel="4" rx-frequency="500" tx-frequency="100">
+               <Description>радиолиния "Интеграл"</Description>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="akbu" auto-connect="true"/>
+         </Endpoints>
+      </Service>
+   </Services>
+   <Sets>
+      <Set id="s1" label="Функциональный Набор" scheme-id="sch1">
+         <Description>Это функциональный набор трактов</Description>
+         <Service id="s01" />
+         <Service id="s02" />
+	 <Service id="s03" />
+	 <Service id="s04" />
+         <Service id="s05" />
+         <Service id="s06" />
+         <Service id="s07" />
+         <Service id="s08" />
+         <Service id="s09" />
+         <Service id="s10" />
+         <Service id="s11" />
+         <Service id="s12" />
+         <Service id="s13" />
+         <Service id="s14" />
+         <Service id="s15" />
+         <Service id="s16" />
+         <Service id="s17" />
+         <Service id="s18" />
+         <Service id="s19" />
+         <Service id="s20" />
+         <Service id="s21" />
+         <Service id="s22" />
+         <Service id="s23" />
+         <Service id="s24" />
+         <Service id="s25" />
+         <Service id="s26" />
+         <Service id="s27" />
+         <Service id="s28" />
+         <Service id="s29" />
+         <Service id="s30" />
+         <Service id="s31" />
+         <Service id="s32" />
+         <Service id="s33" />
+         <Service id="s34" />
+         <Service id="s35" />
+         <Service id="s36" />
+         <Service id="s37" />
+         <Service id="s38" />
+      </Set>
+      <Set id="s2" label="Отладочный набор" scheme-id="sch1">
+         <Description>Это отдладочный набор трактов</Description>
+         <Service id="s1" />
+         <Service id="s2" />
+	 <Service id="s3" />
+	 <Service id="s4" />
+         <Service id="s5" />
+         <Service id="s6" />
+         <Service id="s7" />
+         <Service id="s8" />
+         <Service id="s9" />
+         <Service id="s10" />
+         <Service id="s11" />
+         <Service id="s12" />
+         <Service id="s13" />
+         <Service id="s14" />
+         <Service id="s15" />
+         <Service id="s16" />
+         <Service id="s17" />
+         <Service id="s18" />
+         <Service id="s19" />
+         <Service id="s20" />
+         <Service id="s21" />
+         <Service id="s22" />
+         <Service id="s23" />
+         <Service id="s24" />
+         <Service id="s25" />
+         <Service id="s26" />
+         <Service id="s27" />
+         <Service id="s28" />
+         <Service id="s29" />
+         <Service id="s30" />
+         <Service id="s31" />
+         <Service id="s32" />
+         <Service id="s33" />
+         <Service id="s34" />
+         <Service id="s35" />
+         <Service id="s36" />
+         <Service id="s37" />
+         <Service id="s38" />
+      </Set>
+      <Set id="s3" label="набор" scheme-id="sch1">
+         <Description>Это набор трактов</Description>
+         <Service id="s01" />
+      </Set>
+   </Sets>
+</ComPlans>

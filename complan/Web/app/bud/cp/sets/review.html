@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<div class="cp-services-header b-information-block b-information-block-color">
+  <div class="b-row">
+    <div class="b-col-10">
+      <div ng-bind="cpCtrl.sets[cpCtrl.cSet].label"
+           ng-class="{'cp-long-set-name':ctrl.isLongName(cpCtrl.sets[cpCtrl.cSet].label)}"
+           class="b-pull-left">
+      </div>
+    </div>
+    <div class="b-col-2">
+      <div class="b-pull-right">
+        <button class="cp-button" ng-click="ctrl.cSection = cpCtrl.sections.sets.name">Назад</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div ng-model="accordion" ng-init="accordion={}" ng-class="{'cp-left-list-height':ctrl.isLongServiceList(ctrl.reviewSet)}" ng-style="{'height' : ctrl.WinHeight-380+'px'}">
+  <div ng-init="accordion.cTab=0" ng-repeat="(sId,service) in cpCtrl.sets[ctrl.reviewSet].services track by $index">
+    <div ng-click="accordion.cTab=$index"
+      ng-class="{'b-accordion' : true,
+        'b-active-accordion' : $index == accordion.cTab}">
+        <span ng-bind="cpCtrl.services[sId].label"></span>
+    </div>
+    <div ng-class="{'b-accordion-body' : true,
+      'b-accordion-show' : $index == accordion.cTab,
+      'cp-services-accordion-body-height' : $index == accordion.cTab}"
+      ng-model="tabs"
+      ng-init="tabs=[true,false,false]">
+      <div class="b-row">
+        <div class="b-col-12">
+          <div class="cp-tab-headers">
+            <div>
+              <div class="b-col-4">
+                <button ng-click="tabs=[true,false,false] " ng-class="{'cp-tab-header' : !tabs[0], 'cp-active-tab-header' : tabs[0]}">Информация</button>
+              </div>
+              <div ng-show="ctrl.moreThanOneMode(sId)" class="b-col-4">
+                <button ng-click="tabs=[false,true,false]" ng-class="{'cp-tab-header' : !tabs[1], 'cp-active-tab-header' : tabs[1]}">Режимы</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="b-row cp-tab-padding">
+        <div class="b-col-12">
+          <div ng-if="tabs[0]" ng-include="'app/bud/cp/sets/information.html'"></div>
+          <div ng-if="tabs[1]" ng-include="'app/bud/cp/sets/modes.html'"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

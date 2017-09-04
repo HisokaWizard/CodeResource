@@ -1,0 +1,601 @@
+<Resources>
+	<Item isArray="1">
+		<Entry>NAmg::TlibraryError</Entry>
+		<Values>
+			<Item isArray="1">
+				<Code>1</Code>
+				<Russian>
+					<Short>Отсутствует таблица кодов ошибок</Short>
+					<Full>Таблица перекодировки для класса TCodeConverter не создана</Full>
+				</Russian>
+				<English>
+					<Short>Bad error codes table</Short>
+					<Full>Table for TCodeConverter is not created</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>2</Code>
+				<Russian>
+					<Short>Недопустимый код ошибки</Short>
+					<Full>Код ошибки не найден в таблице перекодировки для TCodeConverter</Full>
+				</Russian>
+				<English>
+					<Short>Incorrect error code</Short>
+					<Full>Error code is not found by TCodeConverter</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>3</Code>
+				<Russian>
+					<Short>Недопустимый индекс в списке</Short>
+					<Full>Индекс для TListOfPointers не лежит в допустимом диапазоне</Full>
+				</Russian>
+				<English>
+					<Short>Incorrect index for list</Short>
+					<Full>Index for TListOfPointers objects is out of boundaries</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>4</Code>
+				<Russian>
+					<Short>Недопустимый индекс в строке</Short>
+					<Full>Индекс для TString не лежит в допустимом диапазоне</Full>
+				</Russian>
+				<English>
+					<Short>Incorrect index for string</Short>
+					<Full>Index for TString objects is out of boundaries</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>5</Code>
+				<Russian>
+					<Short>Невозможно преобразование строки в значение</Short>
+					<Full>Ошибка в процессе преобразования строки в значение</Full>
+				</Russian>
+				<English>
+					<Short>String to value conversion is impossible</Short>
+					<Full>Error in value to string conversion</Full>
+				</English>
+			</Item>
+		</Values>
+	</Item>
+	<Item isArray="1">
+		<Entry>NAmg::TconfigError</Entry>
+		<Values>
+			<Item isArray="1">
+				<Code>1</Code>
+				<Russian>
+					<Short>Атрибут не существует</Short>
+					<Full>Атрибут не существует</Full>
+				</Russian>
+				<English>
+					<Short>Attribut doesn't exist</Short>
+					<Full>Attribut doesn't exist</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>2</Code>
+				<Russian>
+					<Short>Недопустимый индекс в массиве значений атрибута</Short>
+					<Full>Недопустимый индекс в массиве значений атрибута</Full>
+				</Russian>
+				<English>
+					<Short>Incorrect index of attribut values array</Short>
+					<Full>Incorrect index of attribut values array</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>3</Code>
+				<Russian>
+					<Short>Ключ не существует</Short>
+					<Full>Ключ не существует</Full>
+				</Russian>
+				<English>
+					<Short>Key doesn't exist</Short>
+					<Full>Key has no value</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>4</Code>
+				<Russian>
+					<Short>Недопустимый индекс в массиве ключей</Short>
+					<Full>Недопустимый индекс в массиве ключей</Full>
+				</Russian>
+				<English>
+					<Short>Incorrect index of keys array</Short>
+					<Full>Incorrect index of keys array</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>5</Code>
+				<Russian>
+					<Short>Недопустимое значение индекса</Short>
+					<Full>Недопустимое значение индекса</Full>
+				</Russian>
+				<English>
+					<Short>Incorrect index</Short>
+					<Full>Incorrect index</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>6</Code>
+				<Russian>
+					<Short>Недопустимое имя атрибута</Short>
+					<Full>Недопустимое имя атрибута</Full>
+				</Russian>
+				<English>
+					<Short>Incorrect attribute name</Short>
+					<Full>Incorrect attribute name</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>10</Code>
+				<Russian>
+					<Short>Невозможно преоразование в bool</Short>
+					<Full>Невозможно преоразование в bool</Full>
+				</Russian>
+				<English>
+					<Short>Conversion to bool is impossible</Short>
+					<Full>Conversion to bool is impossible</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>11</Code>
+				<Russian>
+					<Short>Невозможно преоразование в int</Short>
+					<Full>Невозможно преоразование в int</Full>
+				</Russian>
+				<English>
+					<Short>Conversion to int is impossible</Short>
+					<Full>Conversion to int is impossible</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>12</Code>
+				<Russian>
+					<Short>Невозможно преоразование в Byte</Short>
+					<Full>Невозможно преоразование в Byte</Full>
+				</Russian>
+				<English>
+					<Short>Conversion to Byte is impossible</Short>
+					<Full>Conversion to Byte is impossible</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>13</Code>
+				<Russian>
+					<Short>Невозможно преоразование в Word</Short>
+					<Full>Невозможно преоразование в Word</Full>
+				</Russian>
+				<English>
+					<Short>Conversion to Word is impossible</Short>
+					<Full>Conversion to Word is impossible</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>14</Code>
+				<Russian>
+					<Short>Невозможно преоразование в double</Short>
+					<Full>Невозможно преоразование в double</Full>
+				</Russian>
+				<English>
+					<Short>Conversion to double is impossible</Short>
+					<Full>Conversion to double is impossible</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>15</Code>
+				<Russian>
+					<Short>Невозможно преоразование в hex</Short>
+					<Full>Невозможно преоразование в hex</Full>
+				</Russian>
+				<English>
+					<Short>Conversion to hex is impossible</Short>
+					<Full>Conversion to hex is impossible</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>20</Code>
+				<Russian>
+					<Short>Атрибут не является массивом</Short>
+					<Full>Невозможно обращение по индексу  к атрибуту, не являющемуся массивом</Full>
+				</Russian>
+				<English>
+					<Short>Attribute is not array</Short>
+					<Full>Attribute is not array</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>21</Code>
+				<Russian>
+					<Short>Атрибут является массивом</Short>
+					<Full>Невозможно обращение без индекса  к атрибуту,  являющемуся массивом</Full>
+				</Russian>
+				<English>
+					<Short>Attribute is array</Short>
+					<Full>Attribute is array</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>22</Code>
+				<Russian>
+					<Short>Ключ не является массивом</Short>
+					<Full>Невозможно обращение по индексу  к ключу,  являющемуся массивом</Full>
+				</Russian>
+				<English>
+					<Short>Key is not array</Short>
+					<Full>Key is not array</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>23</Code>
+				<Russian>
+					<Short>Ключ является массивом</Short>
+					<Full>Невозможно обращение без индекса  к ключу,  являющемуся массивом</Full>
+				</Russian>
+				<English>
+					<Short>Key is array</Short>
+					<Full>Key is array</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>24</Code>
+				<Russian>
+					<Short>Невозможно удаление корневого или текущего ключа</Short>
+					<Full>Невозможно удаление корневого или текущего ключа</Full>
+				</Russian>
+				<English>
+					<Short>It is impossible to delete root or current keys</Short>
+					<Full>It is impossible to delete root or current keys</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>25</Code>
+				<Russian>
+					<Short>Невозможен подсчет элементов текущего ключа</Short>
+					<Full>Невозможен подсчет элементов текущего ключа</Full>
+				</Russian>
+				<English>
+					<Short>It is impossible to count current key items</Short>
+					<Full>It is impossible to count current key items</Full>
+				</English>
+			</Item>
+		</Values>
+	</Item>
+	<Item isArray="1">
+		<Entry>NAmg::TThreadDebug</Entry>
+		<Values>
+			<Item isArray="1">
+				<Code>0</Code>
+				<Russian>
+					<Short>Поток запущен</Short>
+					<Full>Поток запущен</Full>
+				</Russian>
+				<English>
+					<Short>Thread started</Short>
+					<Full>Thread started</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>1</Code>
+				<Russian>
+					<Short>Поток остановлен</Short>
+					<Full>Поток остановлен</Full>
+				</Russian>
+				<English>
+					<Short>Thread stopped</Short>
+					<Full>Thread stopped</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>2</Code>
+				<Russian>
+					<Short>Поток остановлен из-за необработанного исключения</Short>
+					<Full>Поток остановлен из-за необработанного исключения</Full>
+				</Russian>
+				<English>
+					<Short>Thread stopped by unhandled exception</Short>
+					<Full>Thread stopped by unhandled exception</Full>
+				</English>
+			</Item>
+		</Values>
+	</Item>
+	<Item isArray="1">
+		<Entry>NAmg::TConnectionDebug</Entry>
+		<Values>
+			<Item isArray="1">
+				<Code>0x01</Code>
+				<Russian>
+					<Short>Объект соединения создан</Short>
+					<Full>Объект соединения создан</Full>
+				</Russian>
+				<English>
+					<Short>Connection created</Short>
+					<Full>Connection created</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>0x02</Code>
+				<Russian>
+					<Short>Объект соединения удалён</Short>
+					<Full>Объект соединения удалён</Full>
+				</Russian>
+				<English>
+					<Short>Connection deleted</Short>
+					<Full>Connection deleted</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>0x03</Code>
+				<Russian>
+					<Short>Получены данные из соединения</Short>
+					<Full>Получены данные из соединения</Full>
+				</Russian>
+				<English>
+					<Short>Data is read from connection</Short>
+					<Full>Data is read from connection</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>0x04</Code>
+				<Russian>
+					<Short>Данные переданы в соединение</Short>
+					<Full>Данные переданы в соединение</Full>
+				</Russian>
+				<English>
+					<Short>Data is written to connection</Short>
+					<Full>Data is written to connection</Full>
+				</English>
+			</Item>
+		</Values>
+	</Item>
+	<Item isArray="1">
+		<Entry>NAmg::TConnectionStateDebug</Entry>
+		<Values>
+			<Item isArray="1">
+				<Code>0x01</Code>
+				<Russian>
+					<Short>Изменено состояние объекта соединения</Short>
+					<Full>Изменено состояние объекта соединения</Full>
+				</Russian>
+				<English>
+					<Short>Connection state changed</Short>
+					<Full>Connection state changed</Full>
+				</English>
+			</Item>
+		</Values>
+	</Item>
+	<Item isArray="1">
+		<Entry>TConnection::TState</Entry>
+		<Values>
+			<Item isArray="1">
+				<Code>0x00</Code>
+				<Russian>
+					<Short>Неактивно</Short>
+					<Full>Неактивно</Full>
+				</Russian>
+				<English>
+					<Short>Idle</Short>
+					<Full>Idle</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>0x01</Code>
+				<Russian>
+					<Short>Исходящее соединение</Short>
+					<Full>Исходящее соединение</Full>
+				</Russian>
+				<English>
+					<Short>Outgoing connection</Short>
+					<Full>Outgoing connection</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>0x02</Code>
+				<Russian>
+					<Short>Входящее соединение</Short>
+					<Full>Входящее соединение</Full>
+				</Russian>
+				<English>
+					<Short>Incoming connection</Short>
+					<Full>Incoming connection</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>0x03</Code>
+				<Russian>
+					<Short>Закрытие</Short>
+					<Full>Закрытие</Full>
+				</Russian>
+				<English>
+					<Short>Closing</Short>
+					<Full>Closing</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>0x04</Code>
+				<Russian>
+					<Short>Соединение установлено</Short>
+					<Full>Соединение установлено</Full>
+				</Russian>
+				<English>
+					<Short>Connected</Short>
+					<Full>Connected</Full>
+				</English>
+			</Item>
+		</Values>
+	</Item>
+	<Item isArray="1">
+		<Entry>NAmg::TListenerDebug</Entry>
+		<Values>
+			<Item isArray="1">
+				<Code>0x01</Code>
+				<Russian>
+					<Short>Серверный Объект создан</Short>
+					<Full>Серверный Объект создан</Full>
+				</Russian>
+				<English>
+					<Short>Listener created</Short>
+					<Full>Listener created</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>0x02</Code>
+				<Russian>
+					<Short>Серверный Объект удалён</Short>
+					<Full>Серверный Объект удалён</Full>
+				</Russian>
+				<English>
+					<Short>Listener deleted</Short>
+					<Full>Listener deleted</Full>
+				</English>
+			</Item>
+		</Values>
+	</Item>
+	<Item isArray="1">
+		<Entry>NAmg::TListenerStateDebug</Entry>
+		<Values>
+			<Item isArray="1">
+				<Code>0x01</Code>
+				<Russian>
+					<Short>Изменено состояние серверного объекта</Short>
+					<Full>Изменено состояние серверного объекта</Full>
+				</Russian>
+				<English>
+					<Short>Listener state changed</Short>
+					<Full>Listener state changed</Full>
+				</English>
+			</Item>
+		</Values>
+	</Item>
+	<Item isArray="1">
+		<Entry>TListener::TState</Entry>
+		<Values>
+			<Item isArray="1">
+				<Code>0x00</Code>
+				<Russian>
+					<Short>Неактивно</Short>
+					<Full>Неактивно</Full>
+				</Russian>
+				<English>
+					<Short>Idle</Short>
+					<Full>Idle</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>0x01</Code>
+				<Russian>
+					<Short>Starting</Short>
+					<Full>Starting</Full>
+				</Russian>
+				<English>
+					<Short>Starting</Short>
+					<Full>Starting</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>0x02</Code>
+				<Russian>
+					<Short>Stopping</Short>
+					<Full>Stopping</Full>
+				</Russian>
+				<English>
+					<Short>Stopping</Short>
+					<Full>Stopping</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>0x03</Code>
+				<Russian>
+					<Short>Listening</Short>
+					<Full>Listening</Full>
+				</Russian>
+				<English>
+					<Short>Listening</Short>
+					<Full>Listening</Full>
+				</English>
+			</Item>
+		</Values>
+	</Item>
+	<Item isArray="1">
+		<Entry>NAmg::TLinkDebug</Entry>
+		<Values>
+			<Item isArray="1">
+				<Code>0x01</Code>
+				<Russian>
+					<Short>Link created</Short>
+					<Full>Link created</Full>
+				</Russian>
+				<English>
+					<Short>Link created</Short>
+					<Full>Link created</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>0x02</Code>
+				<Russian>
+					<Short>Link deleted</Short>
+					<Full>Link deleted</Full>
+				</Russian>
+				<English>
+					<Short>Link deleted</Short>
+					<Full>Link deleted</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>0x03</Code>
+				<Russian>
+					<Short>Request</Short>
+					<Full>Request</Full>
+				</Russian>
+				<English>
+					<Short>Request</Short>
+					<Full>Request</Full>
+				</English>
+			</Item>
+		</Values>
+	</Item>
+	<Item isArray="1">
+		<Entry>NAmg::TSocketInfoDebug</Entry>
+		<Values>
+			<Item isArray="1">
+				<Code>0x01</Code>
+				<Russian>
+					<Short>Socket created</Short>
+					<Full>Socket created</Full>
+				</Russian>
+				<English>
+					<Short>Socket created</Short>
+					<Full>Socket created</Full>
+				</English>
+			</Item>
+			<Item isArray="1">
+				<Code>0x02</Code>
+				<Russian>
+					<Short>Socket deleted</Short>
+					<Full>Socket deleted</Full>
+				</Russian>
+				<English>
+					<Short>Socket deleted</Short>
+					<Full>Socket deleted</Full>
+				</English>
+			</Item>
+		</Values>
+	</Item>
+	<Item isArray="1">
+		<Entry>NAmg::TConnectionError</Entry>
+		<Values>
+			<Item isArray="1">
+				<Code>0x01</Code>
+				<Russian>
+					<Short>Такое соединение существует</Short>
+					<Full>Такое соединение существует</Full>
+				</Russian>
+				<English>
+					<Short>Connection exist</Short>
+					<Full>Connection exist</Full>
+				</English>
+			</Item>
+		</Values>
+	</Item>
+</Resources>

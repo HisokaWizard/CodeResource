@@ -1,0 +1,26 @@
+<div ng-controller="schemeController as ctrl">
+    <div class="b-row">
+        <div class="b-col-12">
+            <input type="text" ng-model="ctrl.label" class="cp-service-filter"/>
+        </div>
+    </div>
+    <div ng-class="{'cp-scheme-long-list':ctrl.isLongList(cpCtrl.sets[cpCtrl.cSet].services)}">
+      <div ng-repeat="sKey in cpCtrl.getKeys(cpCtrl.sets[cpCtrl.cSet].services) | filter:ctrl.getFilter() track by $index"
+           ng-click="ctrl.pick(sKey)"
+           ng-class="{'cp-scheme-filter' : true,
+                      'cp-scheme-filter-active': ctrl.isPicked(sKey)}">
+        <div class="b-row">
+          <div class="b-col-9 b-text-left" style="padding:0px 0px 0px 3px; margin:5px" >
+            <div ng-bind="cpCtrl.services[sKey].label"></div>
+          </div>
+          <div class="b-col-2" style="padding:0px 0px 0px 0px; margin:5px">
+            <div ng-if="sKey==ctrl.formedObj.data && 'formed'==ctrl.formedObj.formed">
+              <img src="img/state-icons/success.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="b-functional-button-reset" ng-click="ctrl.label=''">
+      Сбросить</button>
+</div>

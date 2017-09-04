@@ -1,0 +1,18 @@
+<div ng-controller="endpointsController as ctrl" ng-model="tabs" ng-init="tabs=[true,false]" class="cp-tab-level2">
+    <div class="b-row">
+      <div class="b-col-6">
+        <button ng-click="tabs=[true,false]"
+          ng-class="{'cp-tab-header-level2' : !tabs[0], 'cp-active-tab-header-level2' : tabs[0]}">Список</button>
+      </div>
+      <div class="b-col-6">
+        <button ng-click="tabs=[false,true]"
+          ng-class="{'cp-tab-header-level2' : !tabs[1], 'cp-active-tab-header-level2' : tabs[1]}">Настройки</button>
+      </div>
+    </div>
+  <div class="b-row">
+    <div class="b-col-12">
+      <div ng-if="tabs[0]" ng-include="'app/bud/cp/services/list.html'"></div>
+      <div ng-if="tabs[1]" ng-include="'app/bud/cp/services/setting.html'"></div>
+    </div>
+  </div>
+</div>

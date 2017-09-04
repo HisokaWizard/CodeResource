@@ -1,0 +1,902 @@
+﻿<PresetType>
+  <Id>PartnerR774</Id>
+  <!-- host-address это заглушка на место которой будет подставлен адрес конкретного хоста -->
+  <UriTemplate>http://{host-address}/restconf/data/r774-conf</UriTemplate>
+  <Description>Предустановка R774 для Партнёра</Description>
+  <AllowedHosts><HostType>r774</HostType></AllowedHosts>
+  <PresetList>
+    <Preset id="R774_dummy">
+    </Preset>
+    <Preset id="R774_preset_1">
+    <r774-conf>
+      <frequency>8000</frequency>
+      <modulation>F1B75</modulation>
+      <volume>0</volume>
+      <tone>60</tone>
+      <preset>1</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_2">
+    <r774-conf>
+      <frequency>8929</frequency>
+      <modulation>G1B100</modulation>
+      <volume>2</volume>
+      <tone>160</tone>
+      <preset>2</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_3">
+    <r774-conf>
+      <frequency>9858</frequency>
+      <modulation>F1B100</modulation>
+      <volume>4</volume>
+      <tone>260</tone>
+      <preset>3</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_4">
+    <r774-conf>
+      <frequency>10787</frequency>
+      <modulation>F1B75</modulation>
+      <volume>6</volume>
+      <tone>360</tone>
+      <preset>4</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_5">
+    <r774-conf>
+      <frequency>11717</frequency>
+      <modulation>G1B100</modulation>
+      <volume>8</volume>
+      <tone>460</tone>
+      <preset>5</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_6">
+    <r774-conf>
+      <frequency>12646</frequency>
+      <modulation>F1B100</modulation>
+      <volume>10</volume>
+      <tone>560</tone>
+      <preset>6</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_7">
+    <r774-conf>
+      <frequency>13575</frequency>
+      <modulation>F1B75</modulation>
+      <volume>12</volume>
+      <tone>660</tone>
+      <preset>7</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_8">
+    <r774-conf>
+      <frequency>14504</frequency>
+      <modulation>G1B100</modulation>
+      <volume>14</volume>
+      <tone>760</tone>
+      <preset>8</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_9">
+    <r774-conf>
+      <frequency>15434</frequency>
+      <modulation>F1B100</modulation>
+      <volume>16</volume>
+      <tone>860</tone>
+      <preset>9</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_10">
+    <r774-conf>
+      <frequency>16363</frequency>
+      <modulation>F1B75</modulation>
+      <volume>18</volume>
+      <tone>960</tone>
+      <preset>10</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_11">
+    <r774-conf>
+      <frequency>17292</frequency>
+      <modulation>G1B100</modulation>
+      <volume>20</volume>
+      <tone>1060</tone>
+      <preset>11</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_12">
+    <r774-conf>
+      <frequency>18222</frequency>
+      <modulation>F1B100</modulation>
+      <volume>22</volume>
+      <tone>1160</tone>
+      <preset>12</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_13">
+    <r774-conf>
+      <frequency>19151</frequency>
+      <modulation>F1B75</modulation>
+      <volume>24</volume>
+      <tone>1260</tone>
+      <preset>13</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_14">
+    <r774-conf>
+      <frequency>20080</frequency>
+      <modulation>G1B100</modulation>
+      <volume>26</volume>
+      <tone>1360</tone>
+      <preset>14</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_15">
+    <r774-conf>
+      <frequency>21009</frequency>
+      <modulation>F1B100</modulation>
+      <volume>28</volume>
+      <tone>1460</tone>
+      <preset>15</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_16">
+    <r774-conf>
+      <frequency>21939</frequency>
+      <modulation>F1B75</modulation>
+      <volume>30</volume>
+      <tone>1560</tone>
+      <preset>16</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_17">
+    <r774-conf>
+      <frequency>22868</frequency>
+      <modulation>G1B100</modulation>
+      <volume>32</volume>
+      <tone>1660</tone>
+      <preset>17</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_18">
+    <r774-conf>
+      <frequency>23797</frequency>
+      <modulation>F1B100</modulation>
+      <volume>34</volume>
+      <tone>60</tone>
+      <preset>18</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_19">
+    <r774-conf>
+      <frequency>24727</frequency>
+      <modulation>F1B75</modulation>
+      <volume>36</volume>
+      <tone>160</tone>
+      <preset>19</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_20">
+    <r774-conf>
+      <frequency>25656</frequency>
+      <modulation>G1B100</modulation>
+      <volume>38</volume>
+      <tone>260</tone>
+      <preset>20</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_21">
+    <r774-conf>
+      <frequency>26585</frequency>
+      <modulation>F1B100</modulation>
+      <volume>40</volume>
+      <tone>360</tone>
+      <preset>21</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_22">
+    <r774-conf>
+      <frequency>27514</frequency>
+      <modulation>F1B75</modulation>
+      <volume>42</volume>
+      <tone>460</tone>
+      <preset>22</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_23">
+    <r774-conf>
+      <frequency>28444</frequency>
+      <modulation>G1B100</modulation>
+      <volume>44</volume>
+      <tone>560</tone>
+      <preset>23</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_24">
+    <r774-conf>
+      <frequency>29373</frequency>
+      <modulation>F1B100</modulation>
+      <volume>0</volume>
+      <tone>660</tone>
+      <preset>24</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_25">
+    <r774-conf>
+      <frequency>30302</frequency>
+      <modulation>F1B75</modulation>
+      <volume>2</volume>
+      <tone>760</tone>
+      <preset>25</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_26">
+    <r774-conf>
+      <frequency>31232</frequency>
+      <modulation>G1B100</modulation>
+      <volume>4</volume>
+      <tone>860</tone>
+      <preset>26</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_27">
+    <r774-conf>
+      <frequency>32161</frequency>
+      <modulation>F1B100</modulation>
+      <volume>6</volume>
+      <tone>960</tone>
+      <preset>27</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_28">
+    <r774-conf>
+      <frequency>33090</frequency>
+      <modulation>F1B75</modulation>
+      <volume>8</volume>
+      <tone>1060</tone>
+      <preset>28</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_29">
+    <r774-conf>
+      <frequency>34019</frequency>
+      <modulation>G1B100</modulation>
+      <volume>10</volume>
+      <tone>1160</tone>
+      <preset>29</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_30">
+    <r774-conf>
+      <frequency>34949</frequency>
+      <modulation>F1B100</modulation>
+      <volume>12</volume>
+      <tone>1260</tone>
+      <preset>30</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_31">
+    <r774-conf>
+      <frequency>35878</frequency>
+      <modulation>F1B75</modulation>
+      <volume>14</volume>
+      <tone>1360</tone>
+      <preset>31</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_32">
+    <r774-conf>
+      <frequency>36807</frequency>
+      <modulation>G1B100</modulation>
+      <volume>16</volume>
+      <tone>1460</tone>
+      <preset>32</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_33">
+    <r774-conf>
+      <frequency>37737</frequency>
+      <modulation>F1B100</modulation>
+      <volume>18</volume>
+      <tone>1560</tone>
+      <preset>33</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_34">
+    <r774-conf>
+      <frequency>38666</frequency>
+      <modulation>F1B75</modulation>
+      <volume>20</volume>
+      <tone>1660</tone>
+      <preset>34</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_35">
+    <r774-conf>
+      <frequency>39595</frequency>
+      <modulation>G1B100</modulation>
+      <volume>22</volume>
+      <tone>60</tone>
+      <preset>35</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_36">
+    <r774-conf>
+      <frequency>40524</frequency>
+      <modulation>F1B100</modulation>
+      <volume>24</volume>
+      <tone>160</tone>
+      <preset>36</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_37">
+    <r774-conf>
+      <frequency>41454</frequency>
+      <modulation>F1B75</modulation>
+      <volume>26</volume>
+      <tone>260</tone>
+      <preset>37</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_38">
+    <r774-conf>
+      <frequency>42383</frequency>
+      <modulation>G1B100</modulation>
+      <volume>28</volume>
+      <tone>360</tone>
+      <preset>38</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_39">
+    <r774-conf>
+      <frequency>43312</frequency>
+      <modulation>F1B100</modulation>
+      <volume>30</volume>
+      <tone>460</tone>
+      <preset>39</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_40">
+    <r774-conf>
+      <frequency>44242</frequency>
+      <modulation>F1B75</modulation>
+      <volume>32</volume>
+      <tone>560</tone>
+      <preset>40</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_41">
+    <r774-conf>
+      <frequency>45171</frequency>
+      <modulation>G1B100</modulation>
+      <volume>34</volume>
+      <tone>660</tone>
+      <preset>41</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_42">
+    <r774-conf>
+      <frequency>46100</frequency>
+      <modulation>F1B100</modulation>
+      <volume>36</volume>
+      <tone>760</tone>
+      <preset>42</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_43">
+    <r774-conf>
+      <frequency>47029</frequency>
+      <modulation>F1B75</modulation>
+      <volume>38</volume>
+      <tone>860</tone>
+      <preset>43</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_44">
+    <r774-conf>
+      <frequency>47959</frequency>
+      <modulation>G1B100</modulation>
+      <volume>40</volume>
+      <tone>960</tone>
+      <preset>44</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_45">
+    <r774-conf>
+      <frequency>48888</frequency>
+      <modulation>F1B100</modulation>
+      <volume>42</volume>
+      <tone>1060</tone>
+      <preset>45</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_46">
+    <r774-conf>
+      <frequency>49817</frequency>
+      <modulation>F1B75</modulation>
+      <volume>44</volume>
+      <tone>1160</tone>
+      <preset>46</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_47">
+    <r774-conf>
+      <frequency>50747</frequency>
+      <modulation>G1B100</modulation>
+      <volume>0</volume>
+      <tone>1260</tone>
+      <preset>47</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_48">
+    <r774-conf>
+      <frequency>51676</frequency>
+      <modulation>F1B100</modulation>
+      <volume>2</volume>
+      <tone>1360</tone>
+      <preset>48</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_49">
+    <r774-conf>
+      <frequency>52605</frequency>
+      <modulation>F1B75</modulation>
+      <volume>4</volume>
+      <tone>1460</tone>
+      <preset>49</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_50">
+    <r774-conf>
+      <frequency>53534</frequency>
+      <modulation>G1B100</modulation>
+      <volume>6</volume>
+      <tone>1560</tone>
+      <preset>50</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_51">
+    <r774-conf>
+      <frequency>54464</frequency>
+      <modulation>F1B100</modulation>
+      <volume>8</volume>
+      <tone>1660</tone>
+      <preset>51</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_52">
+    <r774-conf>
+      <frequency>55393</frequency>
+      <modulation>F1B75</modulation>
+      <volume>10</volume>
+      <tone>60</tone>
+      <preset>52</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_53">
+    <r774-conf>
+      <frequency>56322</frequency>
+      <modulation>G1B100</modulation>
+      <volume>12</volume>
+      <tone>160</tone>
+      <preset>53</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_54">
+    <r774-conf>
+      <frequency>57251</frequency>
+      <modulation>F1B100</modulation>
+      <volume>14</volume>
+      <tone>260</tone>
+      <preset>54</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_55">
+    <r774-conf>
+      <frequency>58181</frequency>
+      <modulation>F1B75</modulation>
+      <volume>16</volume>
+      <tone>360</tone>
+      <preset>55</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_56">
+    <r774-conf>
+      <frequency>59110</frequency>
+      <modulation>G1B100</modulation>
+      <volume>18</volume>
+      <tone>460</tone>
+      <preset>56</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_57">
+    <r774-conf>
+      <frequency>60039</frequency>
+      <modulation>F1B100</modulation>
+      <volume>20</volume>
+      <tone>560</tone>
+      <preset>57</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_58">
+    <r774-conf>
+      <frequency>60969</frequency>
+      <modulation>F1B75</modulation>
+      <volume>22</volume>
+      <tone>660</tone>
+      <preset>58</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_59">
+    <r774-conf>
+      <frequency>61898</frequency>
+      <modulation>G1B100</modulation>
+      <volume>24</volume>
+      <tone>760</tone>
+      <preset>59</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_60">
+    <r774-conf>
+      <frequency>62827</frequency>
+      <modulation>F1B100</modulation>
+      <volume>26</volume>
+      <tone>860</tone>
+      <preset>60</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_61">
+    <r774-conf>
+      <frequency>63756</frequency>
+      <modulation>F1B75</modulation>
+      <volume>28</volume>
+      <tone>960</tone>
+      <preset>61</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_62">
+    <r774-conf>
+      <frequency>64686</frequency>
+      <modulation>G1B100</modulation>
+      <volume>30</volume>
+      <tone>1060</tone>
+      <preset>62</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_63">
+    <r774-conf>
+      <frequency>65615</frequency>
+      <modulation>F1B100</modulation>
+      <volume>32</volume>
+      <tone>1160</tone>
+      <preset>63</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_64">
+    <r774-conf>
+      <frequency>66544</frequency>
+      <modulation>F1B75</modulation>
+      <volume>34</volume>
+      <tone>1260</tone>
+      <preset>64</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_65">
+    <r774-conf>
+      <frequency>67474</frequency>
+      <modulation>G1B100</modulation>
+      <volume>36</volume>
+      <tone>1360</tone>
+      <preset>65</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_66">
+    <r774-conf>
+      <frequency>68403</frequency>
+      <modulation>F1B100</modulation>
+      <volume>38</volume>
+      <tone>1460</tone>
+      <preset>66</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_67">
+    <r774-conf>
+      <frequency>69332</frequency>
+      <modulation>F1B75</modulation>
+      <volume>40</volume>
+      <tone>1560</tone>
+      <preset>67</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_68">
+    <r774-conf>
+      <frequency>70261</frequency>
+      <modulation>G1B100</modulation>
+      <volume>42</volume>
+      <tone>1660</tone>
+      <preset>68</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_69">
+    <r774-conf>
+      <frequency>71191</frequency>
+      <modulation>F1B100</modulation>
+      <volume>44</volume>
+      <tone>60</tone>
+      <preset>69</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_70">
+    <r774-conf>
+      <frequency>72120</frequency>
+      <modulation>F1B75</modulation>
+      <volume>0</volume>
+      <tone>160</tone>
+      <preset>70</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_71">
+    <r774-conf>
+      <frequency>73049</frequency>
+      <modulation>G1B100</modulation>
+      <volume>2</volume>
+      <tone>260</tone>
+      <preset>71</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_72">
+    <r774-conf>
+      <frequency>73979</frequency>
+      <modulation>F1B100</modulation>
+      <volume>4</volume>
+      <tone>360</tone>
+      <preset>72</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_73">
+    <r774-conf>
+      <frequency>74908</frequency>
+      <modulation>F1B75</modulation>
+      <volume>6</volume>
+      <tone>460</tone>
+      <preset>73</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_74">
+    <r774-conf>
+      <frequency>75837</frequency>
+      <modulation>G1B100</modulation>
+      <volume>8</volume>
+      <tone>560</tone>
+      <preset>74</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_75">
+    <r774-conf>
+      <frequency>76766</frequency>
+      <modulation>F1B100</modulation>
+      <volume>10</volume>
+      <tone>660</tone>
+      <preset>75</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_76">
+    <r774-conf>
+      <frequency>77696</frequency>
+      <modulation>F1B75</modulation>
+      <volume>12</volume>
+      <tone>760</tone>
+      <preset>76</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_77">
+    <r774-conf>
+      <frequency>78625</frequency>
+      <modulation>G1B100</modulation>
+      <volume>14</volume>
+      <tone>860</tone>
+      <preset>77</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_78">
+    <r774-conf>
+      <frequency>79554</frequency>
+      <modulation>F1B100</modulation>
+      <volume>16</volume>
+      <tone>960</tone>
+      <preset>78</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_79">
+    <r774-conf>
+      <frequency>80484</frequency>
+      <modulation>F1B75</modulation>
+      <volume>18</volume>
+      <tone>1060</tone>
+      <preset>79</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_80">
+    <r774-conf>
+      <frequency>81413</frequency>
+      <modulation>G1B100</modulation>
+      <volume>20</volume>
+      <tone>1160</tone>
+      <preset>80</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_81">
+    <r774-conf>
+      <frequency>82342</frequency>
+      <modulation>F1B100</modulation>
+      <volume>22</volume>
+      <tone>1260</tone>
+      <preset>81</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_82">
+    <r774-conf>
+      <frequency>83271</frequency>
+      <modulation>F1B75</modulation>
+      <volume>24</volume>
+      <tone>1360</tone>
+      <preset>82</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_83">
+    <r774-conf>
+      <frequency>84201</frequency>
+      <modulation>G1B100</modulation>
+      <volume>26</volume>
+      <tone>1460</tone>
+      <preset>83</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_84">
+    <r774-conf>
+      <frequency>85130</frequency>
+      <modulation>F1B100</modulation>
+      <volume>28</volume>
+      <tone>1560</tone>
+      <preset>84</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_85">
+    <r774-conf>
+      <frequency>86059</frequency>
+      <modulation>F1B75</modulation>
+      <volume>30</volume>
+      <tone>1660</tone>
+      <preset>85</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_86">
+    <r774-conf>
+      <frequency>86989</frequency>
+      <modulation>G1B100</modulation>
+      <volume>32</volume>
+      <tone>60</tone>
+      <preset>86</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_87">
+    <r774-conf>
+      <frequency>87918</frequency>
+      <modulation>F1B100</modulation>
+      <volume>34</volume>
+      <tone>160</tone>
+      <preset>87</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_88">
+    <r774-conf>
+      <frequency>88847</frequency>
+      <modulation>F1B75</modulation>
+      <volume>36</volume>
+      <tone>260</tone>
+      <preset>88</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_89">
+    <r774-conf>
+      <frequency>89776</frequency>
+      <modulation>G1B100</modulation>
+      <volume>38</volume>
+      <tone>360</tone>
+      <preset>89</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_90">
+    <r774-conf>
+      <frequency>90706</frequency>
+      <modulation>F1B100</modulation>
+      <volume>40</volume>
+      <tone>460</tone>
+      <preset>90</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_91">
+    <r774-conf>
+      <frequency>91635</frequency>
+      <modulation>F1B75</modulation>
+      <volume>42</volume>
+      <tone>560</tone>
+      <preset>91</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_92">
+    <r774-conf>
+      <frequency>92564</frequency>
+      <modulation>G1B100</modulation>
+      <volume>44</volume>
+      <tone>660</tone>
+      <preset>92</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_93">
+    <r774-conf>
+      <frequency>93494</frequency>
+      <modulation>F1B100</modulation>
+      <volume>0</volume>
+      <tone>760</tone>
+      <preset>93</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_94">
+    <r774-conf>
+      <frequency>94423</frequency>
+      <modulation>F1B75</modulation>
+      <volume>2</volume>
+      <tone>860</tone>
+      <preset>94</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_95">
+    <r774-conf>
+      <frequency>95352</frequency>
+      <modulation>G1B100</modulation>
+      <volume>4</volume>
+      <tone>960</tone>
+      <preset>95</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_96">
+    <r774-conf>
+      <frequency>96281</frequency>
+      <modulation>F1B100</modulation>
+      <volume>6</volume>
+      <tone>1060</tone>
+      <preset>96</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_97">
+    <r774-conf>
+      <frequency>97211</frequency>
+      <modulation>F1B75</modulation>
+      <volume>8</volume>
+      <tone>1160</tone>
+      <preset>97</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_98">
+    <r774-conf>
+      <frequency>98140</frequency>
+      <modulation>G1B100</modulation>
+      <volume>10</volume>
+      <tone>1260</tone>
+      <preset>98</preset>
+    </r774-conf>
+    </Preset>
+    <Preset id="R774_preset_99">
+    <r774-conf>
+      <frequency>99069</frequency>
+      <modulation>F1B100</modulation>
+      <volume>12</volume>
+      <tone>1360</tone>
+      <preset>99</preset>
+    </r774-conf>
+    </Preset>
+  </PresetList>
+</PresetType>

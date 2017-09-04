@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComPlans>
+<Ranges>
+      <Range id="mv2dmv1" label="МВ2/ДМВ1" suffix="кГц">
+         <Description>Радио/МВ2ДМВ1</Description>
+      </Range>
+      <Range id="mv1" label="МВ1" suffix="кГц">
+         <Description>Радио/МВ1</Description>
+      </Range>
+      <Range id="dkmv" label="ДКМВ" suffix="кГц">
+         <Description>Радио/ДКМВ</Description>
+      </Range>
+      <Range id="sv" label="СВ" suffix="кГц">
+         <Description>Радио/ГКМВ(СВ)</Description>
+      </Range>
+      <Range id="sdv" label="СДВ" suffix="кГц">
+         <Description>Радио/СДВ</Description>
+      </Range>      
+   </Ranges>
+   <Classes>
+      <Class id="a3e" label="A3E">
+         <Description>Однополосная модуляция на верхней боковой полосе с полной несущей с полосой НЧ сигнала (300-2700) Гц в режиме передачи и амплитудная модуляция в режиме приема с полосой НЧ сигнала (300-2700) Гц.</Description>
+      </Class>
+      <Class id="j3eu" label="J3Eu">
+         <Description>Однополосная модуляция на верхней боковой полосе с полностью подавленной несущей с полосой НЧ сигнала (300-3400) Гц.</Description>
+      </Class>
+      <Class id="j3el" label="J3El">
+         <Description>Однополосная модуляция на нижней боковой полосе с полностью подавленной несущей с полосой НЧ сигнала (300-3400) Гц.</Description>
+      </Class>
+      <Class id="j3en" label="J3En">
+         <Description>Однополосная модуляция на верхней боковой полосе с полностью подавленной несущей с полосой НЧ сигнала (300-2700) Гц.</Description>
+      </Class>
+      <Class id="r3eu" label="R3Eu">
+         <Description>Однополосная модуляция на верхней боковой полосе с подавленной на 10 дБ несущей с полосой НЧ сигнала (300-3400) Гц.</Description>
+      </Class>
+      <Class id="r3el" label="R3El">
+         <Description>Однополосная модуляция на нижней боковой полосе с подавленной на 10 дБ несущей с полосой НЧ сигнала (300-3400) Гц.</Description>
+      </Class>
+      <Class id="a1a" label="A1A">
+         <Description>Амплитудная телеграфия со скоростью передачи информации до 24 бод.</Description>
+      </Class>
+      <Class id="j7d1" label="J7D1">
+         <Description>Многоканальная передача цифровой инормации при использовании полосы НЧ сигнала (300-3400) Гц и скоростью передачи информации 1200 бод.</Description>
+         <!-- Такого названия нет, но в списке два класса с одним именем, разнесла их на два-->
+      </Class>
+      <Class id="j7d2" label="J7D2">
+         <!-- Такого названия нет, но в списке два класса с одним именем, разнесла их на два-->
+         <Description>Многоканальная передача цифровой информации при использовании полосы НЧ сигнала (300-3400) Гц и скоростью передачи информации 2400 бод.</Description>
+      </Class>
+      <Class id="f1b1" label="F1B1">
+         <Description>Частотная телеграфия со сдвигом 200 Гц и скоростью передачи информации 75 бод.</Description>
+      </Class>
+      <Class id="f1b2" label="F1B2">
+         <Description>Частотная телеграфия со сдвигом 500 Гц и скоростью передачи информации 150 бод.</Description>
+      </Class>
+      <Class id="f1b3" label="F1B3">
+         <Description>Частотная телеграфия со сдвигом 500 Гц и скоростью передачи информации 300 бод.</Description>
+      </Class>
+      <Class id="f1b4" label="F1B4">
+         <Description>Частотная телеграфия со сдвигом 1000 Гц и скоростью передачи информации 500 бод.</Description>
+      </Class>
+      <Class id="g1b1" label="G1B1">
+         <Description>Фазоразностная манипуляция второго порядка со скоростью передачи информации 75 бод.</Description>
+      </Class>
+      <Class id="g1b2" label="G1B2">
+         <Description>Фазоразностная манипуляция второго порядка со скоростью передачи информации 150 бод.</Description>
+      </Class>
+      <Class id="g1b3" label="G1B3">
+         <Description>Фазоразностная манипуляция второго порядка со скоростью передачи информации 300 бод.</Description>
+      </Class>
+   </Classes>
+   <Services>
+      <Service id="s01" label="ПРМ/ПРД ТЛФ О КВ №1" range-id="mv2dmv1" media-type-id="audio" target-uri="sip:vmspd@gate.local">
+         <Description>Приемно-передающий тракт телефонной открытой связи в КВ диапазоне №1: ТОС - Р-693/1/1 - ВМПСД</Description>
+         <Crypted>false</Crypted>
+         <!--<Encrypted id="t614Device_001"></Encrypted>-->
+         <In>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="режим №1" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Destroy>
+            </Mode>
+          </Modes>
+         <Endpoints>
+            <Endpoint id="tosDevice_001" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s02" label="ПРМ/ПРД ТЛФ О КВ №2" range-id="mv2dmv1" media-type-id="audio" target-uri="sip:vmspd@gate.local">
+         <Description>Приемно-передающий тракт телефонной открытой связи в КВ диапазоне №2: ТМ/1 - Р-693/1/1 - ВМПСД</Description>
+         <Crypted>false</Crypted>
+         <!--<Encrypted id="t614Device_001"></Encrypted>-->
+         <In>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="режим №1" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Destroy>
+            </Mode>
+          </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_001" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s03" label="ПРМ/ПРД ТЛФ О КВ №3" range-id="mv2dmv1" media-type-id="audio" target-uri="sip:vmspd@gate.local">
+         <Description>Приемно-передающий тракт телефонной открытой связи в КВ диапазоне №3: ТМ/1 ТМ/2 - Р-693/1/1 - ВМПСД</Description>
+         <Crypted>false</Crypted>
+         <!--<Encrypted id="t614Device_001"></Encrypted>-->
+         <In>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="режим №1" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Destroy>
+            </Mode>
+          </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_001" auto-connect="true" />
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service> 
+      <Service id="s04" label="ПРМ/ПРД ТЛФ О УКВ №1" range-id="mv2dmv1" media-type-id="audio" target-uri="sip:r620@gate.local">
+         <Description>Приемно-передающий тракт телефонной открытой связи в УКВ диапазоне №1: ТОС - Р-620/1/1</Description>
+         <Crypted>false</Crypted>
+         <!--<Encrypted id="t614Device_001"></Encrypted>-->
+         <In>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </In>
+         <Out>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="режим №1" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Destroy>
+            </Mode>
+          </Modes>
+         <Endpoints>
+            <Endpoint id="tosDevice_001" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s05" label="ПРМ/ПРД ТЛФ О УКВ №2" range-id="mv2dmv1" media-type-id="audio" target-uri="sip:r620@gate.local">
+         <Description>Приемно-передающий тракт телефонной открытой связи в УКВ диапазоне №2: ТМ/1 - Р-620/1/1</Description>
+         <Crypted>false</Crypted>
+         <!--<Encrypted id="t614Device_001"></Encrypted>-->
+         <In>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </In>
+         <Out>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="режим №1" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Destroy>
+            </Mode>
+          </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_001" auto-connect="true" />
+         </Endpoints>
+      </Service>   
+      <Service id="s06" label="ПРМ/ПРД ТЛФ О УКВ №3" range-id="mv2dmv1" media-type-id="audio" target-uri="sip:r620@gate.local">
+         <Description>Приемно-передающий тракт телефонной открытой связи в УКВ диапазоне №3: ТМ/1 ТМ/2 - Р-620/1/1</Description>
+         <Crypted>false</Crypted>
+         <!--<Encrypted id="t614Device_001"></Encrypted>-->
+         <In>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </In>
+         <Out>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="режим №1" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Destroy>
+            </Mode>
+          </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_001" auto-connect="true" />
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s07" label="ПРМ/ПРД ТЛФ З КВ №1" range-id="mv2dmv1" media-type-id="audio" target-uri="sip:vmspd@gate.local">
+         <Description>Приемно-передающий тракт телефонной закрытой связи в КВ диапазоне №1: ТОС - Т-614/1 - Р-693/1/1 - ВМСПД</Description>
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001"></Encrypted>
+         <In>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="режим №1" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Destroy>
+            </Mode>
+          </Modes>
+         <Endpoints>
+            <Endpoint id="tosDevice_001" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s08" label="ПРМ/ПРД ТЛФ З КВ №2" range-id="mv2dmv1" media-type-id="audio" target-uri="sip:vmspd@gate.local">
+         <Description>Приемно-передающий тракт телефонной закрытой связи в КВ диапазоне №2: ТМ/3 - Т-614/1 - Р-693/1/1 - ВМСПД</Description>
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001"></Encrypted>
+         <In>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="режим №1" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Destroy>
+            </Mode>
+          </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_003" auto-connect="true" />
+         </Endpoints>
+      </Service>  
+      <Service id="s09" label="ПРМ/ПРД ТЛФ З КВ №3" range-id="mv2dmv1" media-type-id="audio" target-uri="sip:vmspd@gate.local">
+         <Description>Приемно-передающий тракт телефонной закрытой связи в КВ диапазоне №3: ТМ/3 ТМ/4 - Т-614/1 - Р-693/1/1 - ВМСПД</Description>
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001"></Encrypted>
+         <In>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="режим №1" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Destroy>
+            </Mode>
+          </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_003" auto-connect="true" />
+            <Endpoint id="tmDevice_004" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s10" label="ПРМ/ПРД ТЛФ З УКВ №1" range-id="mv2dmv1" media-type-id="audio" target-uri="sip:r620@gate.local">
+         <Description>Приемно-передающий тракт телефонной закрытой связи в УКВ диапазоне №1: ТОС - Т-614/1 - Р-620/1/1</Description>
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001"></Encrypted>
+         <In>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </In>
+         <Out>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="режим №1" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Destroy>
+            </Mode>
+          </Modes>
+         <Endpoints>
+            <Endpoint id="tosDevice_001" auto-connect="true" />
+         </Endpoints>
+      </Service>    
+      <Service id="s11" label="ПРМ/ПРД ТЛФ З УКВ №2" range-id="mv2dmv1" media-type-id="audio" target-uri="sip:r620@gate.local">
+         <Description>Приемно-передающий тракт телефонной закрытой связи в УКВ диапазоне №2: ТМ/3 - Т-614/1 - Р-620/1/1</Description>
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001"></Encrypted>
+         <In>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </In>
+         <Out>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="режим №1" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Destroy>
+            </Mode>
+          </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_003" auto-connect="true" />
+         </Endpoints>
+      </Service>  
+      <Service id="s12" label="ПРМ/ПРД ТЛФ З УКВ №3" range-id="mv2dmv1" media-type-id="audio" target-uri="sip:r620@gate.local">
+         <Description>Приемно-передающий тракт телефонной закрытой связи в УКВ диапазоне №3: ТМ/3 ТМ/4 - Т-614/1 - Р-620/1/1</Description>
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001"></Encrypted>
+         <In>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </In>
+         <Out>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="режим №1" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <!--<Parameter Name="channel">1</Parameter>-->
+                  </Preset>
+               </Destroy>
+            </Mode>
+          </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_003" auto-connect="true" />
+            <Endpoint id="tmDevice_004" auto-connect="true" />
+         </Endpoints>
+      </Service>       
+   </Services>
+   <Sets>
+      <Set id="s01" label="Группа трактов" scheme-id="sch1">
+         <Description>Набор трактов</Description>
+         <Service id="s01" />
+         <Service id="s02" />
+         <Service id="s03" />
+         <Service id="s04" />
+         <Service id="s05" />
+         <Service id="s06" />
+         <Service id="s07" />
+         <Service id="s08" />
+         <Service id="s09" />
+         <Service id="s10" />
+         <Service id="s11" />
+         <Service id="s12" />
+      </Set>     
+   </Sets>
+</ComPlans>

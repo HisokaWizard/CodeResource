@@ -1,0 +1,27 @@
+<div ng-controller="schemeController as ctrl">
+  <div ng-if="ctrl.modalShow">
+      <div id="cp-modal-window">
+          <button class="cp-closed-button" ng-click="ctrl.closedButton()"></button>
+          <div class="cp-modal-font-title cp-modal-title-position" ng-bind="ctrl.dataAboutDevice.elemName"></div>
+          <button class="b-btn b-btn-default cp-modal-button cp-modal-button-position"
+                  ng-click="ctrl.goToSettings(ctrl.dataAboutDevice.linkToSettings)"
+                  ng-bind="'Настройка параметров'"></button>
+          <div class="cp-modal-font cp-modal-button-position" ng-bind="'Список трактов:'"></div>
+          <ul class="modal-list-scroll">
+              <li class="cp-modal-font-list cp-modal-button-position" ng-repeat="tract in ctrl.dataAboutDevice.listTracts">
+                  <button class="b-btn b-btn-default" ng-click="cpCtrl.cSection=cpCtrl.sections.services.name" ng-bind="tract.label"></button>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <canvas id="canvas"
+          ng-mousemove="ctrl.OnMouseMove($event)"
+          ng-mousedown="ctrl.MouseDown($event)"
+          ng-mouseup="ctrl.MouseUp($event)"
+          class="cp-scheme">
+    <div ng-bind="ctrl.GoToDevice()"></div>
+    <div ng-bind="ctrl.HighLighter()"></div>
+  </canvas>
+</div>
+
+

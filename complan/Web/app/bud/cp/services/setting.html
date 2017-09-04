@@ -1,0 +1,18 @@
+<div class="b-row cp-endpoints-setting">
+  <div class="b-col-6 cp-endpoints-setting-list">
+    <div class="b-row">
+      <div ng-repeat="(eKey,endpoint) in cpCtrl.services[sKey].endpoints"
+        ng-bind="cpCtrl.devices[eKey].label"
+        class="b-col-12 cp-item"></div>
+    </div>
+  </div>
+  <div class="b-col-6">
+    <button ng-click="ctrl.add(sKey,ctrl.newEndpoint)" class="cp-button">Добавить</button>
+    <select ng-model="ctrl.newEndpoint" class="cp-button">
+      <option ng-repeat="(dId,device) in cpCtrl.devices"
+        ng-if="'mvt' == device.type || 'aist' == device.type"
+        ng-bind="device.label"
+        ng-value="dId"></option>
+    </select>
+  </div>
+</div>

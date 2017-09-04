@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComPlans>
+<Ranges>
+      <Range id="mv2dmv1" label="МВ2/ДМВ1" suffix="кГц">
+         <Description>Радио/МВ2ДМВ1</Description>
+      </Range>
+      <Range id="mv1" label="МВ1" suffix="кГц">
+         <Description>Радио/МВ1</Description>
+      </Range>
+      <Range id="dkmv" label="ДКМВ" suffix="кГц">
+         <Description>Радио/ДКМВ</Description>
+      </Range>
+      <Range id="sv" label="СВ" suffix="кГц">
+         <Description>Радио/ГКМВ(СВ)</Description>
+      </Range>
+      <Range id="sdv" label="СДВ" suffix="кГц">
+         <Description>Радио/СДВ</Description>
+      </Range>      
+   </Ranges>
+   <Classes>
+      <Class id="a3e" label="A3E">
+         <Description>Однополосная модуляция на верхней боковой полосе с полной несущей с полосой НЧ сигнала (300-2700) Гц в режиме передачи и амплитудная модуляция в режиме приема с полосой НЧ сигнала (300-2700) Гц.</Description>
+      </Class>
+      <Class id="j3eu" label="J3Eu">
+         <Description>Однополосная модуляция на верхней боковой полосе с полностью подавленной несущей с полосой НЧ сигнала (300-3400) Гц.</Description>
+      </Class>
+      <Class id="j3el" label="J3El">
+         <Description>Однополосная модуляция на нижней боковой полосе с полностью подавленной несущей с полосой НЧ сигнала (300-3400) Гц.</Description>
+      </Class>
+      <Class id="j3en" label="J3En">
+         <Description>Однополосная модуляция на верхней боковой полосе с полностью подавленной несущей с полосой НЧ сигнала (300-2700) Гц.</Description>
+      </Class>
+      <Class id="r3eu" label="R3Eu">
+         <Description>Однополосная модуляция на верхней боковой полосе с подавленной на 10 дБ несущей с полосой НЧ сигнала (300-3400) Гц.</Description>
+      </Class>
+      <Class id="r3el" label="R3El">
+         <Description>Однополосная модуляция на нижней боковой полосе с подавленной на 10 дБ несущей с полосой НЧ сигнала (300-3400) Гц.</Description>
+      </Class>
+      <Class id="a1a" label="A1A">
+         <Description>Амплитудная телеграфия со скоростью передачи информации до 24 бод.</Description>
+      </Class>
+      <Class id="j7d1" label="J7D1">
+         <Description>Многоканальная передача цифровой инормации при использовании полосы НЧ сигнала (300-3400) Гц и скоростью передачи информации 1200 бод.</Description>
+         <!-- Такого названия нет, но в списке два класса с одним именем, разнесла их на два-->
+      </Class>
+      <Class id="j7d2" label="J7D2">
+         <!-- Такого названия нет, но в списке два класса с одним именем, разнесла их на два-->
+         <Description>Многоканальная передача цифровой информации при использовании полосы НЧ сигнала (300-3400) Гц и скоростью передачи информации 2400 бод.</Description>
+      </Class>
+      <Class id="f1b1" label="F1B1">
+         <Description>Частотная телеграфия со сдвигом 200 Гц и скоростью передачи информации 75 бод.</Description>
+      </Class>
+      <Class id="f1b2" label="F1B2">
+         <Description>Частотная телеграфия со сдвигом 500 Гц и скоростью передачи информации 150 бод.</Description>
+      </Class>
+      <Class id="f1b3" label="F1B3">
+         <Description>Частотная телеграфия со сдвигом 500 Гц и скоростью передачи информации 300 бод.</Description>
+      </Class>
+      <Class id="f1b4" label="F1B4">
+         <Description>Частотная телеграфия со сдвигом 1000 Гц и скоростью передачи информации 500 бод.</Description>
+      </Class>
+      <Class id="g1b1" label="G1B1">
+         <Description>Фазоразностная манипуляция второго порядка со скоростью передачи информации 75 бод.</Description>
+      </Class>
+      <Class id="g1b2" label="G1B2">
+         <Description>Фазоразностная манипуляция второго порядка со скоростью передачи информации 150 бод.</Description>
+      </Class>
+      <Class id="g1b3" label="G1B3">
+         <Description>Фазоразностная манипуляция второго порядка со скоростью передачи информации 300 бод.</Description>
+      </Class>
+   </Classes>
+   <Services>
+      <Service id="s01_" label="ПРМ/ПРД ТЛФ О КВ №1" range-id="mv2dmv1" media-type-id="audio" target-uri="sip:vmspd@gate.local">
+         <Description>Это КВ ТФО №1</Description>
+         <Crypted>false</Crypted>
+         <Encrypted id="t614Device_001"></Encrypted>
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="режим №1" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_preset_5MHz" Type="TypeR693" >
+                    <Parameter Name="channel">1</Parameter>
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_preset_5p5MHz" Type="TypeR693" >
+                    <Parameter Name="channel">1</Parameter>
+                  </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="режим №2" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <Parameter Name="channel">1</Parameter>
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693Device_001_r693Agent_0" Id="R693_dummy" Type="TypeR693" >
+                    <Parameter Name="channel">1</Parameter>
+                  </Preset>
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_001" auto-connect="true" />
+         </Endpoints>
+      </Service>     
+   </Services>
+   <Sets>
+      <Set id="s01" label="Тестовый набор трактов" scheme-id="sch1">
+         <Description>Первый набор трактов</Description>
+         <Service id="s01_" />
+      </Set>     
+   </Sets>
+</ComPlans>

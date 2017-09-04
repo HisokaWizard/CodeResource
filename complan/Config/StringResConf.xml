@@ -1,0 +1,5 @@
+<Resources>
+    <File isArray="1">../../Resources/amgRes.xml</File>
+    <File isArray="1">../../Resources/ComPlansRes.xml</File>
+    <File isArray="1">../../Resources/LogRes.xml</File>
+</Resources>

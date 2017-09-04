@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<div class="b-row">
+  <div class="b-col-offset-4 b-col-4 cp-dialog-window">
+    <div ng-class="{'cp-long-set-name':ctrl.isLongName(cpCtrl.sets[ctrl.tmpSetId].label)}" class="b-row b-text-center">
+      Применить
+      <span ng-bind="cpCtrl.sets[ctrl.tmpSetId].label"></span>?
+    </div>
+    <div class="b-row cp-dialog-window-button">
+      <div class="b-col-6">
+        <button class="cp-button" ng-click="ctrl.apply()">Да</button>
+      </div>
+      <div class="b-col-6">
+        <button class="cp-button" ng-click="ctrl.cSection = cpCtrl.sections.sets.name">Нет</button>
+      </div>
+    </div>
+  </div>
+</div>

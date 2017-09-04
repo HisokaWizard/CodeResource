@@ -1,0 +1,1368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ComPlans>
+    <Ranges>
+      <Range id="mv2dmv1" label="МВ2/ДМВ1" suffix="кГц">
+         <Description>Радио/МВ2ДМВ1</Description>
+      </Range>
+      <Range id="mv1" label="МВ1" suffix="кГц">
+         <Description>Радио/МВ1</Description>
+      </Range>
+      <Range id="dkmv" label="ДКМВ" suffix="кГц">
+         <Description>Радио/ДКМВ</Description>
+      </Range>
+      <Range id="sv" label="СВ" suffix="кГц">
+         <Description>Радио/ГКМВ(СВ)</Description>
+      </Range>
+      <Range id="sdv" label="СДВ" suffix="кГц">
+         <Description>Радио/СДВ</Description>
+      </Range>      
+   </Ranges>
+   <Classes>
+      <Class id="a3e" label="A3E">
+         <Description>Однополосная модуляция на верхней боковой полосе с полной несущей с полосой НЧ сигнала (300-2700) Гц в режиме передачи и амплитудная модуляция в режиме приема с полосой НЧ сигнала (300-2700) Гц.</Description>
+      </Class>
+      <Class id="j3eu" label="J3Eu">
+         <Description>Однополосная модуляция на верхней боковой полосе с полностью подавленной несущей с полосой НЧ сигнала (300-3400) Гц.</Description>
+      </Class>
+      <Class id="j3el" label="J3El">
+         <Description>Однополосная модуляция на нижней боковой полосе с полностью подавленной несущей с полосой НЧ сигнала (300-3400) Гц.</Description>
+      </Class>
+      <Class id="j3en" label="J3En">
+         <Description>Однополосная модуляция на верхней боковой полосе с полностью подавленной несущей с полосой НЧ сигнала (300-2700) Гц.</Description>
+      </Class>
+      <Class id="r3eu" label="R3Eu">
+         <Description>Однополосная модуляция на верхней боковой полосе с подавленной на 10 дБ несущей с полосой НЧ сигнала (300-3400) Гц.</Description>
+      </Class>
+      <Class id="r3el" label="R3El">
+         <Description>Однополосная модуляция на нижней боковой полосе с подавленной на 10 дБ несущей с полосой НЧ сигнала (300-3400) Гц.</Description>
+      </Class>
+      <Class id="a1a" label="A1A">
+         <Description>Амплитудная телеграфия со скоростью передачи информации до 24 бод.</Description>
+      </Class>
+      <Class id="j7d1" label="J7D1">
+         <Description>Многоканальная передача цифровой инормации при использовании полосы НЧ сигнала (300-3400) Гц и скоростью передачи информации 1200 бод.</Description>
+         <!-- Такого названия нет, но в списке два класса с одним именем, разнесла их на два-->
+      </Class>
+      <Class id="j7d2" label="J7D2">
+         <!-- Такого названия нет, но в списке два класса с одним именем, разнесла их на два-->
+         <Description>Многоканальная передача цифровой информации при использовании полосы НЧ сигнала (300-3400) Гц и скоростью передачи информации 2400 бод.</Description>
+      </Class>
+      <Class id="f1b1" label="F1B1">
+         <Description>Частотная телеграфия со сдвигом 200 Гц и скоростью передачи информации 75 бод.</Description>
+      </Class>
+      <Class id="f1b2" label="F1B2">
+         <Description>Частотная телеграфия со сдвигом 500 Гц и скоростью передачи информации 150 бод.</Description>
+      </Class>
+      <Class id="f1b3" label="F1B3">
+         <Description>Частотная телеграфия со сдвигом 500 Гц и скоростью передачи информации 300 бод.</Description>
+      </Class>
+      <Class id="f1b4" label="F1B4">
+         <Description>Частотная телеграфия со сдвигом 1000 Гц и скоростью передачи информации 500 бод.</Description>
+      </Class>
+      <Class id="g1b1" label="G1B1">
+         <Description>Фазоразностная манипуляция второго порядка со скоростью передачи информации 75 бод.</Description>
+      </Class>
+      <Class id="g1b2" label="G1B2">
+         <Description>Фазоразностная манипуляция второго порядка со скоростью передачи информации 150 бод.</Description>
+      </Class>
+      <Class id="g1b3" label="G1B3">
+         <Description>Фазоразностная манипуляция второго порядка со скоростью передачи информации 300 бод.</Description>
+      </Class>
+   </Classes>
+   <Services>
+      <Service id="s01_" label="ПРМ/ПРД ТЛФ О КВ №1" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description>Это КВ ТФО №1</Description>
+         <Crypted>false</Crypted>
+         <!--<Encrypted id="t614Device_001"></Encrypted>
+-->
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_001" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s02_" label="ПРМ/ПРД ТЛФ О УКВ №1" range-id="uhv" media-type="audio" target-uri="sip:r620@gate.local">
+         <Description>Приемно-передающий тракт телефонной открытой связи в УКВ диапазоне №1: ТМ/1 - Р-620/1/1</Description>
+         <Crypted>false</Crypted>
+         <!--         <Encrypted id="t614Device_001"></Encrypted> -->
+         <In>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </In>
+         <Out>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="r620Device_001" Id="R620_dummy" Type="TypeR620" />
+               </Build>
+               <Destroy>
+                  <Preset Device="r620Device_001" Id="R620_dummy" Type="TypeR620" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s03_" label="ПРМ/ПРД ТЛФ З УКВ №1" range-id="uhv" media-type="audio" target-uri="sip:channel1@roma-gate.local">
+         <Description>Приемно-передающий тракт телефонной шифрованной связи в УКВ диапазоне №1: ТМ/3 - Т-614/1 - Р-620/1/1</Description>
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </In>
+         <Out>
+            <Radio id="r620Device_001" port-id="0" />
+            <Antenna id="neptunukvDevice_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Канал 1" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="r620Device_001" Id="R620_dummy" Type="TypeR620" />
+               </Build>
+               <Destroy>
+                  <Preset Device="r620Device_001" Id="R620_dummy" Type="TypeR620" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_003" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s04_" label="ПРМ/ПРД ТЛФ О КВ №2" range-id="kv" media-type="audio" target-uri="sip:vchannel5@gate.local">
+         <Description>:Приемно-передающий тракт телефонной открытой связи в КВ диапазоне №2 ТМ/1 - ВМСПД/1/1 и Р-693/1/1</Description>
+         <Crypted>false</Crypted>
+         <!--<Encrypted id="t614Device_001"></Encrypted>
+-->
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="r693Device_001" Id="R693_dummy" Type="TypeR693" />
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="r693Device_001" Id="R693_dummy" Type="TypeR693" />
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_001" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s05_" label="ПРМ/ПРД ТЛФ З КВ №2" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description>Приемно-передающий тракт телефонной шифрованной связи в КВ диапазоне №2: ТМ/3 - Т-614/1 - ВМСПД/1/1 и Р-693/1/1</Description>
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_003" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s06_" label="Р693тм2" range-id="kv" media-type="audio" target-uri="sip:channel2@gate.local">
+         <Description>Это КВ ТФО №2</Description>
+         <Crypted>false</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="r693Device_001" Id="R693_dummy" Type="TypeR693" />
+               </Build>
+               <Destroy>
+                  <Preset Device="r693Device_001" Id="R693_dummy" Type="TypeR693" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s07_" label="шлюз" range-id="kv" media-type="audio" target-uri="sip:channel2@roma-gate.local">
+         <Description>Это КВ ТФО №3</Description>
+         <Crypted>false</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="r693Device_001" Id="R693_dummy" Type="TypeR693" />
+               </Build>
+               <Destroy>
+                  <Preset Device="r693Device_001" Id="R693_dummy" Type="TypeR693" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s08_" label="614первый канал" range-id="kv" media-type="audio" target-uri="sip:channel1@roma-gate.local">
+         <Description>Это КВ ТФО №3</Description>
+         <Crypted>false</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="r774Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="n1000Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="r620Device_001" Id="R620_dummy" Type="TypeR620" />
+               </Build>
+               <Destroy>
+                  <Preset Device="r620Device_001" Id="R620_dummy" Type="TypeR620" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s09_" label="614второй канал" range-id="kv" media-type="audio" target-uri="sip:channel2@roma-gate.local">
+         <Description>Это КВ ТФО №3</Description>
+         <Crypted>false</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="r774Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="n1000Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="r620Device_001" Id="R620_dummy" Type="TypeR620" />
+                  <!--  <Preset Device="ppi1" Id="IConverter1_dummy" Type="IConverterPreset1">
+		    <Parameter Name="port1">1011</Parameter>
+ 		    <Parameter Name="port2">1010</Parameter>
+		    <Parameter Name="port3">1013</Parameter>
+		    <Parameter Name="port4">1012</Parameter>
+		  </Preset>
+-->
+               </Build>
+               <Destroy>
+                  <Preset Device="r620Device_001" Id="R620_dummy" Type="TypeR620" />
+                  <!--		  <Preset Device="ppi1" Id="IConverter1_dummy" Type="IConverterPreset1">
+		  </Preset>
+-->
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="false" />
+         </Endpoints>
+      </Service>
+      <Service id="s10_" label="614второй канал" range-id="kv" media-type="audio" target-uri="sip:vchannel8@gate.local">
+         <Description>Это КВ ТФО №3</Description>
+         <Crypted>false</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="r774Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="n1000Device_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="r620Device_001" Id="R620_dummy" Type="TypeR620" />
+               </Build>
+               <Destroy>
+                  <Preset Device="r620Device_001" Id="R620_dummy" Type="TypeR620" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s11" label="р/сеть №0034-411 (СлРТГС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>false</Crypted>
+         <!-- <Encrypted id="t614Device_001"></Encrypted>
+-->
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s12" label="р/сеть №0035-411 (СлРТГС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>false</Crypted>
+         <!-- <Encrypted id="t614Device_001"></Encrypted>
+-->
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s13" label="р/сеть №0036-411 (СлРТГС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description>По приказанию</Description>
+         <Crypted>false</Crypted>
+         <!-- <Encrypted id="t614Device_001"></Encrypted>
+-->
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s14" label="р/сеть №0037-421 (РТЛФС-ОП ВБ)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description>По приказанию</Description>
+         <Crypted>false</Crypted>
+         <!-- <Encrypted id="t614Device_001"></Encrypted>
+-->
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s15" label="р/сеть №0038-421 (РТЛФС-ОП ВБ)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description>По приказанию</Description>
+         <Crypted>true</Crypted>
+         <!-- <Encrypted id="t614Device_001"></Encrypted>
+-->
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s16" label="р/сеть №102-111 (СлРТГС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>true</Crypted>
+         <!-- <Encrypted id="t614Device_001"></Encrypted>
+-->
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s17" label="р/сеть №201-411 (СлРТГС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>true</Crypted>
+         <!-- <Encrypted id="t614Device_001"></Encrypted>
+-->
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s18" label="р/сеть №205-411 (СлРТГС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description>Постоянно</Description>
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s19" label="р/сеть №205-452 (БДС ЗАС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s20" label="р/сеть №248-1-452 (БДС ЗАС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s21" label="р/сеть №274-411 (СлРТГС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description>По приказанию</Description>
+         <Crypted>false</Crypted>
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s22" label="р/сетm №204-421 (РТЛФС-ОПВБ)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>false</Crypted>
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s23" label="р/сеть №208-411 (СлРТГС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s24" label="р/сеть №274-411 (СлРТГС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>false</Crypted>
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s25" label="р/сеть №206-452 (БДС ЗАС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s26" label="р/сеть №203-462 (СБДС ЗАС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s27" label="р/сеть №109-462 (СБДС ЗАС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s28" label="р/сеть №204-421 (РТЛФС-ОПВБ)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>false</Crypted>
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s29" label="р/сеть №900-1-522 (РТЛФС ЗАС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s30" label="р/направление №258-412 (СлРТГС ЗАС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s31" label="р/направление №258-432 (РТГС ЗАС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s32" label="р/направление №258-452 (БДС ЗАС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s33" label="направление спутниковой связи №С-00101 (ВТФС, ФакС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>false</Crypted>
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s34" label="р/сеть №211-521 (РТЛФС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description>125,0 МГц</Description>
+         <Crypted>false</Crypted>
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s35" label="р/сеть №207-521 (РТЛФС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description>141,250 МГц и на 16 канале (!56,8 МГц)</Description>
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s36" label="р/сеть №207-521 (РТЛФС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>false</Crypted>
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s37" label="р/сеть 2200" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description>на 16 канале (156,8 МГц)</Description>
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s38" label="р/сеть №210СИ-462 (СБДС ЗАС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description />
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s39" label="р/сеть №207-522 (РТЛФС ЗАС)" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description>на второй частоте</Description>
+         <Crypted>true</Crypted>
+         <Encrypted id="t614Device_001" />
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tmDevice_002" auto-connect="true" />
+         </Endpoints>
+      </Service>
+      <Service id="s40" label="ТРАКТ №1" range-id="kv" media-type="audio" target-uri="sip:r620@gate.local">
+         <Description>№1</Description>
+         <Crypted>false</Crypted>
+         <!--<Encrypted id="t614Device_001"></Encrypted>
+-->
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="r620Device_001" Id="R620_preset_110KHz" Type="TypeR620" />
+               </Build>
+               <Destroy>
+                  <Preset Device="r620Device_001" Id="R620_preset_110KHz" Type="TypeR620" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints />
+      </Service>
+      <Service id="s41" label="ТРАКТ №2" range-id="kv" media-type="audio" target-uri="sip:vmspd@gate.local">
+         <Description>на второй частоте</Description>
+         <Crypted>false</Crypted>
+         <!--<Encrypted id="t614Device_001"></Encrypted>
+-->
+         <In>
+            <Radio id="vmspdDevice_001" port-id="0" />
+            <Antenna id="k638Device_001" />
+         </In>
+         <Out>
+            <Radio id="r693Device_001" port-id="0" />
+            <Antenna id="k678Device_001" />
+         </Out>
+         <Can-Send>true</Can-Send>
+         <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="" channel="1" rx-frequency="500" tx-frequency="700" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description />
+               <Build>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Build>
+               <Destroy>
+                  <Preset Device="vmspdDevice_001" Id="VMSPD_dummy" Type="TypeVMSPD" />
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tavs2" auto-connect="true" />
+         </Endpoints>
+      </Service>
+   </Services>
+   <Sets>
+      <Set id="s01" label="Тестовый набор трактов" scheme-id="sch1">
+         <Description>Первый набор трактов</Description>
+         <!--<Service id="s01_" />
+-->
+         <Service id="s02_" />
+         <Service id="s03_" />
+         <Service id="s04_" />
+         <Service id="s05_" />
+         <!--<Service id="s06_" />-->
+         <!-- <Service id="s07_" />-->
+         <!--<Service id="s08_" />
+-->
+         <Service id="s09_" />
+         <!--<Service id="s10_" />
+-->
+      </Set>
+      <Set id="s02" label="Прием оповещений о воздушной обстановке" scheme-id="sch1">
+         <Description />
+         <Service id="s11" />
+         <Service id="s12" />
+         <Service id="s13" />
+         <Service id="s14" />
+         <Service id="s15" />
+      </Set>
+      <Set id="s03" label="Прием сигналов боевого управления, оповещений от ГШ ВМФ" scheme-id="sch1">
+         <Description />
+         <Service id="s16" />
+      </Set>
+      <Set id="s04" label="Прием сигналов боевого управления и оповещений от штаба Флота" scheme-id="sch1">
+         <Description />
+         <Service id="s17" />
+         <Service id="s18" />
+         <Service id="s19" />
+         <Service id="s20" />
+      </Set>
+      <Set id="s05" label="Радиосвязь в направлении берег-корабль" scheme-id="sch1">
+         <Description />
+         <Service id="s21" />
+         <Service id="s22" />
+      </Set>
+      <Set id="s06" label="Радиосвязь в направлении корабль-берег" scheme-id="sch1">
+         <Description />
+         <Service id="s23" />
+         <Service id="s24" />
+         <Service id="s25" />
+         <Service id="s26" />
+         <Service id="s27" />
+         <Service id="s28" />
+      </Set>
+      <Set id="s07" label="Радиосвязь в направленииях двухсторонней связи" scheme-id="sch1">
+         <Description />
+         <Service id="s29" />
+         <Service id="s30" />
+         <Service id="s31" />
+         <Service id="s32" />
+         <Service id="s33" />
+      </Set>
+      <Set id="s08" label="Тактическая связь взаимодействия" scheme-id="sch1">
+         <Description>С НК, МС обеспечения, ЛА и ПЛ</Description>
+         <Service id="s34" />
+         <Service id="s35" />
+      </Set>
+      <Set id="s09" label="Тактическая связь взаимодействия" scheme-id="sch1">
+         <Description>С постами НИС</Description>
+         <Service id="s36" />
+      </Set>
+      <Set id="s10" label="Тактическая связь взаимодействия" scheme-id="sch1">
+         <Description>С гражданскими судами</Description>
+         <Service id="s37" />
+      </Set>
+      <Set id="s11" label="Тактическая связь взаимодействия" scheme-id="sch1">
+         <Description>С ПЛ в надводном положении</Description>
+         <Service id="s38" />
+         <Service id="s39" />
+      </Set>
+      <Set id="s12" label="Тракты для ТАВС" scheme-id="sch1">
+         <Description>ТАВС</Description>
+         <Service id="s40" />
+         <Service id="s41" />
+      </Set>
+   </Sets>
+</ComPlans>

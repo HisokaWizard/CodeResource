@@ -1,0 +1,647 @@
+<Frequency>
+	<FreqValues>
+		<FreqValue id="1" freqvalue="0.500000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="2" freqvalue="2.145000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="3" freqvalue="2.145500">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="4" freqvalue="2.277500">
+			<Description>
+				На территории Дальнего востока
+			</Description>
+		</FreqValue>
+		<FreqValue id="5" freqvalue="4.125000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="6" freqvalue="4.177000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="7" freqvalue="4.177500">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="8" freqvalue="4.207500">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="9" freqvalue="4.210000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="10" freqvalue="6.210000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="11" freqvalue="6.215000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="12" freqvalue="6.215500">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="13" freqvalue="6.268000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="14" freqvalue="6.312000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="15" freqvalue="6.314000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>		
+		<FreqValue id="16" freqvalue="8.291000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="17" freqvalue="8.376500">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="18" freqvalue="8.414500">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="19" freqvalue="8.416500">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>		
+		<FreqValue id="20" freqvalue="12.290000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="21" freqvalue="12.520000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="22" freqvalue="12.577000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="23" freqvalue="12.579000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="24" freqvalue="16.420000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="25" freqvalue="16.695000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="26" freqvalue="16.804500">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="27" freqvalue="16.806500">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="28" freqvalue="19.680500">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="29" freqvalue="22.376000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="30" freqvalue="26.100500">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="31" freqvalue="36.200000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="32" freqvalue="40.000000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="33" freqvalue="40.100000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="34" freqvalue="40.200000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="35" freqvalue="40.500000">
+			<Description>
+			</Description>
+		</FreqValue>		
+		<FreqValue id="36" freqvalue="40.600000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="37" freqvalue="40.700000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="38" freqvalue="40.800000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="39" freqvalue="40.900000">
+			<Description>
+			</Description>
+		</FreqValue>		
+		<FreqValue id="40" freqvalue="41.100000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="41" freqvalue="41.150000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="42" freqvalue="41.800000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="43" freqvalue="42.450000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="44" freqvalue="43.150000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="45" freqvalue="43.750000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="46" freqvalue="44.300000">
+			<Description>
+				В 50-км зоне от гос. границы для всех р/ср и в 100-км зоне для р/ср с мощностью 1 кВт и выше
+			</Description>
+		</FreqValue>
+		<FreqValue id="47" freqvalue="44.400000">
+			<Description>
+				В 50-км зоне от гос. границы для всех р/ср и в 100-км зоне для р/ср с мощностью 1 кВт и выше
+			</Description>
+		</FreqValue>
+		<FreqValue id="48" freqvalue="44.600000">
+			<Description>
+				В 50-км зоне от гос. границы для всех р/ср и в 100-км зоне для р/ср с мощностью 1 кВт и выше
+			</Description>
+		</FreqValue>
+		<FreqValue id="49" freqvalue="44.700000">
+			<Description>
+				В 50-км зоне от гос. границы для всех р/ср и в 100-км зоне для р/ср с мощностью 1 кВт и выше
+			</Description>
+		</FreqValue>
+		<FreqValue id="50" freqvalue="44.800000">
+			<Description>
+				В 50-км зоне от гос. границы для всех р/ср и в 100-км зоне для р/ср с мощностью 1 кВт и выше
+			</Description>
+		</FreqValue>
+		<FreqValue id="51" freqvalue="44.900000">
+			<Description>
+				В 50-км зоне от гос. границы для всех р/ср и в 100-км зоне для р/ср с мощностью 1 кВт и выше
+			</Description>
+		</FreqValue>
+		<FreqValue id="52" freqvalue="45.050000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="53" freqvalue="45.100000">
+			<Description>
+				В 50-км зоне от гос. границы для всех р/ср и в 100-км зоне для р/ср с мощностью 1 кВт и выше
+			</Description>
+		</FreqValue>
+		<FreqValue id="54" freqvalue="45.200000">
+			<Description>
+				В 50-км зоне от гос. границы для всех р/ср и в 100-км зоне для р/ср с мощностью 1 кВт и выше
+			</Description>
+		</FreqValue>
+		<FreqValue id="55" freqvalue="45.300000">
+			<Description>
+				В 50-км зоне от гос. границы для всех р/ср и в 100-км зоне для р/ср с мощностью 1 кВт и выше
+			</Description>
+		</FreqValue>		
+		<FreqValue id="56" freqvalue="45.350000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="57" freqvalue="45.400000">
+			<Description>
+				В 50-км зоне от гос. границы для всех р/ср и в 100-км зоне для р/ср с мощностью 1 кВт и выше
+			</Description>
+		</FreqValue>
+		<FreqValue id="58" freqvalue="45.600000">
+			<Description>
+				В 50-км зоне от гос. границы для всех р/ср и в 100-км зоне для р/ср с мощностью 1 кВт и выше
+			</Description>
+		</FreqValue>
+		<FreqValue id="59" freqvalue="45.700000">
+			<Description>
+				В 50-км зоне от гос. границы для всех р/ср и в 100-км зоне для р/ср с мощностью 1 кВт и выше
+			</Description>
+		</FreqValue>		
+		<FreqValue id="60" freqvalue="45.800000">
+			<Description>
+				В 50-км зоне от гос. границы для всех р/ср и в 100-км зоне для р/ср с мощностью 1 кВт и выше
+			</Description>
+		</FreqValue>
+		<FreqValue id="61" freqvalue="121.500000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="62" freqvalue="140.600000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="63" freqvalue="141.400000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="64" freqvalue="146.200000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="65" freqvalue="147.800000">
+			<Description>
+			</Description>
+		</FreqValue>		
+		<FreqValue id="66" freqvalue="156.525000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="67" freqvalue="156.800000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="68" freqvalue="189.000000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="69" freqvalue="190.200000">
+			<Description>
+			</Description>
+		</FreqValue>		
+		<FreqValue id="70" freqvalue="197.000000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="71" freqvalue="198.200000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="72" freqvalue="206.200000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="73" freqvalue="207.400000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="74" freqvalue="213.000000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="75" freqvalue="214.200000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="76" freqvalue="221.400000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="77" freqvalue="222.200000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="78" freqvalue="229.000000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="79" freqvalue="230.200000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="80" freqvalue="233.800000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="81" freqvalue="234.600000">
+			<Description>
+			</Description>
+		</FreqValue>		
+		<FreqValue id="82" freqvalue="237.800000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="83" freqvalue="238.600000">
+			<Description>
+			</Description>
+		</FreqValue>
+		<FreqValue id="84" freqvalue="243.000000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>
+		<FreqValue id="85" freqvalue="300.200000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</FreqValue>		
+	</FreqValues>
+	<ForbiddenFreqRanges>
+		<ForbiddenFreqRange id="1" freqvalmin="2.125000" freqvalmax="2.135000">
+			<Description>
+				Частота поездной связи
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="2" freqvalmin="2.147000" freqvalmax="2.153000">
+			<Description>
+				Частота поездной связи
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="3" freqvalmin="2.173500" freqvalmax="2.190500">
+			<Description>
+				Частоты передачи бедствия
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="4" freqvalmin="2.498000" freqvalmax="2.502000">
+			<Description>
+				Сигналы службы времени
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="5" freqvalmin="2.850000" freqvalmax="3.155000">
+			<Description>
+				Частоты воздушной подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="6" freqvalmin="3.400000" freqvalmax="3.500000">
+			<Description>
+				Частоты воздушной подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="7" freqvalmin="3.500000" freqvalmax="3.650000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="8" freqvalmin="3.900000" freqvalmax="3.950000">
+			<Description>
+				Частоты воздушной подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="9" freqvalmin="4.650000" freqvalmax="4.750000">
+			<Description>
+				Частоты воздушной подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="10" freqvalmin="4.995000" freqvalmax="5.005000">
+			<Description>
+				Сигналы службы времени
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="11" freqvalmin="5.480000" freqvalmax="5.730000">
+			<Description>
+				Частоты воздушной подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="12" freqvalmin="6.525000" freqvalmax="6.675000">
+			<Description>
+				Частоты воздушной подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="13" freqvalmin="7.000000" freqvalmax="7.100000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="14" freqvalmin="8.195000" freqvalmax="8.416500">
+			<Description>
+				Частоты морской подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="15" freqvalmin="8.815000" freqvalmax="9.040000">
+			<Description>
+				Частоты воздушной подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="16" freqvalmin="9.995000" freqvalmax="10.005000">
+			<Description>
+				Сигналы службы времени
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="17" freqvalmin="10.005000" freqvalmax="10.100000">
+			<Description>
+				Частоты воздушной подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="18" freqvalmin="11.175000" freqvalmax="11.400000">
+			<Description>
+				Частоты воздушной подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="19" freqvalmin="12.230000" freqvalmax="12.579000">
+			<Description>
+				Частоты морской подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="20" freqvalmin="13.200000" freqvalmax="13.360000">
+			<Description>
+				Частоты воздушной подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="21" freqvalmin="14.000000" freqvalmax="14.350000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="22" freqvalmin="14.990000" freqvalmax="15.010000">
+			<Description>
+				Сигналы службы времени
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="23" freqvalmin="15.010000" freqvalmax="15.100000">
+			<Description>
+				Частоты воздушной подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="24" freqvalmin="16.360000" freqvalmax="16.806000">
+			<Description>
+				Частоты морской подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="25" freqvalmin="17.900000" freqvalmax="18.030000">
+			<Description>
+				Частоты воздушной подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="26" freqvalmin="18.780000" freqvalmax="18.900000">
+			<Description>
+				Частоты морской подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="27" freqvalmin="19.990000" freqvalmax="20.010000">
+			<Description>
+				Сигналы службы времени
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="28" freqvalmin="21.000000" freqvalmax="21.450000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="29" freqvalmin="21.850000" freqvalmax="21.870000">
+			<Description>
+				Частоты воздушной подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="30" freqvalmin="21.924000" freqvalmax="22.000000">
+			<Description>
+				Частоты воздушной подвижной службы
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="31" freqvalmin="24.990000" freqvalmax="25.010000">
+			<Description>
+				Сигналы службы времени
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="32" freqvalmin="48.500000" freqvalmax="56.500000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="33" freqvalmin="74.600000" freqvalmax="75.400000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="34" freqvalmin="76.000000" freqvalmax="84.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="35" freqvalmin="84.000000" freqvalmax="92.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="36" freqvalmin="144.000000" freqvalmax="146.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="37" freqvalmin="174.000000" freqvalmax="182.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="38" freqvalmin="190.000000" freqvalmax="198.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="39" freqvalmin="214.000000" freqvalmax="222.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="40" freqvalmin="222.000000" freqvalmax="230.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="41" freqvalmin="406.000000" freqvalmax="406.100000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="42" freqvalmin="478.000000" freqvalmax="486.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="43" freqvalmin="502.000000" freqvalmax="510.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="44" freqvalmin="518.000000" freqvalmax="526.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="45" freqvalmin="534.000000" freqvalmax="542.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="46" freqvalmin="566.000000" freqvalmax="574.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="47" freqvalmin="574.000000" freqvalmax="582.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="48" freqvalmin="590.000000" freqvalmax="598.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="49" freqvalmin="606.000000" freqvalmax="614.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="50" freqvalmin="622.000000" freqvalmax="630.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="51" freqvalmin="646.000000" freqvalmax="654.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="52" freqvalmin="670.000000" freqvalmax="678.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="53" freqvalmin="694.000000" freqvalmax="702.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="54" freqvalmin="710.000000" freqvalmax="718.000000">
+			<Description>
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="55" freqvalmin="1544.000000" freqvalmax="1545.000000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</ForbiddenFreqRange>
+		<ForbiddenFreqRange id="56" freqvalmin="1645.000000" freqvalmax="1646.500000">
+			<Description>
+				Частота передачи бедствия
+			</Description>
+		</ForbiddenFreqRange>
+	</ForbiddenFreqRanges>
+</Frequency>

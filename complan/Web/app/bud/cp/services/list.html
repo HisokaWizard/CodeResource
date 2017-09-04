@@ -1,0 +1,12 @@
+<div class="b-row cp-margin-top5 cp-endpoints-list">
+  <div ng-repeat="(eKey,endpoint) in cpCtrl.services[sKey].endpoints" class="b-col-12">
+    <div class="b-row cp-equipment">
+      <div ng-bind="cpCtrl.devices[eKey].label" class="b-col-4"></div>
+      <div class="b-col-4"
+        ng-bind="cpCtrl.translate(ctrl.getEndpointState(sKey,eKey))"></div>
+      <div class="b-col-4">
+        <button ng-click="ctrl.remove(sKey,eKey)" class="cp-button">Удалить</button>
+      </div>
+    </div>
+  </div>
+</div>

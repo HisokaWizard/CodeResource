@@ -1,0 +1,128 @@
+<div ng-controller="servicesFilterController as ctrl">
+  <div class="b-row">
+    <div class="b-col-12">
+      <input type="text" ng-model="ctrl.filter.label" class="cp-service-filter"/>
+    </div>
+  </div>
+  <div ng-model="accordion" ng-init="accordion={}">
+    <div ng-init="accordion.cTab=0">
+      <div ng-click="accordion.cTab=0"
+         ng-class="{'b-accordion' : true,
+            'b-active-accordion' : 0 == accordion.cTab}">
+        <div class="b-row">
+          <div class="b-col-12 b-text-center">
+            Оборудование
+          </div>
+        </div>
+      </div>
+      <div ng-class="{'b-accordion-body' : true,
+        'b-accordion-show' : 0 == accordion.cTab,
+        'cp-filter-endpoints' : 0 == accordion.cTab}">
+        <div ng-repeat="(dId,device) in cpCtrl.devices" ng-if="'tm' == device.type || 'aist' == device.type" class="b-row">
+          <div class="b-col-12 b-pull-left">
+            <input type="checkbox"
+              ng-init="ctrl.filter.endpoints[dId]=false"
+              ng-model="ctrl.filter.endpoints[dId]"
+              ng-true-value="true"
+              ng-false-value="false">
+            <span ng-bind="device.label"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div ng-click="accordion.cTab=1"
+      ng-class="{'b-accordion' : true,
+        'b-active-accordion' : 1 == accordion.cTab,}">
+      <div class="b-row">
+        <div class="b-col-12 b-text-center">
+          Шифрование
+        </div>
+      </div>
+    </div>
+    <div ng-class="{'b-accordion-body' : true,
+      'b-accordion-show' : 1 == accordion.cTab,
+      'cp-filter-encryption' : 1 == accordion.cTab}">
+      <div class="b-row">
+        <div class="b-col-12 b-pull-left">
+          <input type="radio" name="encryption" ng-model="ctrl.filter.encryption" ng-value="true">
+          Зашифрованный тракт
+        </div>
+      </div>
+      <div class="b-row">
+        <div class="b-col-12 b-pull-left">
+          <input type="radio" name="encryption" ng-model="ctrl.filter.encryption" ng-value="false">
+          Открытый тракт
+        </div>
+      </div>
+      <div class="b-row">
+        <div class="b-col-12 b-pull-left">
+          <input type="radio" name="encryption" ng-model="ctrl.filter.encryption" ng-value="undefined">
+          Все
+        </div>
+      </div>
+    </div>
+    <div ng-click="accordion.cTab=2"
+      ng-class="{'b-accordion' : true,
+        'b-active-accordion' : 2 == accordion.cTab}">
+      <div class="b-row">
+        <div class="b-col-12 b-text-center">
+          Частота
+        </div>
+      </div>
+    </div>
+    <div ng-class="{'b-accordion-body' : true,
+      'b-accordion-show' : 2 == accordion.cTab,
+      'cp-filter-frequency' : 2 == accordion.cTab}">
+      <div class="b-row">
+        <div class="b-col-12 b-pull-left">
+          <input type="radio" name="frequency" ng-model="ctrl.filter.frequencyRange" ng-value="'uhv'">УКВ
+        </div>
+      </div>
+      <div class="b-row">
+        <div class="b-col-12 b-pull-left">
+          <input type="radio" name="frequency" ng-model="ctrl.filter.frequencyRange" ng-value="'kv'">КВ
+        </div>
+      </div>
+      <div class="b-row">
+        <div class="b-col-12 b-pull-left">
+          <input type="radio" name="frequency" ng-model="ctrl.filter.frequencyRange" ng-value="undefined">Все
+        </div>
+      </div>
+    </div>
+    <div ng-click="accordion.cTab=3"
+      ng-class="{'b-accordion' : true,
+        'b-active-accordion' : 3 == accordion.cTab}">
+      <div class="b-row">
+        <div class="b-col-12 b-text-center">
+          Состояние
+        </div>
+      </div>
+    </div>
+    <div ng-class="{'b-accordion-body' : true,
+      'b-accordion-show' : 3 == accordion.cTab,
+      'cp-filter-state' : 3 == accordion.cTab}">
+      <div class="b-row">
+        <div class="b-col-12 b-pull-left">
+          <input type="radio" name="state" ng-model="ctrl.filter.state" ng-value="'formed'">
+          Сформированный тракт
+        </div>
+      </div>
+      <div class="b-row">
+        <div class="b-col-12 b-pull-left">
+          <input type="radio" name="state" ng-model="ctrl.filter.state" ng-value="'unformed'">
+          Расформированный тракт
+        </div>
+      </div>
+      <div class="b-row">
+        <div class="b-col-12 b-pull-left">
+          <input type="radio" name="state" ng-model="ctrl.filter.state" ng-value="undefined">
+          Все
+        </div>
+      </div>
+    </div>
+    <button type="button" class="b-functional-button-reset" ng-click="ctrl.reset()">
+      Сбросить</button>
+  </div>
+</div>
+
+

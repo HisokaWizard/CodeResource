@@ -1,0 +1,46 @@
+﻿<PresetType>
+  <Id>TypeVMSPD</Id>
+  <UriTemplate>http://{host-address}/restconf/data/vmspd-conf</UriTemplate>
+  <Description>Предустановка VMSPD</Description>
+  <AllowedHosts><HostType>vmspd</HostType></AllowedHosts>
+  <PresetList>
+    <Preset id="VMSPD_dummy">
+    </Preset>
+    <Preset id="VMSPD_preset_250300Hz">
+		<vmspd-conf>
+		  <index_work_channel>{index}</index_work_channel>
+		  <ch>
+			<index>{index}</index>
+			<recv_frq>250300</recv_frq>
+			<transv_frq>250300</transv_frq>
+			<connector>Default</connector>
+			<noise_gate>On</noise_gate>
+		  </ch>
+		</vmspd-conf>
+    </Preset>
+    <Preset id="VMSPD_preset_110KHz">
+		<vmspd-conf>
+		  <index_work_channel>{index}</index_work_channel>
+		  <ch>
+			<index>{index}</index>
+			<recv_frq>110000</recv_frq>
+			<transv_frq>110000</transv_frq>
+			<connector>Default</connector>
+			<noise_gate>On</noise_gate>
+		  </ch>
+		</vmspd-conf>
+    </Preset>
+    <Preset id="VMSPD_preset_140KHz">
+		<vmspd-conf>
+		  <index_work_channel>{index}</index_work_channel>
+		  <ch>
+			<index>{index}</index>
+			<recv_frq>140000</recv_frq>
+			<transv_frq>140000</transv_frq>
+			<connector>Default</connector>
+			<noise_gate>On</noise_gate>
+		  </ch>
+		</vmspd-conf>
+    </Preset>
+  </PresetList>
+</PresetType>

@@ -1,0 +1,89 @@
+<div class="cp-tab b-row">
+  <div class="b-col-12">
+    <div class="b-row">
+      <div ng-bind="cpCtrl.services[sId].description" class="b-col-12 b-text-center cp-tab-body-header-margin15"></div>
+    </div>
+    <hr class="cp-tab-line-margin0" style="border-top:2px solid white;"/>
+    <div class="b-row">
+      <div class="b-col-3 cp-tab-text-column" style="margin-left: 50px;">
+        <div class="b-row">
+          <div class="b-col-12 b-text-center cp-service-oa">ОА</div>
+        </div>
+        <div ng-hide="ctrl.isEndpointEditor  || undefined == cpCtrl.devices" class="b-row">
+          <div class="b-col-12 cp-tab-column-pad0 b-text-center">
+            <div ng-class="{'cp-equipments':ctrl.isEndpointListLong(sId) == true}">
+              <a ng-repeat="(eId, endpoint) in cpCtrl.services[sId].endpoints"
+                ng-bind="cpCtrl.devices[eId].label"
+                class="b-reference"
+                ng-href="#/elements/server/{{eId}}"></a>
+            </div>
+          </div>
+        </div>
+        <label ng-show="undefined == cpCtrl.devices">Нет подключения к центральному серверу!</label>
+      </div>
+      <div class="b-col-offset-1 b-col-3 cp-tab-text-column cp-tab-column-pad0 b-text-center">
+        <div ng-show="ctrl.isEncrypted(sId)">
+          <div ng-show="undefined != cpCtrl.services[sId].encrypted_id" class="b-row">
+            <div class="b-col-12 b-text-center cp-service-oa">ШАС</div>
+          </div>
+          <div ng-show="undefined != cpCtrl.services[sId].encrypted_id" class="b-row b-text-left">
+            <div class="b-col-12 cp-tab-column-pad0" style="margin-left:40px;">Шифратор:
+              <a ng-bind="cpCtrl.devices[cpCtrl.services[sId].encrypted_id].label"
+                 ng-href="#/elements/{{cpCtrl.devices[cpCtrl.services[sId].encrypted_id].type}}/{{cpCtrl.services[sId].encrypted_id}}"
+                 class="b-reference"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="b-col-offset-1 b-col-3 cp-tab-text-column cp-tab-column-pad0 b-text-center">
+        <div class="b-row">
+          <div class="b-col-12 b-text-center">
+            КОС
+          </div>
+        </div>
+        <div class="b-row cp-service-margin15">
+          <div class="b-col-12 cp-tab-column-pad0 cp-service-radio">
+            Прием
+          </div>
+        </div>
+        <div  class="b-row">
+          <div class="b-col-12 cp-tab-column-pad0">
+            РПУ:
+            <a ng-hide="ctrl.isReceiverEditor" ng-bind="cpCtrl.devices[cpCtrl.services[sId]['in'].radio.id].label"
+             ng-href="#/elements/{{cpCtrl.devices[cpCtrl.services[sId]['in'].radio.id].type}}/{{cpCtrl.services[sId]['in'].radio.id}}"
+             class="b-reference"></a>
+          </div>
+        </div>
+        <div  class="b-row">
+          <div class="b-col-12 cp-tab-column-pad0">
+            Антенна:
+            <span ng-bind="cpCtrl.devices[cpCtrl.services[sId]['in'].antenna_id].label"
+              ng-href="#/elements/{{cpCtrl.devices[cpCtrl.services[sId]['in'].antenna_id].type}}/{{cpCtrl.services[sId]['in'].antenna_id}}"
+              class="b-reference"></span>
+          </div>
+        </div>
+          <div class="b-row cp-service-margin15">
+            <div class="b-col-12 cp-service-radio cp-tab-column-pad0">
+              Передача
+            </div>
+          </div>
+          <div  class="b-row">
+            <div class="b-col-12 cp-tab-column-pad0">
+              РПДУ:
+              <a ng-bind="cpCtrl.devices[cpCtrl.services[sId].out.radio.id].label"
+               ng-href="#/elements/{{cpCtrl.devices[cpCtrl.services[sId]['in'].radio.id].type}}/{{cpCtrl.services[sId]['in'].radio.id}}"
+               class="b-reference"></a>
+            </div>
+          </div>
+          <div  class="b-row">
+            <div class="b-col-12 cp-tab-column-pad0">
+              Антенна:
+              <span ng-bind="cpCtrl.devices[cpCtrl.services[sId].out.antenna_id].label"
+                class="b-text-center b-reference"
+                ng-href="#/elements/{{cpCtrl.devices[cpCtrl.services[sId].out.antenna_id].type}}/{{cpCtrl.services[sId].out.antenna_id}}"></span>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

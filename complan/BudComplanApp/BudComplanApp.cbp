@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="BudComplan" />
+		<Option platforms="Windows;Unix;" />
+		<Option pch_mode="0" />
+		<Option default_target="Windows" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Windows">
+				<Option platforms="Windows;Unix;" />
+				<Option extension_auto="0" output="../Bin/gcc_windows/BudComplan.exe" prefix_auto="0" />
+				<Option working_dir="../Bin/gcc_windows" />
+				<Option object_output="./Obj/gcc_windows" />
+				<Option deps_output="Bin/gcc_windows/dep" />
+				<Option external_deps="../../../../AMG/Lib/gcc_windows/libAMG.a;../../../../LotApplication/Lib/gcc_windows/libLotApplication.a;../../../../amgSCL/Lib/gcc_windows/libamgSCL.a;../../../../LotData/Lib/gcc_windows/libLotData.a;../../../../sclYang/Lib/gcc_windows/libsclYang.a;../../../Lib/gcc_windows/libCakApi.a;../../../../sclHTTP/Lib/gcc_windows/libsclHTTP.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Option projectResourceIncludeDirsRelation="0" />
+				<Script file="..\..\..\..\Build\Scripts\code-blocks-win.script" />
+				<Linker>
+					<Add option="-lMPR" />
+					<Add option="-lsnmpapi" />
+					<Add option="-luser32" />
+					<Add option="-lmingwex" />
+					<Add option="-lversion" />
+					<Add directory="../../../../AMG/Lib/gcc_windows" />
+					<Add directory="../../../../sclHTTP/Lib/gcc_windows" />
+					<Add directory="../../../../LotApplication/Lib/gcc_windows" />
+					<Add directory="../../../../amgSCL/Lib/gcc_windows" />
+					<Add directory="../../../../sclYang/Lib/gcc_windows" />
+					<Add directory="../../../Lib/gcc_windows" />
+					<Add directory="../../../../LotData/Lib/gcc_windows" />
+				</Linker>
+			</Target>
+			<Target title="Linux">
+				<Option platforms="Windows;Unix;" />
+				<Option extension_auto="0" output="../Bin/gcc_linux/BudComplan" prefix_auto="0" />
+				<Option working_dir="../Bin/gcc_linux" />
+				<Option object_output="./Obj/gcc_linux" />
+				<Option deps_output="Bin/gcc_linux/dep" />
+				<Option external_deps="../../../../AMG/Lib/gcc_linux/libAMG.a;../../../../LotApplication/Lib/gcc_linux/libLotApplication.a;../../../../amgSCL/Lib/gcc_linux/libamgSCL.a;../../../../LotData/Lib/gcc_linux/libLotData.a;../../../../sclYang/Lib/gcc_linux/libsclYang.a;../../../Lib/gcc_linux/libCakApi.a;../../../../sclHTTP/Lib/gcc_linux/libsclHTTP.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="0" />
+				<Linker>
+					<Add directory="../../../../AMG/Lib/gcc_linux" />
+					<Add directory="../../../../sclHTTP/Lib/gcc_linux" />
+					<Add directory="../../../../LotApplication/Lib/gcc_linux" />
+					<Add directory="../../../../amgSCL/Lib/gcc_linux" />
+					<Add directory="../../../../sclYang/Lib/gcc_linux" />
+					<Add directory="../../../Lib/gcc_linux" />
+					<Add directory="../../../../LotData/Lib/gcc_linux" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Windows;Linux;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-W" />
+			<Add option="-Winvalid-pch" />
+			<Add option='-include &quot;gccPrecompile.h&quot;' />
+			<Add option="-DNO_GCC_PRAGMA" />
+			<Add option="-DUSE_PCH" />
+			<Add directory="." />
+			<Add directory="./Include" />
+			<Add directory="../../../../AMG/AMGLib/Include" />
+			<Add directory="../../../../sclHTTP/sclHTTPLib/Include" />
+			<Add directory="../../../../amgSCL/amgSCLLib/Include" />
+			<Add directory="../../../../LotApplication/LotApplicationLib/Include" />
+			<Add directory="../../../../sclYang/sclYangLib/Include" />
+			<Add directory="../../../CakApiLib/Include" />
+			<Add directory="../../../../LotData/LotDataLib/Include" />
+		</Compiler>
+		<Linker>
+			<Add option="-lCakApi" />
+			<Add option="-lLotApplication" />
+			<Add option="-lsclYang" />
+			<Add option="-lsclHTTP" />
+			<Add option="-lamgSCL" />
+			<Add option="-lAMG" />
+			<Add option="-ljsoncpp" />
+			<Add option="-lLotData" />
+		</Linker>
+		<Unit filename="Include/Application.h" />
+		<Unit filename="Include/Endpoint.h" />
+		<Unit filename="Include/EventMsg.h" />
+		<Unit filename="Include/EventSource.h" />
+		<Unit filename="Include/Frequency.h" />
+		<Unit filename="Include/Mode.h" />
+		<Unit filename="Include/RestconfRequests.h" />
+		<Unit filename="Include/Service.h" />
+		<Unit filename="Include/ServiceSet.h" />
+		<Unit filename="Include/XmlMerger.h" />
+		<Unit filename="Include/Types.h" />
+		<Unit filename="Source/Application.cpp" />
+		<Unit filename="Source/Endpoint.cpp" />
+		<Unit filename="Source/EventMsg.cpp" />
+		<Unit filename="Source/EventSource.cpp" />
+		<Unit filename="Source/Frequency.cpp" />
+		<Unit filename="Source/Mode.cpp" />
+		<Unit filename="Source/RestconfRequests.cpp" />
+		<Unit filename="Source/Service.cpp" />
+		<Unit filename="Source/ServiceSet.cpp" />
+		<Unit filename="Source/XmlMerger.cpp" />
+		<Unit filename="Source/Types.cpp" />
+		<Unit filename="Source/main.cpp" />
+		<Unit filename="gccPrecompile.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

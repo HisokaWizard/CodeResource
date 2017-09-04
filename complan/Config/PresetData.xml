@@ -1,0 +1,10 @@
+﻿<PresetManagerData>
+<PresetTypes>
+	<PresetType file="R693PresetType.xml" />
+    <PresetType file="VMSPDPresetType.xml" />
+    <PresetType file="R620PresetType.xml" />
+</PresetTypes>
+
+<CompositePresets/>
+
+</PresetManagerData>

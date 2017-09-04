@@ -1,0 +1,368 @@
+﻿<PresetType>
+  <Id>PartnerMopd4s</Id>
+  <UriTemplate>http://{host-address}/restconf/data/mopd-configuration</UriTemplate>
+  <Description>Предустановка МОПД4С для Партнёра</Description>
+  <AllowedHosts><HostType>mopd4s</HostType></AllowedHosts>
+  <PresetList>
+    <Preset id="Mopd4s_preset_1">
+    <mopd-configuration>
+      <data-transfer-mode>opened audio</data-transfer-mode>
+      <frequency>100000000</frequency>
+      <modulation-mode>A3E</modulation-mode>
+      <power>50</power>
+      <baud-rate>1200</baud-rate>
+      <preset>1</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_2">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered audio</data-transfer-mode>
+      <frequency>102475000</frequency>
+      <modulation-mode>F1B</modulation-mode>
+      <power>100</power>
+      <baud-rate>2400</baud-rate>
+      <preset>2</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_3">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered data</data-transfer-mode>
+      <frequency>104975000</frequency>
+      <modulation-mode>F3B</modulation-mode>
+      <power>150</power>
+      <baud-rate>4800</baud-rate>
+      <preset>3</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_4">
+    <mopd-configuration>
+      <data-transfer-mode>opened audio</data-transfer-mode>
+      <frequency>107475000</frequency>
+      <modulation-mode>A3E</modulation-mode>
+      <power>50</power>
+      <baud-rate>16000</baud-rate>
+      <preset>4</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_5">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered audio</data-transfer-mode>
+      <frequency>109975000</frequency>
+      <modulation-mode>F1B</modulation-mode>
+      <power>100</power>
+      <baud-rate>1200</baud-rate>
+      <preset>5</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_6">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered data</data-transfer-mode>
+      <frequency>112475000</frequency>
+      <modulation-mode>F3B</modulation-mode>
+      <power>150</power>
+      <baud-rate>2400</baud-rate>
+      <preset>6</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_7">
+    <mopd-configuration>
+      <data-transfer-mode>opened audio</data-transfer-mode>
+      <frequency>114975000</frequency>
+      <modulation-mode>A3E</modulation-mode>
+      <power>50</power>
+      <baud-rate>4800</baud-rate>
+      <preset>7</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_8">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered audio</data-transfer-mode>
+      <frequency>117475000</frequency>
+      <modulation-mode>F1B</modulation-mode>
+      <power>100</power>
+      <baud-rate>16000</baud-rate>
+      <preset>8</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_9">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered data</data-transfer-mode>
+      <frequency>119975000</frequency>
+      <modulation-mode>F3B</modulation-mode>
+      <power>150</power>
+      <baud-rate>1200</baud-rate>
+      <preset>9</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_10">
+    <mopd-configuration>
+      <data-transfer-mode>opened audio</data-transfer-mode>
+      <frequency>122475000</frequency>
+      <modulation-mode>A3E</modulation-mode>
+      <power>50</power>
+      <baud-rate>2400</baud-rate>
+      <preset>10</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_11">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered audio</data-transfer-mode>
+      <frequency>124975000</frequency>
+      <modulation-mode>F1B</modulation-mode>
+      <power>100</power>
+      <baud-rate>4800</baud-rate>
+      <preset>11</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_12">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered data</data-transfer-mode>
+      <frequency>127475000</frequency>
+      <modulation-mode>F3B</modulation-mode>
+      <power>150</power>
+      <baud-rate>16000</baud-rate>
+      <preset>12</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_13">
+    <mopd-configuration>
+      <data-transfer-mode>opened audio</data-transfer-mode>
+      <frequency>129975000</frequency>
+      <modulation-mode>A3E</modulation-mode>
+      <power>50</power>
+      <baud-rate>1200</baud-rate>
+      <preset>13</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_14">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered audio</data-transfer-mode>
+      <frequency>132475000</frequency>
+      <modulation-mode>F1B</modulation-mode>
+      <power>100</power>
+      <baud-rate>2400</baud-rate>
+      <preset>14</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_15">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered data</data-transfer-mode>
+      <frequency>134975000</frequency>
+      <modulation-mode>F3B</modulation-mode>
+      <power>150</power>
+      <baud-rate>4800</baud-rate>
+      <preset>15</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_16">
+    <mopd-configuration>
+      <data-transfer-mode>opened audio</data-transfer-mode>
+      <frequency>137475000</frequency>
+      <modulation-mode>A3E</modulation-mode>
+      <power>50</power>
+      <baud-rate>16000</baud-rate>
+      <preset>16</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_17">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered audio</data-transfer-mode>
+      <frequency>139975000</frequency>
+      <modulation-mode>F1B</modulation-mode>
+      <power>100</power>
+      <baud-rate>1200</baud-rate>
+      <preset>17</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_18">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered data</data-transfer-mode>
+      <frequency>142475000</frequency>
+      <modulation-mode>F3B</modulation-mode>
+      <power>150</power>
+      <baud-rate>2400</baud-rate>
+      <preset>18</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_19">
+    <mopd-configuration>
+      <data-transfer-mode>opened audio</data-transfer-mode>
+      <frequency>144975000</frequency>
+      <modulation-mode>A3E</modulation-mode>
+      <power>50</power>
+      <baud-rate>4800</baud-rate>
+      <preset>19</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_20">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered audio</data-transfer-mode>
+      <frequency>147475000</frequency>
+      <modulation-mode>F1B</modulation-mode>
+      <power>100</power>
+      <baud-rate>16000</baud-rate>
+      <preset>20</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_21">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered data</data-transfer-mode>
+      <frequency>220000000</frequency>
+      <modulation-mode>F3B</modulation-mode>
+      <power>150</power>
+      <baud-rate>1200</baud-rate>
+      <preset>21</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_22">
+    <mopd-configuration>
+      <data-transfer-mode>opened audio</data-transfer-mode>
+      <frequency>228975000</frequency>
+      <modulation-mode>A3E</modulation-mode>
+      <power>50</power>
+      <baud-rate>2400</baud-rate>
+      <preset>22</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_23">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered audio</data-transfer-mode>
+      <frequency>237975000</frequency>
+      <modulation-mode>F1B</modulation-mode>
+      <power>100</power>
+      <baud-rate>4800</baud-rate>
+      <preset>23</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_24">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered data</data-transfer-mode>
+      <frequency>246975000</frequency>
+      <modulation-mode>F3B</modulation-mode>
+      <power>150</power>
+      <baud-rate>16000</baud-rate>
+      <preset>24</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_25">
+    <mopd-configuration>
+      <data-transfer-mode>opened audio</data-transfer-mode>
+      <frequency>255975000</frequency>
+      <modulation-mode>A3E</modulation-mode>
+      <power>50</power>
+      <baud-rate>1200</baud-rate>
+      <preset>25</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_26">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered audio</data-transfer-mode>
+      <frequency>264975000</frequency>
+      <modulation-mode>F1B</modulation-mode>
+      <power>100</power>
+      <baud-rate>2400</baud-rate>
+      <preset>26</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_27">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered data</data-transfer-mode>
+      <frequency>273975000</frequency>
+      <modulation-mode>F3B</modulation-mode>
+      <power>150</power>
+      <baud-rate>4800</baud-rate>
+      <preset>27</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_28">
+    <mopd-configuration>
+      <data-transfer-mode>opened audio</data-transfer-mode>
+      <frequency>282975000</frequency>
+      <modulation-mode>A3E</modulation-mode>
+      <power>50</power>
+      <baud-rate>16000</baud-rate>
+      <preset>28</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_29">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered audio</data-transfer-mode>
+      <frequency>291975000</frequency>
+      <modulation-mode>F1B</modulation-mode>
+      <power>100</power>
+      <baud-rate>1200</baud-rate>
+      <preset>29</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_30">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered data</data-transfer-mode>
+      <frequency>300975000</frequency>
+      <modulation-mode>F3B</modulation-mode>
+      <power>150</power>
+      <baud-rate>2400</baud-rate>
+      <preset>30</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_31">
+    <mopd-configuration>
+      <data-transfer-mode>opened audio</data-transfer-mode>
+      <frequency>309975000</frequency>
+      <modulation-mode>G3E</modulation-mode>
+      <power>0</power>
+      <baud-rate>4800</baud-rate>
+      <preset>31</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_32">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered audio</data-transfer-mode>
+      <frequency>318975000</frequency>
+      <modulation-mode>G1W</modulation-mode>
+      <power>0</power>
+      <baud-rate>16000</baud-rate>
+      <preset>32</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_33">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered data</data-transfer-mode>
+      <frequency>327975000</frequency>
+      <modulation-mode>G3E</modulation-mode>
+      <power>0</power>
+      <baud-rate>1200</baud-rate>
+      <preset>33</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_34">
+    <mopd-configuration>
+      <data-transfer-mode>opened audio</data-transfer-mode>
+      <frequency>336975000</frequency>
+      <modulation-mode>G1W</modulation-mode>
+      <power>0</power>
+      <baud-rate>2400</baud-rate>
+      <preset>34</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_35">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered audio</data-transfer-mode>
+      <frequency>345975000</frequency>
+      <modulation-mode>G3E</modulation-mode>
+      <power>0</power>
+      <baud-rate>4800</baud-rate>
+      <preset>35</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_36">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered data</data-transfer-mode>
+      <frequency>354975000</frequency>
+      <modulation-mode>G1W</modulation-mode>
+      <power>0</power>
+      <baud-rate>16000</baud-rate>
+      <preset>36</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_37">
+    <mopd-configuration>
+      <data-transfer-mode>opened audio</data-transfer-mode>
+      <frequency>363975000</frequency>
+      <modulation-mode>G3E</modulation-mode>
+      <power>0</power>
+      <baud-rate>1200</baud-rate>
+      <preset>37</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_38">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered audio</data-transfer-mode>
+      <frequency>372975000</frequency>
+      <modulation-mode>G1W</modulation-mode>
+      <power>0</power>
+      <baud-rate>2400</baud-rate>
+      <preset>38</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_39">
+    <mopd-configuration>
+      <data-transfer-mode>ciphered data</data-transfer-mode>
+      <frequency>381975000</frequency>
+      <modulation-mode>G3E</modulation-mode>
+      <power>0</power>
+      <baud-rate>4800</baud-rate>
+      <preset>39</preset>    </mopd-configuration>
+    </Preset>
+    <Preset id="Mopd4s_preset_40">
+    <mopd-configuration>
+      <data-transfer-mode>opened audio</data-transfer-mode>
+      <frequency>390975000</frequency>
+      <modulation-mode>G1W</modulation-mode>
+      <power>0</power>
+      <baud-rate>16000</baud-rate>
+      <preset>40</preset>    </mopd-configuration>
+    </Preset>
+  </PresetList>
+</PresetType>

@@ -1,0 +1,16 @@
+﻿<Preset id="R693_preset_1">
+  <ch>
+    <frq>1500000</frq>
+    <emission>F1B75</emission>
+    <baud-rate>V50</baud-rate>
+    <tone>-1500</tone>
+    <mgc>AgcManual</mgc>
+    <gain-out>0</gain-out>
+    <gain>0.00</gain>
+    <amplifier>-51</amplifier>
+    <volume>-51</volume>
+    <negative>Off</negative>
+    <regenerator>On</regenerator>
+    <preset>1</preset>
+  </ch>
+</Preset>

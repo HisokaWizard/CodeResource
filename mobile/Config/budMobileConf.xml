@@ -1,0 +1,69 @@
+﻿<budMobileConf>
+  <BioGroups>
+    <BioGroup id="1" label="Сильный">
+      <Description>Высокий уровень показателей жизнеобеспеченности</Description>
+      <MinPulse>40</MinPulse>
+      <MaxPulse>150</MaxPulse>
+      <MinTemperature>35</MinTemperature>
+      <MaxTemperature>38</MaxTemperature>
+      <MinBp>100</MinBp>
+      <MaxBp>200</MaxBp>
+      <MinBlood>40</MinBlood>
+      <MaxBlood>70</MaxBlood>
+    </BioGroup>
+    <BioGroup id="2" label="Средний">
+      <Description>Люди со среднестатичтическими показателями жизни</Description>
+      <MinPulse>50</MinPulse>
+      <MaxPulse>120</MaxPulse>
+      <MinTemperature>36</MinTemperature>
+      <MaxTemperature>37</MaxTemperature>
+      <MinBp>120</MinBp>
+      <MaxBp>180</MaxBp>
+      <MinBlood>50</MinBlood>
+      <MaxBlood>60</MaxBlood>
+    </BioGroup>
+    <BioGroup id="3" label="Слабый">
+      <Description>Низкий уровень показателей жизнеобеспеченности</Description>
+      <MinPulse>60</MinPulse>
+      <MaxPulse>100</MaxPulse>
+      <MinTemperature>36</MinTemperature>
+      <MaxTemperature>36</MaxTemperature>
+      <MinBp>130</MinBp>
+      <MaxBp>150</MaxBp>
+      <MinBlood>54</MinBlood>
+      <MaxBlood>56</MaxBlood>
+    </BioGroup>
+  </BioGroups>
+
+  <EndPoints>
+    <EndPoint id="tmr_1" label="ТМР № 1" mac_address="1234567fds663" user_id="1"></EndPoint>
+    <EndPoint id="tmr_2" label="ТМР № 2" mac_address="3433457fds663" user_id="1"></EndPoint>
+    <EndPoint id="tmr_3" label="ТМР № 3" mac_address="1234324fds663" user_id="2"></EndPoint>
+    <EndPoint id="tmr_4" label="ТМР № 4" mac_address="8766787fds663" user_id="4"></EndPoint>
+    <EndPoint id="tmr_5" label="ТМР № 5" mac_address="547767667fds3" user_id="5"></EndPoint>
+    <EndPoint id="tmr_6" label="ТМР № 6" mac_address="34535357fds63" user_id="6"></EndPoint>
+    <EndPoint id="tmr_7" label="ТМР № 7" mac_address="3435557fds663" user_id="7"></EndPoint>
+    <EndPoint id="tmr_8" label="ТМР № 8" mac_address="3224324fds663" user_id="8"></EndPoint>
+    <EndPoint id="tmr_9" label="ТМР № 9" mac_address="2135767fds663" user_id="9"></EndPoint>
+    <EndPoint id="tmr_10" label="ТМР № 10" mac_address="45454345fdg63" user_id="10"></EndPoint>
+    <EndPoint id="tmr_11" label="ТМР № 11" mac_address="33435785fdg63" user_id="KsO-3"></EndPoint>
+  </EndPoints>
+  
+    <SmrSource id="smr1" type="smr" uri="http://192.168.10.59:80/Public/1/SMR1.xml" interval="2000" web_port="9000">
+		<Translate data_id="1" endpoint_id="tmr_1" />
+		<Translate data_id="2" endpoint_id="tmr_2" />
+		<Translate data_id="3" endpoint_id="tmr_3" />
+		<Translate data_id="4" endpoint_id="tmr_4" />
+		<Translate data_id="5" endpoint_id="tmr_5" />
+		<Translate data_id="6" endpoint_id="tmr_6" />
+		<Translate data_id="7" endpoint_id="tmr_7" />
+    </SmrSource>
+	<SmrSource id="smr2" type="smr" uri="http://192.168.10.59:80/Public/1/SMR2.xml" interval="2000" web_port="9000">
+		<Translate data_id="1" endpoint_id="tmr_8" />
+		<Translate data_id="2" endpoint_id="tmr_9" />
+    </SmrSource>
+    <SmrSource id="smr3" type="smr" uri="http://192.168.10.59:80/Public/1/SMR3.xml" interval="2000" web_port="9000">
+		<Translate data_id="1" endpoint_id="tmr_10" />
+		<Translate data_id="2" endpoint_id="tmr_11" ignore_pulse="true"/>
+    </SmrSource> 
+</budMobileConf>

@@ -1,0 +1,42 @@
+<Schemes>
+   <Scheme id="sch1" label="Первая схема" image="img/eqpt-icons/complan_substrate.png" width="840" height="860">
+       
+
+
+     <!--    <NodeList>
+		    <Node id="r693Device_001" type="device" x="38" y="38"></Node>
+			<Node id="r620Device_001" type="device" x="240" y="38"></Node>
+            <Node id="n1000Device_001" type="device" x="550" y="150"></Node>
+			<Node id="r693Device_001$eth0" type="port" x="70" y="140"></Node>
+			<Node id="r620Device_001$eth0" type="port" x="270" y="140"></Node>
+			<Node id="n1000Device_001$eth0" type="port" x="580" y="250"></Node>
+        </NodeList>
+        <EdgeList>
+            <Edge id="1" source="r693Device_001" target="r620Device_001" />
+			<Edge id="2" source="r620Device_001" target="n1000Device_001" />
+			<Edge id="3" source="n1000Device_001" target="r693Device_001" />
+        </EdgeList>-->
+     
+         <NodeList>
+	    <Node id="k678Device_001" type="device" x="70" y="80"></Node>
+            <Node id="k638Device_001" type="device" x="290" y="80"></Node>
+            <Node id="neptunukvDevice_001" type="device" x="610" y="80"></Node>
+
+            
+            <Node id="r693Device_001" type="device" x="100" y="280"></Node>
+            <Node id="r693Device_001$eth0" type="port" x="130" y="375"></Node>
+            <Node id="vmspdDevice_001" type="device" x="400" y="280"></Node>
+            <Node id="n1000Device_001$eth0" type="port" x="430" y="375"></Node>
+            <Node id="r620Device_001" type="device" x="680" y="280"></Node>
+            <Node id="r620Device_001$eth0" type="port" x="710" y="375"></Node>
+            <Node id="t614Device_001" type="device" x="680" y="500"></Node>
+
+            <Node id="tmDevice_001" type="device" x="70" y="720"></Node>
+            <Node id="tmDevice_002" type="device" x="220" y="720"></Node>
+            <Node id="tmDevice_003" type="device" x="390" y="720"></Node>
+			<Node id="tmDevice_004" type="device" x="540" y="720"></Node>
+            <Node id="tosDevice_001" type="device" x="690" y="720"></Node>
+
+       </NodeList>
+    </Scheme>
+</Schemes>

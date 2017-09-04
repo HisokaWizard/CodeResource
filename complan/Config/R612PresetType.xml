@@ -1,0 +1,46 @@
+﻿<PresetType>
+  <Id>TypeR612</Id>
+  <UriTemplate>http://{host-address}/restconf/data/r612-conf</UriTemplate>
+  <Description>Предустановка R612</Description>
+  <AllowedHosts><HostType>r612</HostType></AllowedHosts>
+  <PresetList>
+    <Preset id="R612_dummy">
+    </Preset>
+    <Preset id="R612_preset_250300Hz">
+		<r612-conf>
+		  <index_work_channel>{index}</index_work_channel>
+		  <ch>
+			<index>{index}</index>
+			<recv_frq>250300</recv_frq>
+			<transv_frq>250300</transv_frq>
+			<connector>Default</connector>
+			<noise_gate>On</noise_gate>
+		  </ch>
+		</r612-conf>
+    </Preset>
+    <Preset id="R612_preset_110KHz">
+		<r612-conf>
+		  <index_work_channel>{index}</index_work_channel>
+		  <ch>
+			<index>{index}</index>
+			<recv_frq>110000</recv_frq>
+			<transv_frq>110000</transv_frq>
+			<connector>Default</connector>
+			<noise_gate>On</noise_gate>
+		  </ch>
+		</r612-conf>
+    </Preset>
+    <Preset id="R612_preset_140KHz">
+		<r612-conf>
+		  <index_work_channel>{index}</index_work_channel>
+		  <ch>
+			<index>{index}</index>
+			<recv_frq>140000</recv_frq>
+			<transv_frq>140000</transv_frq>
+			<connector>Default</connector>
+			<noise_gate>On</noise_gate>
+		  </ch>
+		</r612-conf>
+    </Preset>
+  </PresetList>
+</PresetType>

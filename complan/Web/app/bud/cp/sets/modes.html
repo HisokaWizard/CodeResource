@@ -1,0 +1,13 @@
+<div class="cp-tab b-row">
+  <div ng-repeat="(i,mode) in cpCtrl.services[sId].modes" class="cp-mode-row">
+    <div class="b-col-4">
+      Частота приема:<span ng-bind="mode.rx_frequency"></span><br/>
+      Частота передачи:<span ng-bind="mode.tx_frequency"></span><br/>
+      Класс излучения:<span ng-bind="mode.tx_class_id"></span><br/>
+      Мощность:<span ng-bind="mode.tx_power"></span>%
+    </div>
+    <div class="b-col-4">
+      <span ng-bind="mode.description"></span>
+    </div>
+  </div>
+</div>

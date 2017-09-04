@@ -1,0 +1,67 @@
+<ComPlans>
+   <Ranges>
+      <Range id="uhv" label="УКВ" suffix="кГц">
+         <Description>Ультра короткие волны</Description>
+      </Range>
+      <Range id="kv" label="КВ" suffix="кГц">
+         <Description>Короткие волны</Description>
+      </Range>
+   </Ranges>
+   <Classes>
+        <Class id="a3e" label="TФО(A3E)">
+            <Description>Первый режим излучения.</Description>
+        </Class>
+   </Classes>
+   <Services>
+      <Service id="s01" label="КВ ТФО №1" range-id="kv" media-type-id="audio" target-uri="sip:n1000@gate.local">
+         <Description>Это очень длинное и пространственное описание этого тракта с целой кучей деталей.</Description>
+		 <Crypted>false</Crypted>
+         <Encrypted id="t614"></Encrypted>
+		 <Switch id="sk1"></Switch>
+         <In>
+            <Radio id="r693" port-id="0"/>
+            <Antenna id="k638"/>
+            
+         </In>
+         <Out>
+            <Radio id="n1000" port-id="0"/>
+            <Antenna id="k638"/>
+         </Out>
+		 <Can-Send>true</Can-Send>
+		 <Can-Recv>true</Can-Recv>
+         <Modes>
+            <Mode id="m1" label="Телефонная открытая связь" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description>Описание этого режима.</Description>
+               <Build>
+                  <Preset Host="r693" Id="R693_dummy" Type="TypeR693">                     
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693" Id="R693_dummy" Type="TypeR693">                     
+                  </Preset>
+               </Destroy>
+            </Mode>
+            <Mode id="m2" label="Телефонная открытая связь" channel="1" rx-frequency="100" tx-frequency="200" rx-class-id="a3e" tx-class-id="a3e" tx-power="10">
+               <Description>ТФО</Description>
+               <Build>
+                  <Preset Host="r693" Id="R693_dummy" Type="TypeR693">                     
+                  </Preset>
+               </Build>
+               <Destroy>
+                  <Preset Host="r693" Id="R693_dummy" Type="TypeR693">                     
+                  </Preset>
+               </Destroy>
+            </Mode>
+         </Modes>
+         <Endpoints>
+            <Endpoint id="tm1" auto-connect="true"/>
+         </Endpoints>
+      </Service>    
+   </Services>
+   <Sets>      
+      <Set id="s1" label="Первый набор" scheme-id="sch1">
+         <Description>Первый набор трактов</Description>
+         <Service id="s01" />
+      </Set>    
+   </Sets>
+</ComPlans>

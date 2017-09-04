@@ -1,0 +1,60 @@
+<div ng-controller="complanController as ctrl" class="b-container  b-browser-window-width" ng-init="ctrl.openCurrentSet()">
+  <div class="b-row" ng-init="ctrl.UpdateWinHeight()">
+    <div class="b-col-9">
+      <div ng-show="undefined == ctrl.twitter.msg">
+        <div ng-include="'app/components/breadcrumbs/breadcrumbs.html'"></div>
+      </div>
+      <div ng-include="'app/components/twitter/twitter.html'"></div>
+    </div>
+  </div>
+  <div class="b-row">
+    <div class="b-col-9">
+      <div class="b-left-functional-area b-functional-area-color" ng-style="{'height' : ctrl.WinHeight-150+'px'}">
+        <div class="b-row">
+          <div class="b-col-6">
+            <div ng-show="ctrl.sections.sets.name == ctrl.cSection" class="b-pull-left b-functional-area-heading">
+              Сценарий
+            </div>
+            <div ng-hide="ctrl.sections.sets.name == ctrl.cSection" class="b-pull-left b-functional-area-heading">
+              Группа трактов связи
+            </div>
+          </div>
+          <div class="b-col-6">
+            <div class="b-pull-right">
+              <img class="b-function-area-heading-icon"
+                ng-if="ctrl.sections.services.name == ctrl.cSection"
+                src="/img/view-icons/inactive-table.png">
+              <img class="b-function-area-heading-icon"
+                ng-click="ctrl.cSection=ctrl.sections.scheme"
+                ng-if="ctrl.sections.services.name == ctrl.cSection"
+                src="/img/view-icons/scheme.png">
+              <img class="b-function-area-heading-icon"
+                ng-click="ctrl.cSection=ctrl.sections.services.name"
+                ng-if="ctrl.sections.scheme == ctrl.cSection"
+                src="/img/view-icons/table.png">
+              <img class="b-function-area-heading-icon"
+                ng-if="ctrl.sections.scheme == ctrl.cSection"
+                src="/img/view-icons/inactive-scheme.png">
+            </div>
+          </div>
+        </div>
+        <div class="b-row">
+          <div class="b-col-12">
+            <div ng-if="ctrl.sections.sets.name == ctrl.cSection" ng-include="'app/bud/cp/sets/sets.html'"></div>
+            <div ng-if="ctrl.sections.services.name == ctrl.cSection" ng-include="'app/bud/cp/services/services.html'"></div>
+            <div ng-if="ctrl.sections.scheme == ctrl.cSection" ng-include="'app/bud/cp/scheme/scheme.html'"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="b-col-3">
+      <div class="b-right-functional-area b-functional-area-color" ng-style="{'height' : ctrl.WinHeight-150+'px'}">
+        <div ng-if="ctrl.sections.sets.name == ctrl.cSection" ng-include="'app/bud/cp/sets/filter.html'"></div>
+        <div ng-if="ctrl.sections.services.name == ctrl.cSection" ng-include="'app/bud/cp/services/filter.html'"></div>
+        <div ng-if="ctrl.sections.scheme == ctrl.cSection" ng-include="'app/bud/cp/scheme/filter.html'"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

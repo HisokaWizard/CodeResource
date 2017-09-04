@@ -1,0 +1,247 @@
+<div class="cp-controlling-tab b-row">
+  <div class="b-col-12">
+    <div class="b-row">
+      <div ng-bind="cpCtrl.services[sId].description" class="b-col-9 b-text-center cp-tab-body-header-margin15"></div>
+      <div class="b-col-3 b-text-center">
+        <button ng-click="cpCtrl.cSection=cpCtrl.sections.scheme" class="cp-button-scheme">Схема</button>
+      </div>
+    </div>
+    <hr class="cp-tab-line-margin0" style=" border-top:2px solid white;"/>
+    <div class="b-row">
+      <div ng-init="eMouse"
+        ng-mousemove="eMouse=true"
+        ng-mouseleave="eMouse=false">
+        <div class="b-col-3 cp-tab-text-column" style="margin-left: 50px;">
+          <div class="b-row">
+            <div class="b-col-12 b-text-center cp-service-oa">ОА</div>
+          </div>
+          <div ng-hide="ctrl.isEndpointEditor  || undefined == cpCtrl.devices" ng-class="{'cp-service-equipments':ctrl.isEndpointListLong(sId)}">
+            <div ng-repeat="eId in ctrl.getEndpointList(sId)" class="b-row">
+              <div class="b-col-12 cp-tab-column-pad0 b-text-center">
+                <a ng-bind="cpCtrl.devices[eId].label" ng-href="#/elements/server/{{eId}}" class="b-reference"></a>-
+                <span ng-bind="cpCtrl.translate(ctrl.getEndpointState(sId,eId))" class="b-text-center"></span>
+              </div>
+            </div>
+          </div>
+          <label ng-show="undefined == cpCtrl.devices">Нет подключения к центральному серверу!</label>
+          <div ng-show="ctrl.isEndpointEditor && undefined != cpCtrl.devices">
+            <div ng-class="{'cp-service-equipments-editor':ctrl.isEndpointListLong(sId)}">
+              <div ng-repeat="eId in ctrl.newEndpointList" class="b-row">
+                <div class="b-col-6 cp-tab-column-pad0 b-text-center">
+                  <a ng-hide="undefined == cpCtrl.devices" ng-bind="cpCtrl.devices[eId].label" ng-href="#/elements/server/{{eId}}" class="b-reference"></a>
+                </div>
+                <div class="b-col-6 cp-tab-column-pad0 b-text-center">
+                  <button ng-click="ctrl.removeEndpoint(sId,eId)" class="cp-button">Удалить</button>
+                </div>
+              </div>
+            </div>
+            <div class="b-row" style="margin-top:5px;">
+              <div class="b-col-offset-1 b-col-5 cp-tab-column-pad0 b-text-center">
+                <select ng-model="ctrl.newEndpoint" class="b-form-control">
+                  <option ng-repeat="(dId,device) in cpCtrl.devices"
+                    ng-if="'tm' == device.type || 'aist' == device.type"
+                    ng-bind="device.label"
+                    ng-value="dId"></option>
+                </select>
+              </div>
+              <div class="b-col-5 cp-tab-column-pad0 b-text-center"  style="padding-left:5px;">
+                <button ng-click="ctrl.addEndpoint()" class="cp-button">Добавить</button>
+              </div>
+            </div>
+            <div class="b-row cp-tab-body-header-margin15" >
+              <div class="b-col-offset-1 b-col-5 cp-tab-column-pad0">
+                <button ng-click="ctrl.saveNewEndpointList(sId)" class="cp-button">Ок</button>
+              </div>
+              <div class="b-col-5 cp-tab-column-pad0" style="margin-left:10px;">
+                <button ng-click="ctrl.cleanNewEndpointList()" class="cp-button">Отмена</button>
+              </div>
+            </div>
+          </div>
+          <div ng-hide="ctrl.isEndpointEditor || undefined == cpCtrl.devices" class="b-row">
+            <div class="b-col-12 b-text-center">
+              <button ng-show="eMouse" ng-click="ctrl.openEditor(sId)" class="cp-button">Редактировать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div ng-mouseenter="cryptoMouse=true"
+           ng-mouseleave="cryptoMouse=false"
+           class="b-col-offset-1 b-col-3 cp-tab-text-column cp-tab-column-pad0 b-text-center">
+        <div ng-show="ctrl.isEncrypted(sId)">
+          <div ng-show="undefined != cpCtrl.services[sId].encrypted_id" class="b-row">
+            <div class="b-col-12 b-text-center cp-service-oa">ШАС</div>
+          </div>
+          <div ng-hide="ctrl.isEncryptorEditor || undefined == cpCtrl.services[sId].encrypted_id" class="b-row b-text-left">
+            <div class="b-col-12 cp-tab-column-pad0" style="margin-left:40px;">Шифратор:
+              <a ng-bind="cpCtrl.devices[ctrl.getEncryptor(sId)].label"
+                 ng-href="#/devices/{{cpCtrl.devices[cpCtrl.services[sId].encrypted_id].type}}/{{cpCtrl.services[sId].encrypted_id}}"
+                 class="b-reference"></a>
+            </div>
+          </div>
+          <div ng-hide="ctrl.isEncryptorEditor || !cryptoMouse" class="b-row">
+            <div class="b-col-12 cp-tab-column-pad0">
+              <button ng-click="ctrl.isEncryptorEditor=true" class="cp-button">Редактировать</button>
+            </div>
+          </div>
+          <div ng-show="ctrl.isEncryptorEditor" class="b-row">
+            <div class="b-col-12 cp-tab-column-pad0">
+              <select ng-model="ctrl.encryptor" class="b-form-control">
+                <option ng-repeat="(dId,device) in cpCtrl.devices"
+                        ng-show="'encryptor' == ctrl.extraDeviceTypes[device.type].role"
+                        ng-bind="device.label"
+                        ng-value="dId"
+                        ng-selected="dId == ctrl.getEncryptor(sId)"></option>
+              </select>
+            </div>
+          </div>
+          <div ng-show="ctrl.isEncryptorEditor" class="b-row">
+            <div class="b-col-6 cp-tab-column-pad0">
+              <button  ng-click="ctrl.saveEncryptor(sId)" class="cp-button">Да</button>
+            </div>
+            <div class="b-col-6 cp-tab-column-pad0">
+              <button  ng-click="ctrl.cancelEncryptor()" class="cp-button">Нет</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="b-col-offset-1 b-col-3 cp-tab-text-column cp-tab-column-pad0 b-text-center">
+        <div class="b-row">
+          <div class="b-col-12 b-text-center">
+            КОС
+          </div>
+        </div>
+        <div ng-init="rMouse"
+          ng-mousemove="rMouse=true"
+          ng-mouseleave="rMouse=false">
+          <div class="b-row cp-service-margin15">
+            <div class="b-col-12 cp-tab-column-pad0 cp-service-radio">
+              Прием
+            </div>
+          </div>
+          <div  class="b-row">
+            <div class="b-col-12 cp-tab-column-pad0">
+              РПУ:
+              <a ng-hide="ctrl.isReceiverEditor"
+                 ng-bind="cpCtrl.devices[ctrl.getReceiver(sId)].label"
+                 ng-href="#/elements/{{cpCtrl.devices[cpCtrl.services[sId]['in'].radio.id].type}}/{{cpCtrl.services[sId]['in'].radio.id}}"
+                 class="b-reference"></a>
+              <div ng-show="ctrl.isReceiverEditor" class="b-row">
+                <div class="b-col-10 cp-tab-column-pad0">
+                  <select class="b-form-control"
+                          ng-model="ctrl.receiver">
+                    <option ng-repeat="(dId,device) in cpCtrl.devices"
+                      ng-bind="device.label"
+                      ng-value="dId"
+                      ng-selected="dId == cpCtrl.services[sId]['in'].radio.id"
+                      ng-show="'radio' == ctrl.extraDeviceTypes[device.type].role"></option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  class="b-row">
+            <div class="b-col-12 cp-tab-column-pad0">
+              Антенна:
+              <span ng-hide="ctrl.isReceiverEditor"
+                 ng-bind="cpCtrl.devices[ctrl.getReceivingAntenna(sId)].label"
+                 ng-href="#/elements/{{cpCtrl.devices[cpCtrl.services[sId]['in'].antenna_id].type}}/{{cpCtrl.services[sId]['in'].antenna_id}}"
+                 class="b-reference"></span>
+              <div ng-show="ctrl.isReceiverEditor" class="b-row">
+                <div class="b-col-10 cp-tab-column-pad0">
+                  <select class="b-form-control"
+                      ng-model="ctrl.receiveAntenna">
+                    <option ng-repeat="(dId,device) in cpCtrl.devices"
+                      ng-bind="device.label"
+                      ng-value="dId"
+                      ng-selected="dId == ctrl.getReceivingAntenna(sId)"
+                      ng-show="'antenna' == ctrl.extraDeviceTypes[device.type].role"></option>
+                  </select>
+                </div>
+              </div>
+              <div ng-show="ctrl.isReceiverEditor" class="b-row">
+                <div class="b-col-5 cp-tab-column-pad0">
+                  <button ng-click="ctrl.saveReceiver(sId)" class="cp-tab-button">Ок</button>
+                </div>
+                <div class="b-col-5 cp-tab-column-pad0">
+                  <button ng-click="ctrl.cancelReceiver()" class="cp-tab-button">Отмена</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div ng-hide="ctrl.isReceiverEditor" class="b-row">
+            <div class="b-col-10 cp-tab-column-pad0">
+              <button ng-show="rMouse" ng-click="ctrl.openReceiverEditor()" class="cp-tab-button">Редактировать</button>
+              <div ng-hide="rMouse" style="height:32px"></div>
+            </div>
+          </div>
+        </div>
+        <div ng-init="tMouse"
+          ng-mousemove="tMouse=true"
+          ng-mouseleave="tMouse=false">
+          <div class="b-row cp-service-margin15">
+            <div class="-col-12 cp-service-radio cp-tab-column-pad0">
+              Передача
+            </div>
+          </div>
+          <div  class="b-row">
+            <div class="b-col-12 cp-tab-column-pad0">
+              РПДУ:
+              <a ng-hide="ctrl.isTransmitterEditor"
+                 ng-bind="cpCtrl.devices[ctrl.getTransmitter(sId)].label"
+                 ng-href="#/elements/{{cpCtrl.devices[cpCtrl.services[sId]['in'].radio.id].type}}/{{cpCtrl.services[sId]['in'].radio.id}}"
+                 class="b-reference"></a>
+              <div ng-show="ctrl.isTransmitterEditor" class="b-row">
+                <div class="b-col-10 cp-tab-column-pad0">
+                  <select class="b-form-control"
+                    ng-model="ctrl.transmitter">
+                    <option ng-repeat="(dId,device) in cpCtrl.devices"
+                      ng-bind="device.label"
+                      ng-value="dId"
+                      ng-selected="dId == ctrl.getTransmitter(sId)"
+                      ng-show="'radio' == ctrl.extraDeviceTypes[device.type].role"></option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  class="b-row">
+            <div class="b-col-12 cp-tab-column-pad0">
+              Антенна:
+              <span ng-hide="ctrl.isTransmitterEditor"
+                 ng-bind="cpCtrl.devices[ctrl.getTransmittingAntenna(sId)].label"
+                 class="b-text-center b-reference"
+                 ng-href="#/elements/{{cpCtrl.devices[cpCtrl.services[sId].out.antenna_id].type}}/{{cpCtrl.services[sId].out.antenna_id}}"></span>
+              <div ng-show="ctrl.isTransmitterEditor" class="b-row">
+                <div class="b-col-10 cp-tab-column-pad0">
+                  <select class="b-form-control"
+                    ng-model="ctrl.transmitterAntenna">
+                    <option ng-repeat="(dId,device) in cpCtrl.devices"
+                      ng-bind="device.label"
+                      ng-value="dId"
+                      ng-selected="dId == ctrl.getTransmittingAntenna(sId)"
+                      ng-show="'antenna' == ctrl.extraDeviceTypes[device.type].role"></option>
+                  </select>
+                </div>
+              </div>
+              <div ng-show="ctrl.isTransmitterEditor" class="b-row">
+                <div class="b-col-5 cp-tab-column-pad0">
+                  <button ng-click="ctrl.saveTransmitter(sId)" class="cp-tab-button">Ок</button>
+                </div>
+                <div class="b-col-5 cp-tab-column-pad0">
+                  <button ng-click="ctrl.cancelTransmitter()" class="cp-tab-button">Отмена</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div ng-hide="ctrl.isTransmitterEditor" class="b-row">
+              <div class="b-col-10 cp-tab-column-pad0">
+                <button ng-show="tMouse"  ng-click="ctrl.openTransmitterEditor()" class="cp-tab-button">Редактировать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

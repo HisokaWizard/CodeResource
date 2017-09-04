@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<div ng-controller="setsController as ctrl">
+  <div ng-if="cpCtrl.sections.sets.name == ctrl.cSection"  ng-class="{'cp-set-list-height':ctrl.isLongSetList()}" ng-style="{'height' : ctrl.WinHeight-380+'px'}">
+    <div ng-init="accordion={cTab:0}" ng-class="{'cp-table': cpCtrl.keys(cpCtrl.sets).length > 5}">
+      <div ng-repeat="set in cpCtrl.sets | toArray | filter:ctrl.getFilter() track by $index">
+        <div ng-click="ctrl.pick(accordion,$index)"
+         ng-class="{'b-accordion' : true,
+          'b-accordion-uppercase' : true,
+          'b-active-accordion' : $index == accordion.cTab}">
+          <div class="b-row">
+            <div ng-hide="undefined != cpCtrl.cSet && cpCtrl.cSet == set.$key">
+              <div class="b-col-12">
+                <div class="b-pull-left">
+                  <span ng-bind="set.label"></span>
+                </div>
+              </div>
+            </div>
+            <div ng-show="undefined != cpCtrl.cSet && cpCtrl.cSet == set.$key">
+              <div class="b-col-6">
+                <div class="b-pull-left">
+                  <span ng-bind="set.label"></span>
+                </div>
+              </div>
+              <div class="b-col-2 b-col-1">
+                <img ng-if="undefined != cpCtrl.cSet && cpCtrl.cSet == set.$key" src="/img/state-icons/success.png">
+              </div>
+              <div class="b-col-3">
+                <span>Применен</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ng-class="{'b-accordion-body' : true,
+        'b-accordion-show' : $index == accordion.cTab,
+        'cp-sets-accordion-body-height' : $index == accordion.cTab}">
+          <div class="b-col-4 cp-sets-column cp-sets-text-left">
+            <span ng-bind="set.description"></span>
+          </div>
+          <div ng-class="{'cp-services-list':ctrl.isLongServiceList(set.$key)}" class="b-col-4 cp-sets-column">
+            <div ng-repeat="service in set.services">
+              <span ng-bind="cpCtrl.services[service].label"></span>
+            </div>
+          </div>
+          <div class="b-col-4 cp-sets-column cp-service-buttons">
+            <div ng-if="undefined == cpCtrl.cSet || cpCtrl.cSet != set.$key" class="b-row">
+              <div class="b-col-12">
+                <button ng-click="ctrl.openInstaller(set.$key)" class="cp-button">Применить</button>
+              </div>
+            </div>
+            <div class="b-row">
+              <div class="b-col-12">
+                <button ng-click="ctrl.openReview(set.$key)" class="cp-button">Просмотр</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div ng-if="cpCtrl.sections.sets.sections.installer == ctrl.cSection" ng-include="'/app/bud/cp/sets/installer.html'"></div>
+  <div ng-if="cpCtrl.sections.sets.sections.review == ctrl.cSection" ng-include="'/app/bud/cp/sets/review.html'"></div>
+  <div ng-if="cpCtrl.sections.sets.sections.deleter == ctrl.cSection" ng-include="'/app/bud/cp/sets/deleter.html'"></div>
+</div>
+
+

@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<section ng-controller="UserController as ctrl">
+    <div ng-include="'app/components/breadcrumbs/breadcrumbs.html'"></div>
+    <div class="mob-double-colons">
+
+      <!--<div class="b-row">-->
+        <!--<div class="b-col-12">-->
+          <!--<div ng-controller="breadcrumbsController as bCtrl" ng-init="bCtrl.nipOff(ctrl.breadcrumb)" class="mob-breadcrumbs">-->
+            <!--/<div ng-repeat="(i,crumb) in bCtrl.breadcrumbs track by $index" class="b-breadcrumbs-display">-->
+            <!--<a ng-href="{{crumb.uri}}" ng-bind="crumb.label" class="b-breadcrumbs-space"></a>-->
+            <!--<span ng-hide="i+1 == bCtrl.breadcrumbsLength">/</span>-->
+          <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+        <!--<ul id="breadcrumbs-one">-->
+            <!--<li><a href="#/mobile" ng-bind="'ГЛАВНАЯ'"></a></li>-->
+            <!--<li><a href="#/scheme/main" ng-bind="'Главная схема'"></a></li>-->
+            <!--<li><a id="anything-ctrl" ng-bind="'Пользователь '+ctrl.ctrl[ctrl.id].user_name"></a></li>-->
+        <!--</ul>-->
+
+        <div ng-bind="ctrl.ReplaceUserParams()"></div>
+        <div class="b-col-10">
+            <div class="mob-left-panel">
+
+                <div class="b-col-12 mob-font-title-left-panel">
+                    <div class="b-col-10">
+                        <span class="b-text-left" ng-bind="'Профиль пользователя'"></span>
+                    </div>
+                    <div class="b-col-2 b-text-right">
+                        <div class="b-btn-group">
+                            <button class="b-btn b-btn-default table-button-icon-enable" ng-click="ctrl.ToTable()"></button>
+                            <button class="b-btn b-btn-default scheme-button-icon-enable" ng-click="ctrl.ToScheme()"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="b-row b-col-12 mob-accordion-table-scroll mob-user-position">
+                    <table class="table-size mob-userlist-font text-table-align">
+                        <tr>
+                            <td class="picture-position title-table-td"><img src="app/bud/mobile/img/users/{{ctrl.id}}.png" width="122" height="122"></td>
+                            <td class="title-table-td" ng-bind="ctrl.user[ctrl.id].user_name"></td>
+                        </tr>
+                        <tr>
+                            <td class="title-table-td" ng-bind="ctrl.translate('main_work_place')"></td>
+                            <td class="title-table-td" ng-bind="ctrl.location[ctrl.user[user.id].location].label"></td>
+                        </tr>
+                    </table>
+                    <div ng-if="0==ctrl.EndPoints().length">
+                        <table class="table-size mob-userlist-font text-table-align">
+                            <tr>
+                                <td ng-bind="'Пользователь не имеет портативных устройств'"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div ng-if="0 < ctrl.EndPoints().length" ng-repeat="item in ctrl.EndPoints()">
+                        <table class="table-size mob-userlist-font text-table-align device-title-table">
+                            <tr>
+                                <td class="device-font-weight" ng-bind="'Устройство'+' '+ctrl.data[item].label"></td>
+                            </tr>
+                        </table>
+                        <table class="table-size mob-userlist-font text-table-align">
+                            <tr>
+                                <td class="data-table-td" ng-bind="ctrl.translate('info_locate')"></td>
+                                <td class="data-table-td">
+                                    <div ng-if="ctrl.user[ctrl.id].location != ctrl.state[item].location">
+                                        <div ng-bind="ctrl.RealLocation(ctrl.state[item].location)"></div>
+                                    </div>
+                                    <div ng-if="ctrl.user[ctrl.id].location == ctrl.state[item].location">
+                                        <div ng-bind="ctrl.translate('in_work_place')"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="data-table-td" ng-bind="ctrl.translateMobile('temperature')"></td>
+                                <td class="data-table-td" ng-bind="ctrl.state[item].temperature"></td>
+                            </tr>
+                            <tr>
+                                <td class="data-table-td" ng-bind="ctrl.translateMobile('pulse')"></td>
+                                <td class="data-table-td" ng-bind="ctrl.state[item].pulse"></td>
+                            </tr>
+                            <tr>
+                                <td class="data-table-td" ng-bind="ctrl.translateMobile('blood_oxygen_saturation')"></td>
+                                <td class="data-table-td" ng-bind="ctrl.state[item].blood"></td>
+                            </tr>
+                            <tr>
+                                <td class="data-table-td" ng-bind="ctrl.translateMobile('pressure')"></td>
+                                <td class="data-table-td" ng-bind="ctrl.state[item].bp"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="b-col-2">
+            <div class="mob-right-panel">
+                <div class="mob-userlist-font" ng-bind="'Поиск схем:'"></div>
+                <input class="search-user" type="text" ng-model="text"><br>
+                <div class="b-row b-col-12 mob-list-scroll b-accordion-header-font">
+                    <div class="mob-userlist-font-with-margin-top" ng-repeat="scheme in ctrl.SchemeList | orderBy:'+label' | filter:text">
+                        <a class="mob-userlist-font" href="#/scheme/{{scheme.id_to_list}}"><h3 class="b-text-left" ng-bind="scheme.label"></h3></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>

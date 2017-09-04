@@ -1,0 +1,29 @@
+<Resources>
+	<Item isArray="1">
+		<Entry>StateChanged</Entry>
+		<Russian>
+			<Short>Изменено состояние бада</Short>
+		</Russian>
+		<English>
+			<Short>State Changed</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>Connected</Entry>
+		<Russian>
+			<Short>Подключен</Short>
+		</Russian>
+		<English>
+			<Short>Connected</Short>
+		</English>
+	</Item>
+	<Item isArray="1">
+		<Entry>Disconnected</Entry>
+		<Russian>
+			<Short>Отключен</Short>
+		</Russian>
+		<English>
+			<Short>Disconnected</Short>
+		</English>
+	</Item>
+</Resources>

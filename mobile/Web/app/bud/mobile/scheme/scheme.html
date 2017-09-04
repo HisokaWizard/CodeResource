@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<section ng-controller="SchemeController as ctrl">
+
+  <style>
+
+    .canvas-scroll{
+      margin: 20px 0px 20px 30px;
+      overflow: auto;
+      max-height: 660px;
+      max-width: 1500px;
+    }
+
+    .canvas-border{
+      border: dotted 5px cornflowerblue;
+      /*background: chartreuse;*/
+    }
+
+
+
+  </style>
+
+  <div ng-include="'app/components/breadcrumbs/breadcrumbs.html'"></div>
+    <div class="mob-double-colons">
+      <!--<div class="b-row">-->
+        <!--<div class="b-col-12">-->
+          <!--<div ng-controller="breadcrumbsController as bCtrl" ng-init="bCtrl.nipOff(ctrl.breadcrumb)" class="mob-breadcrumbs">-->
+            <!--/<div ng-repeat="(i,crumb) in bCtrl.breadcrumbs track by $index" class="b-breadcrumbs-display">-->
+            <!--<a ng-href="{{crumb.uri}}" ng-bind="crumb.label" class="b-breadcrumbs-space"></a>-->
+            <!--<span ng-hide="i+1 == bCtrl.breadcrumbsLength">/</span>-->
+          <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <div class="b-col-10">
+        <div class="mob-left-panel">
+
+          <div class="b-col-12 mob-font-title-left-panel">
+            <div class="b-col-3">
+              <span class="b-text-left" ng-bind="'Схема объекта'"></span>
+            </div>
+            <div class="b-col-7">
+              <div ng-if="!ctrl.ShowCoord">
+                <button class="b-btn b-btn-info" ng-click="ctrl.ShowCoordMethod()" ng-bind="'Включить координаты схемы'"></button>
+              </div>
+              <div ng-if="ctrl.ShowCoord">
+                <button class="b-btn b-btn-info" ng-click="ctrl.ShowCoordMethod()" ng-bind="'Выключить координаты схемы'"></button>
+                <span ng-bind="'X: '+ctrl.getCoord().x"></span>
+                <span ng-bind="'Y: '+ctrl.getCoord().y"></span>
+                <span ng-bind="'scroll-X: '+ctrl.Scroll().scroll_x"></span>
+                <span ng-bind="'scroll-Y: '+ctrl.Scroll().scroll_y"></span>
+              </div>
+            </div>
+            <div class="b-col-2 b-text-right">
+              <div class="b-btn-group">
+                <button class="b-btn b-btn-default table-button-icon-enable" ng-click="ctrl.ToTable()"></button>
+                <button class="b-btn b-btn-default scheme-button-icon-enable" ng-click="ctrl.ToScheme()"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="b-row b-col-12">
+            <div id="canvas_panel" class="canvas-scroll">
+              <canvas id="canvas" class="canvas-border"
+                      ng-mousemove="ctrl.OnMouseMove($event)"
+                      ng-mouseover="ctrl.MouseOver($event)"
+                      ng-mousedown="ctrl.MouseDown($event)"
+                      ng-mouseleave="ctrl.MouseLeave($event)"
+                      ng-mouseup="ctrl.MouseUp($event)">
+                <div ng-bind="ctrl.HighLighter(ctrl.schemes[ctrl.id])"></div>
+                <div ng-bind="ctrl.SchemeTransit(ctrl.schemes[ctrl.id])"></div>
+                <div ng-bind="ctrl.LocationTransit(ctrl.schemes[ctrl.id])"></div>
+              </canvas>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="b-col-2">
+        <div class="mob-right-panel">
+
+          <div ng-if="'main'==ctrl.id">
+            <select disabled class="mob-select-style">
+              <option selected ng-value="ctrl.LocationsStr" ng-bind="ctrl.LocationsStr"></option>
+              <option ng-value="ctrl.UsersStr" ng-bind="ctrl.UsersStr"></option>
+            </select>
+          </div>
+
+          <div ng-if="'main'!=ctrl.id">
+            <select ng-model="select.item" class="mob-select-style">
+              <option selected ng-value="ctrl.LocationsStr" ng-bind="ctrl.LocationsStr"></option>
+              <option ng-value="ctrl.UsersStr" ng-bind="ctrl.UsersStr"></option>
+            </select>
+
+            <div ng-bind="ctrl.ChoiceInSelect(select.item)"></div>
+
+            <div ng-if="'main' != ctrl.id">
+
+              <div ng-if="ctrl.flagLocations">
+                <input class="search-user" type="text" ng-model="text"><br>
+                <div class="mob-list-scroll-scheme">
+                  <div class="mob-userlist-font-with-margin-top" ng-repeat="place in ctrl.PlacementList(ctrl.schemes[ctrl.id]) | orderBy:'+label' | filter : text">
+                    <a class="mob-userlist-font" ng-href="#/placement/{{place.id_to_list}}"
+                       ng-mousemove="ctrl.HighLightPlacementList(place.id_to_list, ctrl.schemes[ctrl.id])"
+                       ng-mouseleave="ctrl.DisLightPlacementList(ctrl.schemes[ctrl.id])">
+                      <div ng-if="''==ctrl.HighLightInListId" ng-bind="place.description"></div>
+                      <div ng-if="place.id_to_list==ctrl.HighLightInListId" ng-bind="place.description"></div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div ng-if="ctrl.flagUsers">
+                <input class="search-user" type="text" ng-model="text"><br>
+                <div class="mob-list-scroll-scheme">
+                  <div class="mob-userlist-font-with-margin-top" ng-repeat="user in ctrl.UserList(ctrl.schemes[ctrl.id]) | orderBy:'+user_name' | filter : text track by $index">
+
+                    <div ng-if="1==user.endpoint.length">
+                      <a class="mob-userlist-font" ng-href="#/user/{{user.id_to_list}}"
+                         ng-mousemove="ctrl.HighLightPlacementList(user.real_location[0], ctrl.schemes[ctrl.id])"
+                         ng-mouseleave="ctrl.DisLightPlacementList(ctrl.schemes[ctrl.id])">
+                          <div ng-if="''==ctrl.HighLightInListId" ng-bind="user.user_name"></div>
+                          <div ng-if="user.real_location[0]==ctrl.HighLightInListId && ''!=user.real_location[0]" ng-bind="user.user_name"></div>
+                      </a>
+                    </div>
+
+                    <div ng-if="1 < user.endpoint.length" ng-repeat="i in user.endpoint">
+                      <a class="mob-userlist-font" ng-href="#/user/{{user.id_to_list}}"
+                         ng-mousemove="ctrl.HighLightPlacementList(user.real_location[$index], ctrl.schemes[ctrl.id])"
+                         ng-mouseleave="ctrl.DisLightPlacementList(ctrl.schemes[ctrl.id])">
+                          <div ng-if="''==ctrl.HighLightInListId" ng-bind="user.user_name+'('+ctrl.data[i].label+')'"></div>
+                          <div ng-if="user.real_location[$index]==ctrl.HighLightInListId && ''!=user.real_location[$index]" ng-bind="user.user_name+'('+ctrl.data[i].label+')'"></div>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</section>

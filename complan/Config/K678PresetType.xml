@@ -1,0 +1,46 @@
+﻿<PresetType>
+  <Id>TypeK678</Id>
+  <UriTemplate>http://{host-address}/restconf/data/k678-conf</UriTemplate>
+  <Description>Предустановка K678</Description>
+  <AllowedHosts><HostType>k678</HostType></AllowedHosts>
+  <PresetList>
+    <Preset id="K678_dummy">
+    </Preset>
+    <Preset id="K678_preset_250300Hz">
+		<k678-conf>
+		  <index_work_channel>{index}</index_work_channel>
+		  <ch>
+			<index>{index}</index>
+			<recv_frq>250300</recv_frq>
+			<transv_frq>250300</transv_frq>
+			<connector>Default</connector>
+			<noise_gate>On</noise_gate>
+		  </ch>
+		</k678-conf>
+    </Preset>
+    <Preset id="K678_preset_110KHz">
+		<k678-conf>
+		  <index_work_channel>{index}</index_work_channel>
+		  <ch>
+			<index>{index}</index>
+			<recv_frq>110000</recv_frq>
+			<transv_frq>110000</transv_frq>
+			<connector>Default</connector>
+			<noise_gate>On</noise_gate>
+		  </ch>
+		</k678-conf>
+    </Preset>
+    <Preset id="K678_preset_140KHz">
+		<k678-conf>
+		  <index_work_channel>{index}</index_work_channel>
+		  <ch>
+			<index>{index}</index>
+			<recv_frq>140000</recv_frq>
+			<transv_frq>140000</transv_frq>
+			<connector>Default</connector>
+			<noise_gate>On</noise_gate>
+		  </ch>
+		</k678-conf>
+    </Preset>
+  </PresetList>
+</PresetType>
