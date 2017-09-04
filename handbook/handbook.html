@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<section ng-controller="handBookCtrl as ctrl" class="b-container b-browser-window-width">
+  <div ng-include="'app/components/breadcrumbs/breadcrumbs.html'"></div>
+
+  <div class="b-row">
+    <div class="b-col-9">
+      <div class="b-left-functional-area b-functional-area-color" ng-style="{'height' : ctrl.WinHeight-200+'px'}">
+        <div class="b-row">
+          <div class="b-col-6">
+            <div class="b-pull-left b-functional-area-heading">
+              Справочник КАТС
+            </div>
+          </div>
+        </div>
+        <div class="b-row">
+          <div class="b-col-12">
+            <div ng-model="accordion_event" ng-init="accordion_event={cTab:null}" class="e-table"
+                 ng-style="{'height' : ctrl.WinHeight-300+'px'}">
+
+              <div ng-class="{'b-accordion' : true, 'b-accordion-uppercase': true, 'b-active-accordion' : true}">
+                <div class="b-row">
+                  <div class="b-col-2 b-text-center">Фотография</div>
+                  <div class="b-col-3 b-text-center">ФИО</div>
+                  <div class="b-col-3 b-text-center">Должность</div>
+                  <div class="b-col-1 b-text-center">Сокр. должность</div>
+                  <div class="b-col-3 b-text-center">Звание</div>
+                </div>
+              </div>
+
+              <div ng-if="undefined !== ctrl.users">
+                <div ng-repeat="user in ctrl.users | toArray | filter:ctrl.getFilter(ctrl.label, ctrl.filter) track by $index">
+                  <div ng-if="undefined !== user">
+                    <div ng-click="$index === accordion_event.cTab ?  accordion_event.cTab=null : accordion_event.cTab=$index"
+                         ng-class="{'b-accordion' : true,
+                                    'b-accordion-uppercase' : true,
+                                    'b-active-accordion' : $index == accordion_event.cTab}">
+                      <div class="b-row">
+                        <div class="b-col-2">
+                          <img src="{{user.photo}}">
+                        </div>
+                        <div class="b-col-3 b-text-center">
+                          <div ng-bind="user.user_name"></div>
+                        </div>
+                        <div class="b-col-3 b-text-center">
+                          <div ng-bind="user.post_full"></div>
+                        </div>
+                        <div class="b-col-1 b-text-center">
+                          <div ng-bind="user.post_short"></div>
+                        </div>
+                        <div class="b-col-3 b-text-center">
+                          <div ng-bind="user.rank"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div ng-if="undefined !== user">
+                    <div ng-class="{'b-accordion-body' : true,
+                                    'b-accordion-show' : $index == accordion_event.cTab,
+                                    'cacos-sets-accordion-height-left-middle' : $index == accordion_event.cTab}">
+                      <div class="b-col-6 b-pull-left">ФИО</div><div class="b-col-6 b-pull-left" ng-bind="user.user_name"></div>
+                      <div class="b-col-6 b-pull-left">Должность</div><div class="b-col-6 b-pull-left" ng-bind="user.post_full"></div>
+                      <div class="b-col-6 b-pull-left">Должность(сокращенно)</div><div class="b-col-6 b-pull-left" ng-bind="user.post_short"></div>
+                      <div class="b-col-6 b-pull-left">Звание</div><div class="b-col-6 b-pull-left" ng-bind="user.rank"></div>
+                      <div class="b-col-6 b-pull-left">Номер телефона</div><div class="b-col-6 b-pull-left" ng-bind="user.phone_number"></div>
+                      <div class="b-col-6 b-pull-left">Позиция(помещение)</div><div class="b-col-6 b-pull-left" ng-bind="user.location"></div>
+                      <div class="b-col-6 b-pull-left">Группа здоровья</div><div class="b-col-6 b-pull-left" ng-bind="user.biogroup"></div>
+                      <div class="b-col-6 b-pull-left">Адрес устройства связи</div><div class="b-col-6 b-pull-left" ng-bind="user.uri"></div>
+                      <div class="b-col-6 b-pull-left">Дополнительная информация</div><div class="b-col-6 b-pull-left" ng-bind="user.info"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="b-col-3">
+      <div class="b-right-functional-area b-functional-area-color" ng-style="{'height' : ctrl.WinHeight-200+'px'}">
+        <div class="b-row">
+          <div class="b-col-12">
+            <input type="text" ng-model="ctrl.label" class="cp-service-filter"/>
+          </div>
+          <div class="b-col-12" ng-model="accordion" ng-init="accordion={}">
+            <div ng-init="accordion.cTab=1">
+              <div ng-click="accordion.cTab=1"
+                   ng-class="{'b-accordion' : true, 'b-active-accordion' : 1 == accordion.cTab}">
+                <div class="b-row">
+                  <div class="b-col-12">
+                    <div class="b-pull-left">Звание</div>
+                  </div>
+                </div>
+              </div>
+              <div ng-class="{'b-accordion-body' : true,
+                                    'b-accordion-show' : 1 == accordion.cTab,
+                                    'cacos-sets-accordion-height-right' : 1 == accordion.cTab}" ng-style="{height : 210+'px'}">
+                <div ng-repeat="rank in ctrl.userRanks track by $index" class="b-row b-col-12 cacos-checkbox-list-item" ng-style="{margin: 1+'px'}">
+                  <span class="b-col-10" ng-style="{top: 5+'px'}" ng-bind="rank"></span>
+                  <div class="b-col-2 b-pull-left">
+                    <input type="checkbox"
+                           id="{{rank}}"
+                           class="regular-checkbox"
+                           ng-init="ctrl.filter.ranks[rank]=false"
+                           ng-model="ctrl.filter.ranks[rank]"
+                           ng-true-value="true"
+                           ng-false-value="false"/>
+                    <label for="{{rank}}"></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

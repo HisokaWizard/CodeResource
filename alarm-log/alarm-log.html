@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<section ng-controller="alarmLogController as ctrl" class="b-container b-browser-window-width">
+  <div ng-include="'app/components/breadcrumbs/breadcrumbs.html'"></div>
+  <div class="b-row">
+    <div class="b-col-9">
+      <div class="b-left-functional-area b-functional-area-color" ng-style="{'height' : ctrl.WinHeight-200+'px'}">
+        <div class="b-row">
+          <div class="b-col-6">
+            <div class="b-functional-area-heading">
+              Журнал аварий
+            </div>
+          </div>
+          <div class="b-col-6">
+            <div class="b-pull-right b-functional-area-heading">
+              <img ng-click="ctrl.eventsLog()" src="/img/view-icons/event.png" class="b-function-area-heading-icon">
+              <img src="/img/view-icons/alarm-inactive.png" class="b-function-area-heading-icon">
+              <img ng-click="ctrl.elements()" src="/img/view-icons/table.png" class="b-function-area-heading-icon">
+              <img ng-click="ctrl.graph()" src="/img/view-icons/scheme.png" class="b-function-area-heading-icon">
+            </div>
+          </div>
+        </div>
+        <div class="b-row">
+          <div class="b-col-12">
+            <div ng-model="accordion_event" ng-init="accordion_event={cTab : null}" class="e-table"
+                 ng-style="{'height' : ctrl.WinHeight-300+'px'}">
+
+              <div ng-class="{'b-accordion' : true, 'b-accordion-uppercase': true, 'b-active-accordion' : true}">
+                <div class="b-row">
+                  <div class="b-col-2">Дата/Время</div>
+                  <div class="b-col-2">Устройство</div>
+                  <div class="b-col-2">Тип</div>
+                  <div class="b-col-4">Компонент</div>
+                </div>
+              </div>
+
+              <div ng-if="undefined !== ctrl.alarmData">
+                <div ng-repeat="(id, accident) in ctrl.alarmData | toArray | filter:ctrl.getFilter(ctrl.label, ctrl.filter) | orderBy:'-record.Time.Value' track by $index">
+                  <div ng-if="undefined !== accident">
+                    <div ng-click="$index === accordion_event.cTab ? accordion_event.cTab=null : accordion_event.cTab=$index"
+                         ng-class="{'b-accordion' : true,
+                                    'b-accordion-uppercase' : true,
+                                    'b-active-accordion' : $index === accordion_event.cTab}" ng-style="{'font-size': 10+'pt'}">
+                      <div class="b-row">
+                        <div class="b-col-2">
+                          <div class="b-pull-left" ng-bind="accident.record.Time.Value"></div>
+                        </div>
+                        <div class="b-col-2">
+                          <a class="b-pull-left" ng-href="#/devices/{{accident.routeType}}/{{accident.routeId}}"
+                             ng-bind="accident.label"
+                             ng-class="{'accordion-reference' : true,
+                                        'active-accordion-reference' : $index === accordion_event.cTab}"></a>
+                        </div>
+                        <div class="b-col-2">
+                          <div class="b-pull-left" ng-bind="accident.elemType"></div>
+                        </div>
+                        <div class="b-col-4">
+                          <div class="b-pull-left" ng-bind="accident.elemLabel"></div>
+                        </div>
+                        <div class="b-col-2">
+                          <div ng-show="!accident.confirmed.value">
+                            <button class="cp-build-button b-pull-right"
+                                    ng-click="ctrl.Apply(accident);"
+                                    ng-bind="'Подтвердить'"></button>
+                          </div>
+                          <div ng-show="accident.confirmed.value">
+                            <img class="b-function-area-heading-icon" src="img/state-icons/success.png">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div ng-if="undefined !== accident">
+                    <div ng-class="{'b-accordion-body' : true,
+                                    'b-accordion-show' : $index === accordion_event.cTab,
+                                    'cacos-sets-accordion-height-left-little' : (!ctrl.bigValue && $index === accordion_event.cTab),
+                                    'cacos-sets-accordion-height-left-big' :(ctrl.bigValue && $index === accordion_event.cTab)}" ng-style="{'font-size': 10+'pt'}">
+                      <div class="b-row">
+                        <div class="b-col-10" ng-repeat="item in ctrl.getShortInfo(accident.record)">
+                          <div class="b-col-4" ng-bind="item.TypeName"></div>
+                          <div class="b-col-8" ng-bind="item.Value"></div>
+                        </div>
+                        <div class="b-col-2">
+                          <button class="cp-build-button b-pull-right" ng-click="ctrl.deleteClick(accident)" ng-bind="'Удалить'"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="b-col-3" style="padding: 0px">
+      <div class="b-right-functional-area b-functional-area-color" ng-style="{'height' : ctrl.WinHeight-200+'px'}">
+        <div class="b-row">
+          <div class="b-col-12">
+            <input type="text" ng-model="ctrl.label" class="cp-service-filter"/>
+          </div>
+          <div class="b-col-12">
+            <div ng-model="accordion" ng-init="accordion={}">
+              <div ng-init="accordion.cTab=0">
+                <div ng-click="accordion.cTab=0"
+                     ng-class="{'b-accordion' : true, 'b-active-accordion' : 0 == accordion.cTab}">
+                  <div class="b-row">
+                    <div class="b-col-12">
+                      <div class="b-pull-left">Дата</div>
+                    </div>
+                  </div>
+                </div>
+                <div ng-class="{'b-accordion-body' : true, 'b-accordion-show' : 0 == accordion.cTab, 'cacos-sets-accordion-height-right' : 0 == accordion.cTab}">
+                  <div class="b-row">
+                    <div class="b-col-12">
+                      <div ng-include="'app/components/filter-calendar/filter-calendar.html'"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div ng-model="accordion" ng-init="accordion={}">
+              <div ng-init="accordion.cTab=0">
+                <div ng-click="accordion.cTab=1"
+                     ng-class="{'b-accordion' : true, 'b-active-accordion' : 1 == accordion.cTab}">
+                  <div class="b-row">
+                    <div class="b-col-12">
+                      <div class="b-pull-left">Тип</div>
+                    </div>
+                  </div>
+                </div>
+                <div ng-class="{'b-accordion-body' : true,
+                                'b-accordion-show' : 1 == accordion.cTab,
+                                'cacos-sets-accordion-height-right' : 1 == accordion.cTab}">
+                  <div class="b-row">
+                    <div class="b-col-12 cacos-checkbox-list-item">
+                      <span class="b-col-10" style="top: 5px" ng-bind="'Компонент'"></span>
+                      <div class="b-col-2 b-pull-left">
+                        <input type="checkbox"
+                               id="{{'checkbox-' + 'component'}}"
+                               class="regular-checkbox"
+                               ng-init="ctrl.filter.types['component']=false"
+                               ng-model="ctrl.filter.types['component']"
+                               ng-true-value="true"
+                               ng-false-value="false"/>
+                        <label for="{{'checkbox-' + 'component'}}"></label>
+                      </div>
+                    </div>
+                    <div class="b-col-12 cacos-checkbox-list-item">
+                      <span class="b-col-10" style="top: 5px" ng-bind="'Порт'"></span>
+                      <div class="b-col-2 b-pull-left">
+                        <input type="checkbox"
+                               id="{{'checkbox-' + 'port'}}"
+                               class="regular-checkbox"
+                               ng-init="ctrl.filter.types['port']=false"
+                               ng-model="ctrl.filter.types['port']"
+                               ng-true-value="true"
+                               ng-false-value="false"/>
+                        <label for="{{'checkbox-' + 'port'}}"></label>
+                      </div>
+                    </div>
+                    <div class="b-col-12 cacos-checkbox-list-item">
+                      <span class="b-col-10" style="top: 5px" ng-bind="'Модуль'"></span>
+                      <div class="b-col-2 b-pull-left">
+                        <input type="checkbox"
+                               id="{{'checkbox-' + 'bud'}}"
+                               class="regular-checkbox"
+                               ng-init="ctrl.filter.types['bud']=false"
+                               ng-model="ctrl.filter.types['bud']"
+                               ng-true-value="true"
+                               ng-false-value="false"/>
+                        <label for="{{'checkbox-' + 'bud'}}"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="b-btn b-btn-default cacos-button-filter" ng-click="ctrl.applyFilter()">Применить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div ng-show="ctrl.showModal">
+    <div id="cp-dark-modal">
+      <div id="cp-modal">
+        <button class="cp-closed-modal" ng-click="ctrl.closedButton()"></button>
+        <div class="cp-modal-font-title cp-modal-title-position" ng-bind="'Вы уверены?'"></div>
+        <button class="b-btn b-btn-default cp-modal-button cp-modal-button-position"
+                ng-click="ctrl.Delete(ctrl.accident)"
+                ng-bind="'Да'"></button>
+        <button class="b-btn b-btn-default cp-modal-button cp-modal-button-position"
+                ng-click="ctrl.closedButton()"
+                ng-bind="'Нет'"></button>
+      </div>
+    </div>
+  </div>
+</section>

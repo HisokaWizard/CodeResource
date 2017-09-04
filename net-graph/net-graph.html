@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<section ng-controller="netGraphCtrl as ctrl">
+  <div ng-controller="breadcrumbsController as bCtrl" class="b-breadcrumbs b-breadcrumbs-special">
+    <div ng-repeat="crumb in bCtrl.getBreadCrumbs() track by $index" class="b-breadcrumbs-display">
+      &nbsp;<img src="img/navigation-icons/nav1.png"/><a ng-href="{{crumb.path}}" ng-class="{'b-breadcrumbs-link' : crumb.noClickable==true}" ng-bind="crumb.label" class="b-breadcrumbs-space"></a>
+    </div>
+  </div>
+  <div class="cacos-mnemoscheme-container">
+    <div class="b-row">
+      <div class="b-col-12">
+        <div class="b-col-4 b-hidden-xs">
+          <div class="cacos-top-title-position text-left">
+            <div ng-if="ctrl.viewCoordFlag">
+              <span class="b-functional-area-agent-heading-font"
+                ng-bind="'X : '+ctrl.canvas_coord.x+' Y : '+ctrl.canvas_coord.y">
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="b-col-4 b-hidden-xs">
+          <div class="cacos-top-title-position b-text-left">
+            <span class="b-functional-area-agent-heading-font" ng-click="ctrl.ViewCoord()" ng-bind="ctrl.schemeLabel"></span>
+          </div>
+        </div>
+        <div class="b-col-4 b-hidden-xs">
+          <div class="cacos-top-title-position">
+            <div class="b-pull-right">
+              <img ng-click="ctrl.eventsLog()" src="/img/view-icons/event.png" class="b-function-area-heading-icon">
+              <img ng-click="ctrl.alarmsLog()" src="/img/view-icons/alarm.png" class="b-function-area-heading-icon">
+              <img ng-click="ctrl.elements()" src="/img/view-icons/table.png" class="b-function-area-heading-icon">
+              <img src="/img/view-icons/inactive-scheme.png" class="b-function-area-heading-icon">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="b-container-fluid">
+    <div class="b-row">
+      <div class="b-col-12" style="margin: 50px 0 0 0">
+        <canvas id="canvas"
+                ng-mousemove="ctrl.OnMouseMove($event)"
+                ng-mousedown="ctrl.MouseDown($event)"
+                ng-mouseup="ctrl.MouseUp($event)"
+                ng-mouseover="ctrl.MouseOver($event)"
+                ng-mouseleave="ctrl.MouseLeave($event)">
+          <div ng-bind="ctrl.GoToDevice()"></div>
+          <div ng-bind="ctrl.GoToNextScheme()"></div>
+          <div ng-bind="ctrl.HighLighter(ctrl.schemes)"></div>
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+</section>

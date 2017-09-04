@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<section ng-controller="eventLogController as ctrl" class="b-container b-browser-window-width">
+  <div ng-include="'app/components/breadcrumbs/breadcrumbs.html'"></div>
+  <div class="b-row">
+    <div class="b-col-9">
+      <div class="b-left-functional-area b-functional-area-color" ng-style="{'height' : ctrl.WinHeight-200+'px'}">
+        <div class="b-row">
+          <div class="b-col-6">
+            <div class="b-pull-left b-functional-area-heading">
+              Журнал событий
+            </div>
+          </div>
+          <div class="b-col-6">
+            <div class="b-pull-right b-functional-area-heading">
+              <img src="/img/view-icons/event-inactive.png" class="b-function-area-heading-icon">
+              <img ng-click="ctrl.alarmsLog()" src="/img/view-icons/alarm.png" class="b-function-area-heading-icon">
+              <img ng-click="ctrl.elements()" src="/img/view-icons/table.png" class="b-function-area-heading-icon">
+              <img ng-click="ctrl.graph()" src="/img/view-icons/scheme.png" class="b-function-area-heading-icon">
+            </div>
+          </div>
+        </div>
+        <div class="b-row">
+          <div class="b-col-12">
+            <div ng-model="accordion_event" ng-init="accordion_event={cTab:null}" class="e-table"
+                 ng-style="{'height' : ctrl.WinHeight-320+'px'}">
+
+              <div ng-class="{'b-accordion' : true, 'b-accordion-uppercase': true, 'b-active-accordion': true}">
+                <div class="b-row">
+                  <div class="b-col-2">Дата/Время</div>
+                  <div class="b-col-3">Название устройства</div>
+                  <div class="b-col-7">Событие</div>
+                </div>
+              </div>
+
+              <div ng-repeat="item in ctrl.events | filter:ctrl.getFilter(ctrl.label) | orderBy:'-Time.Value' track by $index">
+                <div ng-click="accordion_event.cTab === item.id ? accordion_event.cTab = null : accordion_event.cTab = item.id"
+                   ng-class="{'b-accordion' : true,
+                              'b-accordion-uppercase' : true,
+                              'b-active-accordion' : item.id === accordion_event.cTab}">
+                  <div class="b-row">
+                    <div class="b-col-12">
+                      <div class="b-col-2">
+                        <span ng-bind="item.Time.Value"></span>
+                      </div>
+                      <div class="b-col-3">
+                        <a ng-href="#/devices/{{item.routeType}}/{{item.routeId}}"
+                           ng-bind="ctrl.getLabel(item)"
+                           ng-class="{'accordion-reference' : true,
+                                      'active-accordion-reference' : item.id === accordion_event.cTab}"></a>
+                      </div>
+                      <div class="b-col-7">
+                        <span ng-bind="ctrl.getDescription(item, 40)"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div ng-class="{'b-accordion-body' : true,
+                  'b-accordion-show' : item.id === accordion_event.cTab,
+                  'cacos-sets-accordion-height-left-little' :(!ctrl.bigValue && item.id  === accordion_event.cTab),
+                  'cacos-sets-accordion-height-left-big' : (ctrl.bigValue &&  item.id  === accordion_event.cTab)}">
+                  <div class="b-row" ng-repeat="field in ctrl.getShortInfo(item)">
+                    <div class="b-col-6" ng-bind="field.TypeName"></div>
+                    <div class="b-col-6" ng-bind="field.Value"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="b-col-12" align="center">
+              <button class="b-btn b-btn-default cacos-button-filter" ng-style="{'width' : 300+'px'}" ng-click="ctrl.moreMessage()" ng-bind="'Больше сообщений'"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="b-col-3" style="padding: 0px">
+      <div class="b-right-functional-area b-functional-area-color" ng-style="{'height' : ctrl.WinHeight-200+'px'}">
+        <div class="b-row">
+          <div class="b-col-12">
+            <input type="text" ng-model="ctrl.label" class="cp-service-filter"/>
+          </div>
+        </div>
+        <div class="b-row">
+          <div class="b-col-12">
+            <div ng-model="accordion" ng-init="accordion={}">
+              <div ng-init="accordion.cTab=0">
+                <div ng-click="accordion.cTab=0"
+                     ng-class="{'b-accordion' : true, 'b-active-accordion' : 0 == accordion.cTab}">
+                  <div class="b-row">
+                    <div class="b-col-12">
+                      <div class="b-pull-left">Дата</div>
+                    </div>
+                  </div>
+                </div>
+                <div ng-class="{'b-accordion-body' : true, 'b-accordion-show' : 0 == accordion.cTab, 'cacos-sets-accordion-height-right' : 0 == accordion.cTab}">
+                  <div class="b-row">
+                    <div class="b-col-12">
+                      <div ng-include="'app/components/filter-calendar/filter-calendar.html'"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div ng-init="accordion.cTab=0">
+                <div ng-click="accordion.cTab=1"
+                     ng-class="{'b-accordion' : true, 'b-active-accordion' : 1 == accordion.cTab}">
+                  <div class="b-row">
+                    <div class="b-col-12">
+                      <div class="b-pull-left">Типы</div>
+                    </div>
+                  </div>
+                </div>
+                <div ng-class="{'b-accordion-body' : true, 'b-accordion-show' : 1 == accordion.cTab, 'cacos-sets-accordion-height-right' : 1 == accordion.cTab}">
+                  <div class="b-row">
+                    <div class="b-col-12">
+                      <p><input name="RecordType" type="radio" value="status"> Статусные</p>
+                      <p><input name="RecordType" type="radio" value="register"> Регистрационные</p>
+                      <p><input name="RecordType" type="radio" value="all" checked> Все</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="b-btn b-btn-default cacos-button-filter" ng-click="ctrl.applyFilter()">Применить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
